@@ -360,6 +360,13 @@
   resolved "https://registry.yarnpkg.com/@gitmoji/parser-opts/-/parser-opts-1.3.0.tgz#7118a512342afd89c895cb2fd95454fa73f377bb"
   integrity sha512-NqfoW12eXMdDJz3g3NHnopEgDoqdY1YshO6XxIVPOqotGTDcjD1sL28AVKskbYveGmHBPdHieRRv6M9Iq7dt4w==
 
+"@miyauci/is-valid@^1.0.0-beta.15":
+  version "1.0.0-beta.15"
+  resolved "https://registry.yarnpkg.com/@miyauci/is-valid/-/is-valid-1.0.0-beta.15.tgz#7af55c0f0ab5fa41ff784d0eac788782ba143ccd"
+  integrity sha512-ZF8du4N3uD02Q5CoHOz53d6FW2U/sl8GUvIUUP0GU94RFCR3ZvQ2VWajB8+gGsa1TGXQBCbLdhO835ajpHeDFA==
+  dependencies:
+    fonction "^1.8.0-beta.6"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -1473,6 +1480,11 @@ csstype@^3.0.2:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.8.tgz#d2266a792729fb227cd216fb572f43728e1ad340"
   integrity sha512-jXKhWqXPmlUeoQnF/EhTtTl4C9SnrxSH/jZUih3jmO6lBKr99rP3/+FmrMj4EFpOXzMtXHAZkd3x0E6h6Fgflw==
 
+curry-rice@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/curry-rice/-/curry-rice-1.0.0.tgz#ff5daf251141a54931988458ced7c39931fa5b96"
+  integrity sha512-rpXOEtPurOBZGieMQf/wG7YW+zi2N7EWrkaVBFLZYCUyG2LiLLuNup9yIdasuiCmo+O/LTwPDiijotmSlRLYXA==
+
 cz-conventional-changelog@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/cz-conventional-changelog/-/cz-conventional-changelog-3.2.0.tgz#6aef1f892d64113343d7e455529089ac9f20e477"
@@ -1955,6 +1967,13 @@ findup-sync@^4.0.0:
     is-glob "^4.0.0"
     micromatch "^4.0.2"
     resolve-dir "^1.0.1"
+
+fonction@^1.8.0-beta.6:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/fonction/-/fonction-1.9.0.tgz#3866621a5d6381c44e559db4a04d043253eecb96"
+  integrity sha512-kFt8/QbJdrVukhppuOwuSmNsAxfkl2LH9OygARP7pUfb7aJzJUoF7triyww6YjY40F/m9x+qoJX9zhEk2c6gjA==
+  dependencies:
+    curry-rice "^1.0.0"
 
 forever-agent@~0.6.1:
   version "0.6.1"
