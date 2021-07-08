@@ -24,7 +24,6 @@ const createScriptElement = ({
       ? issueTerm.join(' ')
       : issueTerm
 
-    console.log(_issueTerm)
     scriptEl.setAttribute('issue-term', _issueTerm)
   } else if (typeof issueNumber === 'number') {
     scriptEl.setAttribute('issue-number', String(issueNumber))
