@@ -1,0 +1,44 @@
+{
+  "name": "utterances-svelte-component",
+  "description": "Type safety svalte component for utterances",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.es.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "svelte": "lib/Utterances.svelte",
+  "scripts": {
+    "cz": "yarn --cwd ../.. cz",
+    "commit": "yarn cz",
+    "prepare": "yarn --cwd ../..",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
+    "@tsconfig/svelte": "^2.0.1",
+    "svelte": "^3.37.0",
+    "svelte-check": "^2.1.0",
+    "svelte-preprocess": "^4.7.2",
+    "tslib": "^2.2.0"
+  },
+  "author": {
+    "name": "TomokiMiyauci",
+    "email": "development.operation6.6.6@gmail.com",
+    "url": "https://miyauchi.dev/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TomokiMiyauci/utterances-component.git",
+    "directory": "packages/svelte"
+  }
+}
