@@ -6,6 +6,7 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.1.0",
+    "@vitejs/plugin-vue": "^1.2.4",
     "preact": "^10.5.14",
     "typescript": "^4.3.2",
     "vite": "^2.4.0"
