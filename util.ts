@@ -1,5 +1,4 @@
 import { Utterances } from './types'
-import { isNumber } from '@miyauci/is-valid'
 
 const SOURCE = 'https://utteranc.es/client.js'
 
@@ -27,7 +26,7 @@ const createScriptElement = ({
 
     console.log(_issueTerm)
     scriptEl.setAttribute('issue-term', _issueTerm)
-  } else if (isNumber(issueNumber)) {
+  } else if (typeof issueNumber === 'number') {
     scriptEl.setAttribute('issue-number', String(issueNumber))
   }
   scriptEl.setAttribute('crossorigin', 'anonymous')
