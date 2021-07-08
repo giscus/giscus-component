@@ -85,15 +85,29 @@ No default value is set to respect the original behavior.
 
 [Official document](https://utteranc.es/)
 
-| Name          | Type                                                                                                                                                                   | Description                                                                                        |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `repo`        | `${String}/${String}`                                                                                                                                                  | Repository for Utterances to connect to. Expected value: `username/repo`                           |
-| `theme`       | `github-light` &#124; `github-dark` &#124; `preferred-color-scheme` &#124; `github-dark-orange` &#124; `icy-dark` `dark-blue` &#124; `photon-dark` &#124; `boxy-light` | The Utterance theme.                                                                               |
-| `label`       | `string?`                                                                                                                                                              | Choose the label that will be assigned to issues created by Utterances.                            |
-| `issueTerm`   | `pathname` &#124; `url` &#124; `title` &#124; `og:title`                                                                                                               | The mapping between blog posts and GitHub issues. <td rowspan="2">One of them[1]</td>              |
-| `issueNumber` | `number`                                                                                                                                                               | You configure Utterances to load a specific issue by number. Issues are not automatically created. |
+| Name          | Type                         | Description                                                                                        |
+| ------------- | ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| `repo`        | `${String}/${String}`        | Repository for Utterances to connect to. Expected value: `username/repo`                           |
+| `theme`       | `Theme`                      | The Utterance theme.                                                                               |
+| `label`       | `string?`                    | Choose the label that will be assigned to issues created by Utterances.                            |
+| `issueTerm`   | `Term` &#124; `string[]`[^1] | The mapping between blog posts and GitHub issues. <td rowspan="2">One of them[^2]</td>             |
+| `issueNumber` | `number`                     | You configure Utterances to load a specific issue by number. Issues are not automatically created. |
 
-[1] `issueTerm` and `issueNumber` are exclusive. TypeScript will prompt you to specify one or the other.
+```ts
+declare type Theme =
+  | 'github-light'
+  | 'github-dark'
+  | 'preferred-color-scheme'
+  | 'github-dark-orange'
+  | 'icy-dark'
+  | 'dark-blue'
+  | 'photon-dark'
+  | 'boxy-light'
+declare type Term = 'pathname' | 'url' | 'title' | 'og:title'
+```
+
+[^1]: If you chose "Issue title contains specific term", specify the specific term as string array.
+[^2]: `issueTerm` and `issueNumber` are exclusive. TypeScript will prompt you to specify one or the other.
 
 ## :handshake: Contributing
 

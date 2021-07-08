@@ -8,7 +8,7 @@ type Utterances = {
 
 type Issue =
   | {
-      issueTerm: IssueTerm | string[]
+      issueTerm: Term | string[]
       issueNumber?: never
     }
   | {
@@ -16,7 +16,7 @@ type Issue =
       issueNumber: number
     }
 
-type IssueTerm = 'pathname' | 'url' | 'title' | 'og:title'
+type Term = 'pathname' | 'url' | 'title' | 'og:title'
 type Theme =
   | 'github-light'
   | 'github-dark'
@@ -27,4 +27,4 @@ type Theme =
   | 'photon-dark'
   | 'boxy-light'
 
-export type { UtterancesProps, IssueTerm, Theme, Utterances }
+export type { UtterancesProps, Term, Theme, Utterances }
