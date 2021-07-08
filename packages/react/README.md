@@ -112,7 +112,7 @@ declare type Term = 'pathname' | 'url' | 'title' | 'og:title'
 ## :handshake: Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check
-[issues](https://github.com/TomokiMiyauci/utterances-react-component/issues).
+[issues](https://github.com/TomokiMiyauci/utterances-component/issues).
 
 [Contributing guide](./.github/CONTRIBUTING.md)
 
