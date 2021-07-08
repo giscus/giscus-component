@@ -118,3 +118,5 @@ dist
 temp
 docs/api/*
 node_modules
+
+.vercel
