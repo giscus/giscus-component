@@ -18,6 +18,12 @@ Utterances is a lightweight comments widget built on GitHub issues, for blog com
 
 This is monorepo. See below for implementation.
 
-| Name                                                            |                                                                 Version                                                                 |                                                                 Downloads                                                                  |
-| :-------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------: |
-| [`utterances-react-component`](./package/react/../../README.md) | [![npm version](https://img.shields.io/npm/v/utterances-react-component.svg)](https://www.npmjs.com/package/utterances-react-component) | [![npm downloads](https://img.shields.io/npm/dt/utterances-react-component.svg)](https://www.npmjs.com/package/utterances-react-component) |
+| Name                                                       |                                                                 Version                                                                 |                                                                 Downloads                                                                  |
+| :--------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------: |
+| [`utterances-react-component`](./packages/react/README.md) | [![npm version](https://img.shields.io/npm/v/utterances-react-component.svg)](https://www.npmjs.com/package/utterances-react-component) | [![npm downloads](https://img.shields.io/npm/dt/utterances-react-component.svg)](https://www.npmjs.com/package/utterances-react-component) |
+
+## License
+
+Copyright © 2021-present [TomokiMiyauci](https://github.com/TomokiMiyauci).
+
+Released under the [MIT](./LICENSE) license
