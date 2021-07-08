@@ -27,7 +27,7 @@ Type safety react component for utterances
 
 ---
 
-React component for [utterances](https://utteranc.es/)
+React component for [utterances](https://utteranc.es/) 🔮
 
 Utterances is a lightweight comments widget built on GitHub issues, for blog comments, wiki pages and more.
 
@@ -71,10 +71,29 @@ import { Utterances } from 'https://cdn.skypack.dev/utterances-react-component'
 
 **peerDependency**
 
-| package     | version |
-| ----------- | ------- |
-| `react`     | ``      |
-| `react-dom` | ``      |
+| package     | version                         |
+| ----------- | ------------------------------- |
+| `react`     | `^16` &#124; `^17` &#124; `^18` |
+| `react-dom` | `^16` &#124; `^17` &#124; `^18` |
+
+## API
+
+### Props
+
+It has a strict type definition.
+No default value is set to respect the original behavior.
+
+[Official document](https://utteranc.es/)
+
+| Name          | Type                                                                                                                                                                   | Description                                                                                        |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `repo`        | `${String}/${String}`                                                                                                                                                  | Repository for Utterances to connect to. Expected value: `username/repo`                           |
+| `theme`       | `github-light` &#124; `github-dark` &#124; `preferred-color-scheme` &#124; `github-dark-orange` &#124; `icy-dark` `dark-blue` &#124; `photon-dark` &#124; `boxy-light` | The Utterance theme.                                                                               |
+| `label`       | `string?`                                                                                                                                                              | Choose the label that will be assigned to issues created by Utterances.                            |
+| `issueTerm`   | `pathname` &#124; `url` &#124; `title` &#124; `og:title`                                                                                                               | The mapping between blog posts and GitHub issues. <td rowspan="2">One of them[1]</td>              |
+| `issueNumber` | `number`                                                                                                                                                               | You configure Utterances to load a specific issue by number. Issues are not automatically created. |
+
+[1] `issueTerm` and `issueNumber` are exclusive. TypeScript will prompt you to specify one or the other.
 
 ## :handshake: Contributing
 
