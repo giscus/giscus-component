@@ -755,6 +755,11 @@ util-deprecate@^1.0.2:
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
 
+utterances-vue-component@^1.0.0-beta.1:
+  version "1.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/utterances-vue-component/-/utterances-vue-component-1.0.0-beta.1.tgz#ebed5aa56bf7389c17f34cf069b117eab7fe06c6"
+  integrity sha512-blbu3of4xom1W3HYBemggaziFYGXFn2+QsxFdmeAKx2vCowPhx4lzzFg74ZATgL4m92OXDMCfNWCVSVrhdaqnw==
+
 vite@^2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.4.1.tgz#2e48b8dbfc69e4edbf7f4d1c0798d621585cb8da"
