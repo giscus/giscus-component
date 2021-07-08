@@ -43,5 +43,25 @@
     "type": "git",
     "url": "https://github.com/TomokiMiyauci/utterances-component.git",
     "directory": "packages/vue"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "utterances",
+    "utterance",
+    "comment",
+    "comments",
+    "comment-system",
+    "vue",
+    "github",
+    "component",
+    "issue"
+  ],
+  "homepage": "https://github.com/TomokiMiyauci/utterances-component#readme",
+  "bugs": "https://github.com/TomokiMiyauci/utterances-component/issues",
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/tomoki_miyauci"
   }
 }

@@ -1,6 +1,6 @@
 <p align="center">
-
-  <h1 align="center">utterances-vue-component</h1>
+  <img alt="hero image" src="https://res.cloudinary.com/dz3vsv9pg/image/upload/v1625751123/projects/utterances-component/utterances-vue-component/hero.png"  />
+  <h1 align="center"> utterances-vue-component</h1>
 </p>
 
 <p align="center">
@@ -22,6 +22,7 @@ Type safety vue component for utterances
 ![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat)
 ![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B26231%2Fgithub.com%2FTomokiMiyauci%2Futterances-component.svg?type=small)](https://app.fossa.com/projects/custom%2B26231%2Fgithub.com%2FTomokiMiyauci%2Futterances-component?ref=badge_small)
 
 </div>
 
@@ -118,13 +119,13 @@ No default value is set to respect the original behavior.
 
 [Official document](https://utteranc.es/)
 
-| Name          | Type                         | Description                                                                                        |
-| ------------- | ---------------------------- | -------------------------------------------------------------------------------------------------- |
-| `repo`        | `${String}/${String}`        | Repository for Utterances to connect to. Expected value: `username/repo`                           |
-| `theme`       | `Theme`                      | The Utterance theme.                                                                               |
-| `label`       | `string?`                    | Choose the label that will be assigned to issues created by Utterances.                            |
-| `issueTerm`   | `Term` &#124; `string[]`[^1] | The mapping between blog posts and GitHub issues. <td rowspan="2">One of them[^2]</td>             |
-| `issueNumber` | `number`                     | You configure Utterances to load a specific issue by number. Issues are not automatically created. |
+| Name          | Type                            | Description                                                                                        |
+| ------------- | ------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `repo`        | `${String}/${String}`           | Repository for Utterances to connect to. Expected value: `username/repo`                           |
+| `theme`       | `Theme`                         | The Utterance theme.                                                                               |
+| `label`       | `string?`                       | Choose the label that will be assigned to issues created by Utterances.                            |
+| `issueTerm`   | `Term` &#124; `string[]`[1](#1) | The mapping between blog posts and GitHub issues. <td rowspan="2">One of them[2](#2)</td>          |
+| `issueNumber` | `number`                        | You configure Utterances to load a specific issue by number. Issues are not automatically created. |
 
 ```ts
 declare type Theme =
@@ -139,8 +140,13 @@ declare type Theme =
 declare type Term = 'pathname' | 'url' | 'title' | 'og:title'
 ```
 
-[^1]: If you chose "Issue title contains specific term", specify the specific term as string array.
-[^2]: Unfortunately, props in vue cannot be exclusively defined. You can specify either an `issueTerm` or an `issueNumber`.
+###### 1
+
+If you chose "Issue title contains specific term", specify the specific term as string array.
+
+###### 2
+
+Unfortunately, props in vue cannot be exclusively defined. You can specify either an `issueTerm` or an `issueNumber`.
 
 ## :handshake: Contributing
 
@@ -162,3 +168,5 @@ Give a ⭐️ if this project helped you!
 Copyright © 2021-present [TomokiMiyauci](https://github.com/TomokiMiyauci).
 
 Released under the [MIT](./LICENSE) license
+
+[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B26231%2Fgithub.com%2FTomokiMiyauci%2Futterances-component.svg?type=large)](https://app.fossa.com/projects/custom%2B26231%2Fgithub.com%2FTomokiMiyauci%2Futterances-component?ref=badge_large)
