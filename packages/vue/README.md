@@ -110,7 +110,7 @@ import { Utterances } from 'https://cdn.skypack.dev/utterances-vue-component'
 | ------- | -------- |
 | `vue`   | `^3.0.0` |
 
-## API
+## :memo: API
 
 ### Props
 
@@ -126,6 +126,8 @@ No default value is set to respect the original behavior.
 | `label`       | `string?`                       | Choose the label that will be assigned to issues created by Utterances.                            |
 | `issueTerm`   | `Term` &#124; `string[]`[1](#1) | The mapping between blog posts and GitHub issues. <td rowspan="2">One of them[2](#2)</td>          |
 | `issueNumber` | `number`                        | You configure Utterances to load a specific issue by number. Issues are not automatically created. |
+
+---
 
 ```ts
 declare type Theme =
@@ -152,8 +154,6 @@ Unfortunately, props in vue cannot be exclusively defined. You can specify eithe
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check
 [issues](https://github.com/TomokiMiyauci/utterance-component/issues).
-
-[Contributing guide](./.github/CONTRIBUTING.md)
 
 ## :seedling: Show your support
 

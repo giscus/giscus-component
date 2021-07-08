@@ -77,7 +77,7 @@ import { Utterances } from 'https://cdn.skypack.dev/utterances-react-component'
 | `react`     | `^16` &#124; `^17` &#124; `^18` |
 | `react-dom` | `^16` &#124; `^17` &#124; `^18` |
 
-## API
+## :memo: API
 
 ### Props
 
@@ -121,8 +121,6 @@ If you chose "Issue title contains specific term", specify the specific term as 
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check
 [issues](https://github.com/TomokiMiyauci/utterances-component/issues).
-
-[Contributing guide](./.github/CONTRIBUTING.md)
 
 ## :seedling: Show your support
 
