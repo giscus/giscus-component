@@ -16,8 +16,9 @@
   })()
 
 
-  let divRef: HTMLDivElement;
+  let divRef: HTMLDivElement | undefined;
   onMount(() => {
+    if(!divRef) return
     const scriptEl = createScriptElement({
       repo,
       theme,
