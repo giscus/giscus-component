@@ -1,0 +1,49 @@
+{
+  "name": "utterances-vue-component",
+  "description": "Type safety vue component for utterances",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.es.js"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "cz": "yarn --cwd ../.. cz",
+    "commit": "yarn cz",
+    "prepare": "yarn --cwd ../..",
+    "dev": "vite",
+    "lint": "vue-tsc --noEmit",
+    "build": "yarn build:script && yarn build:types",
+    "build:script": "vite build",
+    "build:types": "dts-bundle-generator --no-banner --no-check --external-imports=vue -o dist/index.d.ts lib/index.ts",
+    "serve": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/vfile-message": "^2.0.0",
+    "@vitejs/plugin-vue": "^1.2.4",
+    "@vitejs/plugin-vue-jsx": "^1.1.6",
+    "@vue/compiler-sfc": "^3.1.4",
+    "dts-bundle-generator": "^5.9.0",
+    "vue": "^3.1.4",
+    "vue-tsc": "^0.2.0"
+  },
+  "author": {
+    "name": "TomokiMiyauci",
+    "email": "development.operation6.6.6@gmail.com",
+    "url": "https://miyauchi.dev/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TomokiMiyauci/utterances-component.git",
+    "directory": "packages/vue"
+  }
+}
