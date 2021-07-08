@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "commit": "cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build": "yarn workspaces run build",
+    "release": "yarn workspaces run semantic-release"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
