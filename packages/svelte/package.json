@@ -1,7 +1,7 @@
 {
   "name": "utterances-svelte-component",
   "description": "Type safety svalte component for utterances",
-  "version": "0.0.0",
+  "version": "1.0.0-beta.1",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
