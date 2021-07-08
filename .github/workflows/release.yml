@@ -74,6 +74,11 @@ jobs:
           name: vue-dist
           path: packages/vue/dist
 
+      - uses: actions/upload-artifact@v2
+        with:
+          name: svelte-dist
+          path: packages/svelte/dist
+
   release:
     needs: [build]
     runs-on: ${{ matrix.os }}
@@ -106,6 +111,11 @@ jobs:
         with:
           name: vue-dist
           path: packages/vue/dist
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: svelte-dist
+          path: packages/svelte/dist
 
       - name: Release
         run: yarn release
