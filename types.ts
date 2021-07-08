@@ -1,10 +1,12 @@
 type UtterancesProps = Utterances
 
 type Utterances = {
-  repo: `${string}/${string}`
+  repo: Repo
   label?: string
   theme: Theme
 } & Issue
+
+type Repo = `${string}/${string}`
 
 type Issue =
   | {
@@ -27,4 +29,4 @@ type Theme =
   | 'photon-dark'
   | 'boxy-light'
 
-export type { UtterancesProps, Term, Theme, Utterances }
+export type { UtterancesProps, Repo, Term, Theme, Utterances }
