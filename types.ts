@@ -29,4 +29,4 @@ type Theme =
   | 'photon-dark'
   | 'boxy-light'
 
-export type { UtterancesProps, Repo, Term, Theme, Utterances }
+export type { UtterancesProps, Repo, Term, Theme, Utterances, Issue }
