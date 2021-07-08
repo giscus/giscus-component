@@ -1,7 +1,7 @@
 {
   "name": "utterances-vue-component",
   "description": "Type safety vue component for utterances",
-  "version": "0.0.0",
+  "version": "1.0.0-beta.1",
   "license": "MIT",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
