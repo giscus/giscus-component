@@ -1,7 +1,8 @@
 {
   "name": "utterances-svelte-component",
-  "description": "Type safety svalte component for utterances",
+  "description": "Type safety svelte component for utterances",
   "version": "1.0.0-beta.2",
+  "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -49,7 +50,7 @@
     "comment",
     "comments",
     "comment-system",
-    "vue",
+    "svelte",
     "github",
     "component",
     "issue"
