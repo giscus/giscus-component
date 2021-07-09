@@ -1,7 +1,7 @@
 {
   "name": "utterances-svelte-component",
   "description": "Type safety svelte component for utterances",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs.js",
