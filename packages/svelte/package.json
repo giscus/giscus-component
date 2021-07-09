@@ -1,0 +1,64 @@
+{
+  "name": "utterances-svelte-component",
+  "description": "Type safety svelte component for utterances",
+  "version": "1.0.0-beta.2",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.es.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "cz": "yarn --cwd ../.. cz",
+    "commit": "yarn cz",
+    "prepare": "yarn --cwd ../..",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
+    "@tsconfig/svelte": "^2.0.1",
+    "svelte": "^3.37.0",
+    "svelte-check": "^2.1.0",
+    "svelte-preprocess": "^4.7.2",
+    "tslib": "^2.2.0"
+  },
+  "author": {
+    "name": "TomokiMiyauci",
+    "email": "contact@miyauchi.dev",
+    "url": "https://miyauchi.dev/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TomokiMiyauci/utterances-component.git",
+    "directory": "packages/svelte"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "utterances",
+    "utterance",
+    "comment",
+    "comments",
+    "comment-system",
+    "svelte",
+    "github",
+    "component",
+    "issue"
+  ],
+  "homepage": "https://github.com/TomokiMiyauci/utterances-component#readme",
+  "bugs": "https://github.com/TomokiMiyauci/utterances-component/issues",
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/tomoki_miyauci"
+  }
+}

@@ -1,0 +1,124 @@
+name: release
+
+on:
+  push:
+    branches:
+      - beta
+      - main
+    paths-ignore:
+      - examples/**
+      - docs/**
+
+jobs:
+  setup:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [16]
+
+    steps:
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cache node_modules
+        id: node_modules_cache_id
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+
+      - name: Install
+        if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
+        run: yarn --check-files --frozen-lockfile --non-interactive
+
+  build:
+    needs: [setup]
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [16]
+
+    steps:
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Restore node_modules
+        id: node_modules_cache_id
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+
+      - name: Build
+        run: yarn build
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: react-dist
+          path: packages/react/dist
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: vue-dist
+          path: packages/vue/dist
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: svelte-dist
+          path: packages/svelte/dist
+
+  release:
+    needs: [build]
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [16]
+    steps:
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Restore node_modules
+        id: node_modules_cache_id
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: react-dist
+          path: packages/react/dist
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: vue-dist
+          path: packages/vue/dist
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: svelte-dist
+          path: packages/svelte/dist
+
+      - name: Release
+        run: yarn release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PUBLIC }}

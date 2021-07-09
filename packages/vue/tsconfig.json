@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "declaration": true,
+    "declarationDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["../../*"]
+    }
+  },
+
+  "include": [
+    "lib/**/*.ts",
+    "lib/**/*.d.ts",
+    "lib/**/*.tsx",
+    "lib/**/*.vue",
+    "_debug/**/*.vue"
+  ]
+}

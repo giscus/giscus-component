@@ -201,6 +201,13 @@
     "@babel/helper-validator-identifier" "^7.14.5"
     to-fast-properties "^2.0.0"
 
+"@miyauci/is-valid@^1.0.0-beta.15":
+  version "1.0.0-beta.15"
+  resolved "https://registry.yarnpkg.com/@miyauci/is-valid/-/is-valid-1.0.0-beta.15.tgz#7af55c0f0ab5fa41ff784d0eac788782ba143ccd"
+  integrity sha512-ZF8du4N3uD02Q5CoHOz53d6FW2U/sl8GUvIUUP0GU94RFCR3ZvQ2VWajB8+gGsa1TGXQBCbLdhO835ajpHeDFA==
+  dependencies:
+    fonction "^1.8.0-beta.6"
+
 "@preact/preset-vite@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@preact/preset-vite/-/preset-vite-2.1.0.tgz#66934767ca0b49c1ea1cc00e82d3d43f2caba7d1"
@@ -245,10 +252,43 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@sveltejs/vite-plugin-svelte@^1.0.0-next.11":
+  version "1.0.0-next.11"
+  resolved "https://registry.yarnpkg.com/@sveltejs/vite-plugin-svelte/-/vite-plugin-svelte-1.0.0-next.11.tgz#1a415a1c4b1642a452e073438c63a73cfd203b51"
+  integrity sha512-EYR1I145k5rflVqhPwk3442m3bkYimTKSHM9uO5KdomXzt+GS9ZSBJQE3/wy1Di9V8OnGa3oKpckI3OZsHkTIA==
+  dependencies:
+    "@rollup/pluginutils" "^4.1.0"
+    chalk "^4.1.1"
+    debug "^4.3.2"
+    require-relative "^0.8.7"
+    svelte-hmr "^0.14.4"
+
+"@tsconfig/svelte@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@tsconfig/svelte/-/svelte-2.0.1.tgz#0e8d7caa693e9b2afce5e622c0475bb0fd89c12c"
+  integrity sha512-aqkICXbM1oX5FfgZd2qSSAGdyo/NRxjWCamxoyi3T8iVQnzGge19HhDYzZ6NrVOW7bhcWNSq9XexWFtMzbB24A==
+
 "@types/estree@^0.0.48":
   version "0.0.48"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.48.tgz#18dc8091b285df90db2f25aa7d906cfc394b7f74"
   integrity sha512-LfZwXoGUDo0C3me81HXgkBg5CTQYb6xzEl+fNmbO4JdRiSKQ8A0GD1OBBvKAIsbCUgoyAty7m99GqqMQe784ew==
+
+"@types/node@*":
+  version "16.0.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.0.3.tgz#f99794f182a9ffeaf6a0b589e3d3dc652a623ad5"
+  integrity sha512-QhhSbE1wJMbh+lDsb9G6UFmyojhEgoO7dFVDBkli80sp3sPFojGh6TJXsht9Qbe2VWi91pbj08+1Kvue61RwsQ==
+
+"@types/pug@^2.0.4":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@types/pug/-/pug-2.0.5.tgz#69bc700934dd473c7ab97270bd2dbacefe562231"
+  integrity sha512-LOnASQoeNZMkzexRuyqcBBDZ6rS+rQxUMkmj5A0PkhhiSZivLIuz6Hxyr1mkGoEZEkk66faROmpMi4fFkrKsBA==
+
+"@types/sass@^1.16.0":
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/@types/sass/-/sass-1.16.1.tgz#cf465bd1fea486d0331f760db023de14daf4980d"
+  integrity sha512-iZUcRrGuz/Tbg3loODpW7vrQJkUtpY2fFSf4ELqqkApcS2TkZ1msk7ie8iZPB86lDOP8QOTTmuvWjc5S0R9OjQ==
+  dependencies:
+    "@types/node" "*"
 
 "@vitejs/plugin-vue@^1.2.4":
   version "1.2.4"
@@ -341,6 +381,13 @@ ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
+ansi-styles@^4.1.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-4.3.0.tgz#edd803628ae71c04c85ae7a0906edad34b648937"
+  integrity sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==
+  dependencies:
+    color-convert "^2.0.1"
+
 babel-plugin-transform-hook-names@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-hook-names/-/babel-plugin-transform-hook-names-1.0.2.tgz#0d75c2d78e8bbcdb258241131562b9cf07f010f3"
@@ -381,6 +428,14 @@ chalk@^2.0.0:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
+chalk@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.1.tgz#c80b3fab28bf6371e6863325eee67e618b77e6ad"
+  integrity sha512-diHzdDKxcU+bAsUboHLPEDQiw0qEe0qd7SYUn3HgcFlWgbDcfLGswOHYeGrHKzG9z6UYf01d9VFMfZxPM1xZSg==
+  dependencies:
+    ansi-styles "^4.1.0"
+    supports-color "^7.1.0"
+
 color-convert@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
@@ -388,10 +443,22 @@ color-convert@^1.9.0:
   dependencies:
     color-name "1.1.3"
 
+color-convert@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-2.0.1.tgz#72d3a68d598c9bdb3af2ad1e84f21d896abd4de3"
+  integrity sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==
+  dependencies:
+    color-name "~1.1.4"
+
 color-name@1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
   integrity sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
+
+color-name@~1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
+  integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
 colorette@^1.2.2:
   version "1.2.2"
@@ -422,12 +489,22 @@ csstype@^2.6.8:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.17.tgz#4cf30eb87e1d1a005d8b6510f95292413f6a1c0e"
   integrity sha512-u1wmTI1jJGzCJzWndZo8mk4wnPTZd1eOIYTYvuEyOQGfmDl3TrabCCfKnOC86FZwW/9djqTl933UF/cS425i9A==
 
-debug@^4.1.0, debug@^4.3.1:
+curry-rice@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/curry-rice/-/curry-rice-1.0.0.tgz#ff5daf251141a54931988458ced7c39931fa5b96"
+  integrity sha512-rpXOEtPurOBZGieMQf/wG7YW+zi2N7EWrkaVBFLZYCUyG2LiLLuNup9yIdasuiCmo+O/LTwPDiijotmSlRLYXA==
+
+debug@^4.1.0, debug@^4.3.1, debug@^4.3.2:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
   integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
   dependencies:
     ms "2.1.2"
+
+detect-indent@^6.0.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-6.1.0.tgz#592485ebbbf6b3b1ab2be175c8393d04ca0d57e6"
+  integrity sha512-reYkTUJAZb9gUuZ2RvVCNhVHdg62RHnJ7WJl8ftMi4diZ6NWlciOzQN88pUhSELEwflJht4oQDv0F0BMlwaYtA==
 
 electron-to-chromium@^1.3.723:
   version "1.3.770"
@@ -458,6 +535,13 @@ estree-walker@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-2.0.2.tgz#52f010178c2a4c117a7757cfe942adb7d2da4cac"
   integrity sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==
+
+fonction@^1.8.0-beta.6:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/fonction/-/fonction-1.9.0.tgz#3866621a5d6381c44e559db4a04d043253eecb96"
+  integrity sha512-kFt8/QbJdrVukhppuOwuSmNsAxfkl2LH9OygARP7pUfb7aJzJUoF7triyww6YjY40F/m9x+qoJX9zhEk2c6gjA==
+  dependencies:
+    curry-rice "^1.0.0"
 
 fsevents@~2.3.2:
   version "2.3.2"
@@ -490,6 +574,11 @@ has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
   integrity sha1-tdRU3CGZriJWmfNGfloH87lVuv0=
+
+has-flag@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-4.0.0.tgz#944771fd9c81c81265c4d6941860da06bb59479b"
+  integrity sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
 
 has@^1.0.3:
   version "1.0.3"
@@ -583,6 +672,11 @@ merge-source-map@^1.1.0:
   integrity sha512-Qkcp7P2ygktpMPh2mCQZaf3jhN6D3Z/qVZHSdWvQ+2Ef5HgRAPBO57A77+ENm0CPx2+1Ce/MYKi3ymqdfuqibw==
   dependencies:
     source-map "^0.6.1"
+
+min-indent@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/min-indent/-/min-indent-1.0.1.tgz#a63f681673b30571fbe8bc25686ae746eefa9869"
+  integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
 minimist@^1.2.0, minimist@^1.2.5:
   version "1.2.5"
@@ -683,6 +777,11 @@ preact@^10.5.14:
   resolved "https://registry.yarnpkg.com/preact/-/preact-10.5.14.tgz#0b14a2eefba3c10a57116b90d1a65f5f00cd2701"
   integrity sha512-KojoltCrshZ099ksUZ2OQKfbH66uquFoxHSbnwKbTJHeQNvx42EmC7wQVWNuDt6vC5s3nudRHFtKbpY4ijKlaQ==
 
+require-relative@^0.8.7:
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/require-relative/-/require-relative-0.8.7.tgz#7999539fc9e047a37928fa196f8e1563dabd36de"
+  integrity sha1-eZlTn8ngR6N5KPoZb44VY9q9Nt4=
+
 resolve@^1.20.0:
   version "1.20.0"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.20.0.tgz#629a013fb3f70755d6f0b7935cc1c2c5378b1975"
@@ -733,12 +832,46 @@ string-hash@^1.1.1:
   resolved "https://registry.yarnpkg.com/string-hash/-/string-hash-1.1.3.tgz#e8aafc0ac1855b4666929ed7dd1275df5d6c811b"
   integrity sha1-6Kr8CsGFW0Zmkp7X3RJ1311sgRs=
 
+strip-indent@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/strip-indent/-/strip-indent-3.0.0.tgz#c32e1cee940b6b3432c771bc2c54bcce73cd3001"
+  integrity sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==
+  dependencies:
+    min-indent "^1.0.0"
+
 supports-color@^5.3.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.5.0.tgz#e2e69a44ac8772f78a1ec0b35b689df6530efc8f"
   integrity sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
   dependencies:
     has-flag "^3.0.0"
+
+supports-color@^7.1.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-7.2.0.tgz#1b7dcdcb32b8138801b3e478ba6a51caa89648da"
+  integrity sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==
+  dependencies:
+    has-flag "^4.0.0"
+
+svelte-hmr@^0.14.4:
+  version "0.14.4"
+  resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.14.4.tgz#b7ef2bfeef23916e0e912828c50645ca572ac355"
+  integrity sha512-kItFF7vqzStckSigoFmMnxJpTOdB9TWnQAW6Js+yAB4277tLbJIIE5KBlGHNmJNpA7MguqidsPB27Uw5UzQPCA==
+
+svelte-preprocess@^4.7.3:
+  version "4.7.3"
+  resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-4.7.3.tgz#454fa059c2400b15e7a3caeca18993cff9df0e96"
+  integrity sha512-Zx1/xLeGOIBlZMGPRCaXtlMe4ZA0faato5Dc3CosEqwu75MIEPuOstdkH6cy+RYTUYynoxzNaDxkPX4DbrPwRA==
+  dependencies:
+    "@types/pug" "^2.0.4"
+    "@types/sass" "^1.16.0"
+    detect-indent "^6.0.0"
+    strip-indent "^3.0.0"
+
+svelte@^3.38.3:
+  version "3.38.3"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.38.3.tgz#e15a1da98ee4b10162a6c8cb4c80aa86b2b589ed"
+  integrity sha512-N7bBZJH0iF24wsalFZF+fVYMUOigaAUQMIcEKHO3jstK/iL8VmP9xE+P0/a76+FkNcWt+TDv2Gx1taUoUscrvw==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
@@ -754,6 +887,18 @@ util-deprecate@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
+
+utterances-react-component@^1.0.0-beta.1:
+  version "1.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/utterances-react-component/-/utterances-react-component-1.0.0-beta.1.tgz#5a7824b39a280f42ae31ec4c678e0955bec041d5"
+  integrity sha512-5eh7yImQBej81aqbYY6FqRUL3HFEoHNY3l3U0H5UB99kuPxUVzP1ztrYd4NAFvp+ujIoC1mFlLaB+ruU5Q0osQ==
+  dependencies:
+    "@miyauci/is-valid" "^1.0.0-beta.15"
+
+utterances-svelte-component@^1.0.0-beta.2:
+  version "1.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/utterances-svelte-component/-/utterances-svelte-component-1.0.0-beta.2.tgz#7e7422b0cc0e3d9216fb6fb6889686009233ce85"
+  integrity sha512-i4ueaWoWly5BnR4EdqV0pMdN8Yxevn8w1Dni0ZgmT1FfmwgjxWw+UtUlNVbfpemSWR9cO5wBKqSlyG6WuxSi9w==
 
 utterances-vue-component@^1.0.0-beta.1:
   version "1.0.0-beta.1"
