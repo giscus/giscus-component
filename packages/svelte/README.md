@@ -28,6 +28,8 @@ Type safety svelte component for utterances
 
 ---
 
+:construction: No type definition provided yet
+
 Svelte component for [utterances](https://utteranc.es/) 🔮
 
 Utterances is a lightweight comments widget built on GitHub issues, for blog comments, wiki pages and more.
@@ -76,6 +78,8 @@ import { Utterances } from 'https://cdn.skypack.dev/utterances-svelte-component'
 ## :memo: API
 
 ### Props
+
+:construction: No type definition provided yet
 
 It has a strict type definition.
 No default value is set to respect the original behavior.
