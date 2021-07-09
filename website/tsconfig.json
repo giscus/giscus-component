@@ -1,4 +1,6 @@
 {
+  "extends": "@tsconfig/svelte/tsconfig.json",
+
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
@@ -13,5 +15,5 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true
   },
-  "include": ["./src"]
+  "include": ["./src", "svelte/**/*.svelte"]
 }
