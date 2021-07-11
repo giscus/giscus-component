@@ -8,7 +8,7 @@ const external = Object.keys(peerDependencies)
 export default defineConfig({
   resolve: {
     alias: {
-      '@shared': resolve(__dirname, '..', '..')
+      '@shared': resolve(__dirname, '..', '@shared')
     }
   },
   plugins: [reactRefresh()],

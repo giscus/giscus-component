@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { createScriptElement, putChildElement } from '../../../util'
-  import  type { Repo, Theme,  Issue } from '../../../types'
+  import { createScriptElement, putChildElement } from '../../@shared/util'
+  import  type { Repo, Theme,  Issue } from '../../@shared/types'
 
   type $$Props = Issue
 

@@ -14,7 +14,7 @@
     "declarationDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@shared/*": ["../../*"]
+      "@shared/*": ["../@shared/*"]
     }
   },
 
