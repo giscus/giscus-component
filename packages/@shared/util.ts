@@ -42,9 +42,7 @@ const putChildElement = <T extends HTMLElement, U extends HTMLElement>(
   parent: T,
   child: U
 ): T => {
-  parent.childNodes.forEach((node) => {
-    node.remove()
-  })
+  parent.childNodes.forEach((node) => node.remove())
 
   parent.appendChild(child)
   return parent
