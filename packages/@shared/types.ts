@@ -1,32 +1,22 @@
-type UtterancesProps = Utterances
+type GiscusProps = Giscus
 
-type Utterances = {
+type Giscus = {
   repo: Repo
-  label?: string
   theme: Theme
-} & Issue
+  term: string
+}
 
 type Repo = `${string}/${string}`
 
-type Issue =
-  | {
-      issueTerm: Term | string[]
-      issueNumber?: never
-    }
-  | {
-      issueTerm?: never
-      issueNumber: number
-    }
+type Term = 'url' | 'title' | 'og:title' | 'specific' | 'number' | 'pathname'
 
-type Term = 'pathname' | 'url' | 'title' | 'og:title'
 type Theme =
-  | 'github-light'
-  | 'github-dark'
-  | 'preferred-color-scheme'
-  | 'github-dark-orange'
-  | 'icy-dark'
-  | 'dark-blue'
-  | 'photon-dark'
-  | 'boxy-light'
+  | 'light'
+  | 'dark'
+  | 'dark_dimmed'
+  | 'dark_high_contrast'
+  | 'preferred_color_scheme'
+  | 'transparent_dark'
+  | `https://${string}`
 
-export type { UtterancesProps, Repo, Term, Theme, Utterances, Issue }
+export type { GiscusProps, Repo, Term, Theme, Giscus }
