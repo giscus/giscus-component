@@ -13,7 +13,7 @@ export function App() {
       </div>
 
       <Utterances
-        repo="TomokiMiyauci/utterances-component"
+        repo="giscus/giscus-component"
         theme="github-light"
         issueTerm="pathname"
       />

@@ -1,10 +1,7 @@
-<p align="center">
-  <img alt="hero image" src="https://res.cloudinary.com/dz3vsv9pg/image/upload/v1625748894/projects/utterances-component/hero.png"  />
-  <h1 align="center"> utterances-component</h1>
-</p>
+<h1 align="center">giscus-component</h1>
 
 <p align="center">
-  React, Vue and Svelte for utterances
+  React, Vue and Svelte for giscus
 </p>
 
 <div align="center">
@@ -13,23 +10,22 @@
 ![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat)
 ![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B26231%2Fgithub.com%2FTomokiMiyauci%2Futterances-component.svg?type=small)](https://app.fossa.com/projects/custom%2B26231%2Fgithub.com%2FTomokiMiyauci%2Futterances-component?ref=badge_small)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgiscus%2Fgiscus-component.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fgiscus%2Fgiscus-component?ref=badge_small)
 
 </div>
 
-Utterances is a lightweight comments widget built on GitHub issues, for blog comments, wiki pages and more.
-
-This project wrap it for modern frontend library such as React, Vue and Svelte.
+A wrapper component for giscus, a comments system powered by GitHub Discussions.
+Currently available for React, Vue, and Svelte.
 
 ---
 
 ## Documentation
 
-[Official document](https://utteranc.es/)
+See [the documentation for giscus](https://giscus.app).
 
 ## Packages
 
-This is monorepo. See below for implementation.
+This is a monorepo. See below for implementation.
 
 |                                                                                                                                                                 | Name                                               |                                                                  Version                                                                  |                                                                  Downloads                                                                   |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -39,13 +35,13 @@ This is monorepo. See below for implementation.
 
 ## Related Article
 
-[The tech blog commenting system with utterances
-](https://miyauchi.dev/posts/comment-system/)
+[Introducing giscus](https://laymonage.com/posts/giscus/)
 
 ## License
 
-Copyright © 2021-present [TomokiMiyauci](https://github.com/TomokiMiyauci).
+Copyright © 2021-present [TomokiMiyauci](https://github.com/TomokiMiyauci),
+forked by [laymonage](https://github.com/laymonage) for giscus.
 
-Released under the [MIT](./LICENSE) license
+Released under the [MIT](./LICENSE) license.
 
-[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B26231%2Fgithub.com%2FTomokiMiyauci%2Futterances-component.svg?type=large)](https://app.fossa.com/projects/custom%2B26231%2Fgithub.com%2FTomokiMiyauci%2Futterances-component?ref=badge_large)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fgiscus%2Fgiscus-component.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fgiscus%2Fgiscus-component?ref=badge_large)

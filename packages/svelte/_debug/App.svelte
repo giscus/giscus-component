@@ -3,6 +3,5 @@
 </script>
 
 <main>
-  <Utterances repo="TomokiMiyauci/utterances-component" issueTerm="pathname"  theme="boxy-light" />
+  <Utterances repo="giscus/giscus-component" issueTerm="pathname"  theme="boxy-light" />
 </main>
-

@@ -48,7 +48,7 @@ Utterances is a lightweight comments widget built on GitHub issues, for blog com
 </script>
 
 <Utterances
-  repo="TomokiMiyauci/utterances-component"
+  repo="giscus/giscus-component"
   theme="github-dark"
   issueTerm="pathname"
 />

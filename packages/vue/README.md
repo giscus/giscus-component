@@ -48,7 +48,7 @@ This is a type-safe props.
 ```html
 <template>
   <Utterances
-    repo="TomokiMiyauci/utterances-component"
+    repo="giscus/giscus-component"
     theme="github-dark"
     issueTerm="pathname"
   />

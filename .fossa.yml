@@ -5,7 +5,7 @@ version: 2
 cli:
   server: https://app.fossa.com
   fetcher: custom
-  project: https://github.com/TomokiMiyauci/utterances-component.git
+  project: https://github.com/giscus/giscus-component.git
 analyze:
   modules:
     - name: .

@@ -10,7 +10,7 @@
       <a href="/svelte">Svelte</a>
     </div>
     <Utterances
-      repo="TomokiMiyauci/utterances-component"
+      repo="giscus/giscus-component"
       theme="github-light"
       issue-term="pathname"
     />

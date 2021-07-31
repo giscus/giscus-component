@@ -1,6 +1,6 @@
 {
-  "name": "utterances-vue-component",
-  "description": "Type safety vue component for utterances",
+  "name": "giscus-vue",
+  "description": "Type-safe Vue component for giscus",
   "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.cjs.js",
@@ -35,33 +35,32 @@
     "vue-tsc": "^0.2.0"
   },
   "author": {
-    "name": "TomokiMiyauci",
-    "email": "contact@miyauchi.dev",
-    "url": "https://miyauchi.dev/"
+    "name": "laymonage",
+    "email": "me@laymonage.com",
+    "url": "https://laymonage.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TomokiMiyauci/utterances-component.git",
+    "url": "https://github.com/giscus/giscus-component.git",
     "directory": "packages/vue"
   },
   "files": [
     "dist"
   ],
   "keywords": [
-    "utterances",
-    "utterance",
+    "giscus",
     "comment",
     "comments",
     "comment-system",
     "vue",
     "github",
     "component",
-    "issue"
+    "discussions"
   ],
-  "homepage": "https://github.com/TomokiMiyauci/utterances-component#readme",
-  "bugs": "https://github.com/TomokiMiyauci/utterances-component/issues",
+  "homepage": "https://github.com/giscus/giscus-component#readme",
+  "bugs": "https://github.com/giscus/giscus-component/issues",
   "funding": {
     "type": "patreon",
-    "url": "https://www.patreon.com/tomoki_miyauci"
+    "url": "https://www.patreon.com/sage"
   }
 }

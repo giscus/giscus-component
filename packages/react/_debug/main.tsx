@@ -5,7 +5,7 @@ import Utterances from '../lib/Utterances'
 ReactDOM.render(
   <React.StrictMode>
     <Utterances
-      repo="TomokiMiyauci/utterances-component"
+      repo="giscus/giscus-component"
       theme="github-dark"
       issueTerm="pathname"
     />

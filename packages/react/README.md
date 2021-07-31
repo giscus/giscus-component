@@ -43,7 +43,7 @@ Utterances is a lightweight comments widget built on GitHub issues, for blog com
 ```tsx
 import { Utterances } from 'utterances-react-component'
 ;<Utterances
-  repo="TomokiMiyauci/utterances-component"
+  repo="giscus/giscus-component"
   theme="github-dark"
   issueTerm="pathname"
 />
@@ -120,7 +120,7 @@ If you chose "Issue title contains specific term", specify the specific term as 
 ## :handshake: Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check
-[issues](https://github.com/TomokiMiyauci/utterances-component/issues).
+[issues](https://github.com/giscus/giscus-component/issues).
 
 ## :seedling: Show your support
 

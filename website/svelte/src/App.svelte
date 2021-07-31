@@ -14,7 +14,7 @@
   <a href="/vue">Vue</a>
   </div>
 
-  <Utterances repo="TomokiMiyauci/utterances-component" theme="github-light" issueTerm="pathname" label="comment" />
+  <Utterances repo="giscus/giscus-component" theme="github-light" issueTerm="pathname" label="comment" />
 </main>
 
 <style>
