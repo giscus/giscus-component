@@ -1,3 +1,3 @@
-import Utterances from './Utterances.svelte'
+import Giscus from './Giscus.svelte'
 
-export { Utterances }
+export { Giscus }
