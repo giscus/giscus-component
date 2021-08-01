@@ -1,3 +1,8 @@
+# [v@giscus/svelte-v1.0.1](https://github.com/giscus/giscus-component/compare/@giscus/svelte-v1.0.0...@giscus/svelte-v1.0.1) (2021-08-01)
+
+## 🚑 Critical Hotfixes
+- [`10cf56e`](https://github.com/giscus/giscus-component/commit/10cf56e)  (svelte) Use onMount for determining session
+
 # v@giscus/svelte-v1.0.0 (2021-08-01)
 
 ## ✨ New Features
