@@ -36,7 +36,7 @@
     session
   })
 
-  $: {
+  onMount(() => {
     const origin = location.href
     const url = new URL(origin)
     const savedSession = localStorage.getItem(GISCUS_SESSION_KEY)
@@ -55,7 +55,7 @@
         console.warn(`${formatError(e?.message)} Session has been cleared.`)
       }
     }
-  }
+  })
 
   onMount(addDefaultStyles)
 
