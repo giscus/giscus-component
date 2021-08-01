@@ -201,12 +201,12 @@
     "@babel/helper-validator-identifier" "^7.14.5"
     to-fast-properties "^2.0.0"
 
-"@miyauci/is-valid@^1.0.0-beta.15":
-  version "1.0.0-beta.15"
-  resolved "https://registry.yarnpkg.com/@miyauci/is-valid/-/is-valid-1.0.0-beta.15.tgz#7af55c0f0ab5fa41ff784d0eac788782ba143ccd"
-  integrity sha512-ZF8du4N3uD02Q5CoHOz53d6FW2U/sl8GUvIUUP0GU94RFCR3ZvQ2VWajB8+gGsa1TGXQBCbLdhO835ajpHeDFA==
+"@giscus/react@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@giscus/react/-/react-1.0.0.tgz#1c77347372af2d54bdd711dd5445a338f45bfcaa"
+  integrity sha512-KPTGG106meUCRH18IXCZbu4Fdwz3NDnNoesCItIkcYv6wu1ZiWbfeSkuiC8z6sEw+I+JSlXqseRXtjygBy7GJA==
   dependencies:
-    fonction "^1.8.0-beta.6"
+    iframe-resizer-react "^1.1.0"
 
 "@preact/preset-vite@^2.0.0":
   version "2.1.0"
@@ -337,11 +337,6 @@ csstype@^3.0.2:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.8.tgz#d2266a792729fb227cd216fb572f43728e1ad340"
   integrity sha512-jXKhWqXPmlUeoQnF/EhTtTl4C9SnrxSH/jZUih3jmO6lBKr99rP3/+FmrMj4EFpOXzMtXHAZkd3x0E6h6Fgflw==
 
-curry-rice@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/curry-rice/-/curry-rice-1.0.0.tgz#ff5daf251141a54931988458ced7c39931fa5b96"
-  integrity sha512-rpXOEtPurOBZGieMQf/wG7YW+zi2N7EWrkaVBFLZYCUyG2LiLLuNup9yIdasuiCmo+O/LTwPDiijotmSlRLYXA==
-
 debug@^4.1.0, debug@^4.3.1:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
@@ -373,13 +368,6 @@ estree-walker@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-2.0.2.tgz#52f010178c2a4c117a7757cfe942adb7d2da4cac"
   integrity sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==
-
-fonction@^1.8.0-beta.6:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/fonction/-/fonction-1.9.0.tgz#3866621a5d6381c44e559db4a04d043253eecb96"
-  integrity sha512-kFt8/QbJdrVukhppuOwuSmNsAxfkl2LH9OygARP7pUfb7aJzJUoF7triyww6YjY40F/m9x+qoJX9zhEk2c6gjA==
-  dependencies:
-    curry-rice "^1.0.0"
 
 fsevents@~2.3.2:
   version "2.3.2"
@@ -413,6 +401,19 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+iframe-resizer-react@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/iframe-resizer-react/-/iframe-resizer-react-1.1.0.tgz#5009e019b7a5c7f1c009bff5bcdf0dbf33557465"
+  integrity sha512-FrytSq91AIJaDgE+6uK/Vdd6IR8CrwLoZ6eGmL2qQMPTzF0xlSV2jaSzRRUh5V2fttD7vzl21jvBl97bV40eBw==
+  dependencies:
+    iframe-resizer "^4.3.0"
+    warning "^4.0.3"
+
+iframe-resizer@^4.3.0:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/iframe-resizer/-/iframe-resizer-4.3.2.tgz#42dd88345d18b9e377b6044dddb98c664ab0ce6b"
+  integrity sha512-gOWo2hmdPjMQsQ+zTKbses08mDfDEMh4NneGQNP4qwePYujY1lguqP6gnbeJkf154gojWlBhIltlgnMfYjGHWA==
+
 is-core-module@^2.2.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.4.0.tgz#8e9fc8e15027b011418026e98f0e6f4d86305cc1"
@@ -420,7 +421,7 @@ is-core-module@^2.2.0:
   dependencies:
     has "^1.0.3"
 
-js-tokens@^4.0.0:
+"js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
@@ -441,6 +442,13 @@ kolorist@^1.2.10:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/kolorist/-/kolorist-1.5.0.tgz#a06f7dd11d1b5fdb743d79c8acd4e1ecbcbd89b3"
   integrity sha512-pPobydIHK884YBtkS/tWSZXpSAEpcMbilyun3KL37ot935qL2HNKm/tI45i/Rd+MxdIWEhm7/LmUQzWZYK+Qhg==
+
+loose-envify@^1.0.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
+  integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
+  dependencies:
+    js-tokens "^3.0.0 || ^4.0.0"
 
 minimist@^1.2.5:
   version "1.2.5"
@@ -538,13 +546,6 @@ typescript@^4.3.2:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.3.5.tgz#4d1c37cc16e893973c45a06886b7113234f119f4"
   integrity sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==
 
-utterances-react-component@^1.0.0-beta.1:
-  version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/utterances-react-component/-/utterances-react-component-1.0.0-beta.1.tgz#5a7824b39a280f42ae31ec4c678e0955bec041d5"
-  integrity sha512-5eh7yImQBej81aqbYY6FqRUL3HFEoHNY3l3U0H5UB99kuPxUVzP1ztrYd4NAFvp+ujIoC1mFlLaB+ruU5Q0osQ==
-  dependencies:
-    "@miyauci/is-valid" "^1.0.0-beta.15"
-
 vite@^2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/vite/-/vite-2.4.1.tgz#2e48b8dbfc69e4edbf7f4d1c0798d621585cb8da"
@@ -556,3 +557,10 @@ vite@^2.4.0:
     rollup "^2.38.5"
   optionalDependencies:
     fsevents "~2.3.2"
+
+warning@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/warning/-/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
+  integrity sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==
+  dependencies:
+    loose-envify "^1.0.0"

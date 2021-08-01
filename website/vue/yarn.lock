@@ -20,6 +20,11 @@
     "@babel/helper-validator-identifier" "^7.14.5"
     to-fast-properties "^2.0.0"
 
+"@giscus/vue@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@giscus/vue/-/vue-1.0.0.tgz#c3f8bdf5c7e6cca598285b9e577722d8e20f82f1"
+  integrity sha512-hwJx4tU1kdT8KW4OQsr7srps7QldU70ne5bEz+hKzCQE8TQzXyiYiGofh7VqmF5Wx4wuVkTkgy0fE89k0dq6jQ==
+
 "@types/estree@^0.0.48":
   version "0.0.48"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.48.tgz#18dc8091b285df90db2f25aa7d906cfc394b7f74"
@@ -581,11 +586,6 @@ util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
-
-utterances-vue-component@^1.0.0-beta.1:
-  version "1.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/utterances-vue-component/-/utterances-vue-component-1.0.0-beta.1.tgz#ebed5aa56bf7389c17f34cf069b117eab7fe06c6"
-  integrity sha512-blbu3of4xom1W3HYBemggaziFYGXFn2+QsxFdmeAKx2vCowPhx4lzzFg74ZATgL4m92OXDMCfNWCVSVrhdaqnw==
 
 vite@^2.4.0:
   version "2.4.1"

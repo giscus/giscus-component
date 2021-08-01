@@ -1,10 +1,11 @@
-import { Utterances } from 'utterances-react-component'
+import { Giscus } from '@giscus/react'
+
 export function App() {
   return (
     <main>
-      <h1>utterances-react-component</h1>
+      <h1>@giscus/react</h1>
 
-      <p>This page works preact</p>
+      <p>This page is running Preact</p>
 
       <div className="space-x-2">
         <a href="/">Home</a>
@@ -12,10 +13,16 @@ export function App() {
         <a href="/svelte">Svelte</a>
       </div>
 
-      <Utterances
-        repo="giscus/giscus-component"
-        theme="github-light"
-        issueTerm="pathname"
+      <Giscus
+        repo="giscus/react-giscus"
+        repoId="MDEwOlJlcG9zaXRvcnkzODMxNjMyOTY="
+        category="Announcements"
+        categoryId="DIC_kwDOFtaboM4B-N2c"
+        mapping="specific"
+        term="Welcome to react-giscus Discussions!"
+        reactionsEnabled="1"
+        emitMetadata="0"
+        theme="light"
       />
     </main>
   )

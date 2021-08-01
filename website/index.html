@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | giscus-component</title>
+    <meta name="description" content="Component library for giscus" />
+    <style>
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" href="/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | utterances-component</title>
-  <meta name="description" content="Component library for utterances" />
-  <style>
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-  </style>
-</head>
+  <body>
+    <main>
+      <h1>giscus-component</h1>
 
-<body>
-  <main>
-    <h1>utterances-component</h1>
+      <p>This page is running native giscus script</p>
 
-    <p>This page works native utterances script</p>
+      <a href="./react">React</a>
+      <a href="./vue">Vue</a>
+      <a href="./svelte">Svelte</a>
 
-    <a href="./react">React</a>
-    <a href="./vue">Vue</a>
-    <a href="./svelte">Svelte</a>
-
-    <script src="https://utteranc.es/client.js" repo="giscus/giscus-component" issue-term="pathname"
-      theme="github-light" crossorigin="anonymous" async></script>
-  </main>
-</body>
-
+      <script
+        src="https://giscus.app/client.js"
+        data-repo="giscus/react-giscus"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzODMxNjMyOTY="
+        data-category="Announcements"
+        data-category-id="DIC_kwDOFtaboM4B-N2c"
+        data-mapping="specific"
+        data-term="Welcome to react-giscus Discussions!"
+        data-reactions-enabled="1"
+        data-theme="light"
+        crossorigin="anonymous"
+        async
+      ></script>
+    </main>
+  </body>
 </html>
