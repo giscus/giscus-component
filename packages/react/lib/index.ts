@@ -1,4 +1,4 @@
-import Utterances from './Utterances'
+import Giscus from './Giscus'
 
-export { Utterances }
-export type { UtterancesProps, Theme, Term } from '@shared/types'
+export { Giscus }
+export type { GiscusProps, Session, Repo, Mapping, Theme } from '@shared/types'

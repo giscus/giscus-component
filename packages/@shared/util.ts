@@ -1,51 +1,128 @@
-import { Utterances } from './types'
+import { Giscus, Session } from './types'
 
-const SOURCE = 'https://utteranc.es/client.js'
+export const GISCUS_SESSION_KEY = 'giscus-session'
+export const GISCUS_ORIGIN = 'https://giscus.app'
+const ERROR_SUGGESTION = `Please consider reporting this error at https://github.com/laymonage/giscus/issues/new.`
 
-/**
- * Return HTMLScriptElement for async loading utterance script
- * @param param - `Utterances` setting properties
- * @returns HTMLScriptElement what load utterances script
- */
-const createScriptElement = ({
+export function formatError(message: string) {
+  return `[giscus] An error occurred. Error message: "${message}".`
+}
+
+export function getOgMetaContent(property: string) {
+  const element = document.querySelector(
+    `meta[property='og:${property}'],meta[name='${property}']`
+  ) as HTMLMetaElement
+
+  return element ? element.content : ''
+}
+
+export function getIframeSrc({
   repo,
-  label,
-  theme,
-  issueTerm,
-  issueNumber
-}: Utterances): HTMLScriptElement => {
-  const scriptEl = document.createElement('script')
+  repoId,
+  category = '',
+  categoryId = '',
+  mapping,
+  term = '',
+  theme = 'light',
+  reactionsEnabled = '1',
+  emitMetadata = '0',
+  session
+}: Giscus & Session) {
+  const origin = location.href
+  const description = getOgMetaContent('description')
 
-  scriptEl.src = SOURCE
-  scriptEl.async = true
-  scriptEl.setAttribute('repo', repo)
-  if (issueTerm) {
-    const _issueTerm = Array.isArray(issueTerm)
-      ? issueTerm.join(' ')
-      : issueTerm
-
-    scriptEl.setAttribute('issue-term', _issueTerm)
-  } else if (typeof issueNumber === 'number') {
-    scriptEl.setAttribute('issue-number', String(issueNumber))
+  const params: Record<string, string> = {
+    origin,
+    session,
+    theme,
+    reactionsEnabled,
+    emitMetadata,
+    repo,
+    repoId,
+    category,
+    categoryId,
+    description
   }
-  scriptEl.setAttribute('crossorigin', 'anonymous')
-  scriptEl.setAttribute('theme', theme)
 
-  if (label) {
-    scriptEl.setAttribute('label', label)
+  switch (mapping) {
+    case 'url':
+      params.term = location.href
+      break
+    case 'title':
+      params.term = document.title
+      break
+    case 'og:title':
+      params.term = getOgMetaContent('title')
+      break
+    case 'specific':
+      params.term = term
+      break
+    case 'number':
+      params.number = term
+      break
+    case 'pathname':
+    default:
+      params.term =
+        location.pathname.length < 2
+          ? 'index'
+          : location.pathname.substr(1).replace(/\.\w+$/, '')
+      break
   }
 
-  return scriptEl
+  return `${GISCUS_ORIGIN}/widget?${new URLSearchParams(params)}`
 }
 
-const putChildElement = <T extends HTMLElement, U extends HTMLElement>(
-  parent: T,
-  child: U
-): T => {
-  parent.childNodes.forEach((node) => node.remove())
-
-  parent.appendChild(child)
-  return parent
+export function addDefaultStyles() {
+  const style =
+    document.getElementById('giscus-css') || document.createElement('style')
+  style.id = 'giscus-css'
+  style.textContent = `
+    .giscus, .giscus-frame {
+      width: 100%;
+    }
+    .giscus-frame {
+      border: none;
+      color-scheme: auto;
+    }
+  `
+  document.head.prepend(style)
 }
 
-export { createScriptElement, putChildElement }
+export function createErrorMessageListener(resetSession: () => void) {
+  return function (event: MessageEvent) {
+    if (event.origin !== GISCUS_ORIGIN) return
+
+    const { data } = event
+    if (!(typeof data === 'object' && data?.giscus?.error)) return
+
+    const message: string = data.giscus.error
+
+    if (
+      message.includes('Bad credentials') ||
+      message.includes('Invalid state value')
+    ) {
+      // Might be because token is expired or other causes
+      if (localStorage.getItem(GISCUS_SESSION_KEY) !== null) {
+        localStorage.removeItem(GISCUS_SESSION_KEY)
+        resetSession()
+        console.warn(`${formatError(message)} Session has been cleared.`)
+        return
+      }
+
+      console.error(
+        `${formatError(
+          message
+        )} No session is stored initially. ${ERROR_SUGGESTION}`
+      )
+    }
+
+    if (message.includes('Discussion not found')) {
+      console.warn(
+        `[giscus] ${message}. A new discussion will be created if a comment/reaction is submitted.`
+      )
+      return
+    }
+
+    console.error(`${formatError(message)} ${ERROR_SUGGESTION}`)
+  }
+}

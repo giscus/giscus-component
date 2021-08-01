@@ -26,7 +26,8 @@
   },
   "peerDependencies": {
     "react": "^16 || ^17 || ^18",
-    "react-dom": "^16 || ^17 || ^18"
+    "react-dom": "^16 || ^17 || ^18",
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
@@ -63,5 +64,8 @@
   "funding": {
     "type": "patreon",
     "url": "https://www.patreon.com/sage"
+  },
+  "dependencies": {
+    "iframe-resizer-react": "^1.1.0"
   }
 }
