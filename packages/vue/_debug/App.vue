@@ -1,8 +1,14 @@
 <template>
-  <Utterances
-    repo="TomokiMiyauci/me"
-    issue-term="pathname"
-    theme="github-light"
+  <Giscus
+    repo="giscus/giscus-component"
+    repoId="MDEwOlJlcG9zaXRvcnkzOTEzMTMwMjA="
+    category="Announcements"
+    categoryId="DIC_kwDOF1L2fM4B-hVS"
+    mapping="specific"
+    term="Welcome to giscus-components Discussions!"
+    reactionsEnabled="1"
+    emitMetadata="0"
+    theme="light"
   />
 </template>
 

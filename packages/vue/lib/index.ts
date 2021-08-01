@@ -1,8 +1,8 @@
-import Utterances from './Utterances'
+import Giscus from './Giscus'
 import { Plugin } from 'vue'
 
 const plugin: Plugin = {
-  install: (app) => app.component('Utterances', Utterances)
+  install: (app) => app.component('Giscus', Giscus)
 }
 
-export { Utterances, plugin }
+export { Giscus, plugin }
