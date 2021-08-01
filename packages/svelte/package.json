@@ -2,7 +2,7 @@
   "name": "@giscus/svelte",
   "private": false,
   "description": "Type-safe Svelte component for giscus",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs.js",
