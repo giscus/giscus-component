@@ -1,7 +1,7 @@
 {
-  "name": "giscus-react",
+  "name": "@giscus/react",
   "description": "Type-safe React component for giscus",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -61,10 +61,6 @@
   ],
   "homepage": "https://github.com/giscus/giscus-component#readme",
   "bugs": "https://github.com/giscus/giscus-component/issues",
-  "funding": {
-    "type": "patreon",
-    "url": "https://www.patreon.com/sage"
-  },
   "dependencies": {
     "iframe-resizer-react": "^1.1.0"
   }

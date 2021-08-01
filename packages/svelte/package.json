@@ -1,7 +1,7 @@
 {
-  "name": "giscus-svelte",
+  "name": "@giscus/svelte",
   "description": "Type-safe Svelte component for giscus",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs.js",
@@ -57,9 +57,5 @@
     "discussions"
   ],
   "homepage": "https://github.com/giscus/giscus-component#readme",
-  "bugs": "https://github.com/giscus/giscus-component/issues",
-  "funding": {
-    "type": "patreon",
-    "url": "https://www.patreon.com/sage"
-  }
+  "bugs": "https://github.com/giscus/giscus-component/issues"
 }
