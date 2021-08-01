@@ -17,10 +17,11 @@
     "vite": "^2.4.0"
   },
   "dependencies": {
+    "@giscus/react": "^1.0.0",
+    "@giscus/svelte": "^1.0.1",
+    "@giscus/vue": "^1.0.0",
     "preact": "^10.5.14",
-    "utterances-react-component": "^1.0.0-beta.1",
-    "utterances-svelte-component": "^1.0.0-beta.2",
-    "utterances-vue-component": "^1.0.0-beta.1",
+    "prop-types": "^15.7.2",
     "vue": "^3.1.4"
   }
 }

@@ -1,24 +1,30 @@
 <template>
   <main>
-    <h1>utterances-vue-component</h1>
+    <h1>@giscus/vue</h1>
 
-    <p>This page works vue3</p>
+    <p>This page is running Vue</p>
 
-    <div className="space-x-2">
+    <div class="space-x-2">
       <a href="/">Home</a>
       <a href="/react">React</a>
       <a href="/svelte">Svelte</a>
     </div>
-    <Utterances
-      repo="giscus/giscus-component"
-      theme="github-light"
-      issue-term="pathname"
+    <Giscus
+      repo="giscus/react-giscus"
+      repoId="MDEwOlJlcG9zaXRvcnkzODMxNjMyOTY="
+      category="Announcements"
+      categoryId="DIC_kwDOFtaboM4B-N2c"
+      mapping="specific"
+      term="Welcome to react-giscus Discussions!"
+      reactionsEnabled="1"
+      emitMetadata="0"
+      theme="light"
     />
   </main>
 </template>
 
 <script setup lang="ts">
-import { Utterances } from 'utterances-vue-component'
+import { Giscus } from '@giscus/vue'
 </script>
 
 <style>
