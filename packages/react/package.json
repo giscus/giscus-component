@@ -1,5 +1,6 @@
 {
   "name": "@giscus/react",
+  "private": false,
   "description": "Type-safe React component for giscus",
   "version": "0.1.0",
   "license": "MIT",
@@ -63,5 +64,8 @@
   "bugs": "https://github.com/giscus/giscus-component/issues",
   "dependencies": {
     "iframe-resizer-react": "^1.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "@giscus/vue",
+  "private": false,
   "description": "Type-safe Vue component for giscus",
   "version": "0.1.0",
   "license": "MIT",
@@ -60,5 +61,8 @@
     "discussions"
   ],
   "homepage": "https://github.com/giscus/giscus-component#readme",
-  "bugs": "https://github.com/giscus/giscus-component/issues"
+  "bugs": "https://github.com/giscus/giscus-component/issues",
+  "publishConfig": {
+    "access": "public"
+  }
 }
