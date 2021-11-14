@@ -4,12 +4,12 @@
 
 <main>
   <Giscus
-    repo="giscus/react-giscus"
-    repoId="MDEwOlJlcG9zaXRvcnkzODMxNjMyOTY="
+    repo="giscus/giscus-component"
+    repoId="MDEwOlJlcG9zaXRvcnkzOTEzMTMwMjA="
     category="Announcements"
-    categoryId="DIC_kwDOFtaboM4B-N2c"
+    categoryId="DIC_kwDOF1L2fM4B-hVS"
     mapping="specific"
-    term="Welcome to react-giscus Discussions!"
+    term="Welcome to giscus-component Discussions"
     reactionsEnabled="1"
     emitMetadata="0"
     theme="light"
