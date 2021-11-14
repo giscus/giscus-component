@@ -26,9 +26,9 @@ export function getIframeSrc({
   theme = 'light',
   reactionsEnabled = '1',
   emitMetadata = '0',
-  session
-}: Giscus & Session) {
-  const origin = location.href
+  session,
+  origin = location.href
+}: Giscus & Session & { origin?: string }) {
   const description = getOgMetaContent('description')
 
   const params: Record<string, string> = {
