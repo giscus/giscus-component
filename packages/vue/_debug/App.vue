@@ -5,7 +5,7 @@
     category="Announcements"
     categoryId="DIC_kwDOF1L2fM4B-hVS"
     mapping="specific"
-    term="Welcome to giscus-components Discussions!"
+    term="Welcome to giscus-component Discussions"
     reactionsEnabled="1"
     emitMetadata="0"
     theme="light"
