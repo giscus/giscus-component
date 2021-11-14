@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { GiscusProps } from '@shared/types'
 import {
   addDefaultStyles,
@@ -16,19 +16,24 @@ function GiscusClient(props: GiscusProps) {
   const savedSession = localStorage.getItem(GISCUS_SESSION_KEY)
 
   const [session, setSession] = useState(url.searchParams.get('giscus') || '')
+  const [src, setSrc] = useState(getIframeSrc({ ...props, session }))
+  const ref = useRef<HTMLIFrameElement>(null)
 
   useEffect(() => {
     if (session) {
       localStorage.setItem(GISCUS_SESSION_KEY, JSON.stringify(session))
       url.searchParams.delete('giscus')
-      history.replaceState(undefined, document.title, url.toString())
+      const newOrigin = url.toString()
+      const newSrc = getIframeSrc({ ...props, session, origin: newOrigin })
+      setSrc(newSrc)
+      history.replaceState(undefined, document.title, newOrigin)
       return
     }
 
     if (savedSession) {
       try {
         setSession(JSON.parse(savedSession || '') || '')
-      } catch (e) {
+      } catch (e: any) {
         setSession('')
         localStorage.removeItem(GISCUS_SESSION_KEY)
         console.warn(`${formatError(e?.message)} Session has been cleared.`)
@@ -44,7 +49,10 @@ function GiscusClient(props: GiscusProps) {
     return () => window.removeEventListener('message', listener)
   }, [])
 
-  const src = getIframeSrc({ ...props, session })
+  useEffect(() => {
+    if (!ref.current) return
+    ref.current.src = src
+  }, [src])
 
   return (
     <div className="giscus">
@@ -52,6 +60,7 @@ function GiscusClient(props: GiscusProps) {
         className="giscus-frame"
         title="Comments"
         src={src}
+        forwardRef={ref}
         checkOrigin={[GISCUS_ORIGIN]}
       />
     </div>
