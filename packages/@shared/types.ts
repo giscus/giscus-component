@@ -10,6 +10,7 @@ type Giscus = {
   theme?: Theme
   reactionsEnabled?: BooleanString
   emitMetadata?: BooleanString
+  lang?: Lang
 }
 
 type BooleanString = '0' | '1'
@@ -30,5 +31,21 @@ type Theme =
   | 'preferred_color_scheme'
   | 'transparent_dark'
   | `https://${string}`
+
+type Lang =
+  | 'en'
+  | 'fr'
+  | 'de'
+  | 'gsw'
+  | 'es'
+  | 'it'
+  | 'ja'
+  | 'ko'
+  | 'pl'
+  | 'id'
+  | 'ro'
+  | 'zh-CN'
+  | 'zh-TW'
+  | string
 
 export type { GiscusProps, Giscus, Session, Repo, Mapping, Theme }
