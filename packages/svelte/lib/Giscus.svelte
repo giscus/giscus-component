@@ -18,6 +18,7 @@
   export let categoryId: GiscusProps['categoryId'] = ''
   export let mapping: GiscusProps['mapping']
   export let term: GiscusProps['term'] = ''
+  export let lang: GiscusProps['lang'] = 'en'
   export let theme: GiscusProps['theme'] = 'light'
   export let reactionsEnabled: GiscusProps['reactionsEnabled'] = '1'
   export let emitMetadata: GiscusProps['emitMetadata'] = '0'
@@ -30,10 +31,11 @@
     categoryId,
     mapping,
     term,
+    lang,
     theme,
     reactionsEnabled,
     emitMetadata,
-    session
+    session,
   })
 
   onMount(() => {

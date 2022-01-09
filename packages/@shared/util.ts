@@ -26,6 +26,7 @@ export function getIframeSrc({
   theme = 'light',
   reactionsEnabled = '1',
   emitMetadata = '0',
+  lang = 'en',
   session,
   origin = location.href
 }: Giscus & Session & { origin?: string }) {
@@ -69,7 +70,7 @@ export function getIframeSrc({
       break
   }
 
-  return `${GISCUS_ORIGIN}/widget?${new URLSearchParams(params)}`
+  return `${GISCUS_ORIGIN}/${lang}/widget?${new URLSearchParams(params)}`
 }
 
 export function addDefaultStyles() {

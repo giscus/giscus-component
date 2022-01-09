@@ -35,6 +35,10 @@ const Giscus = defineComponent({
       required: true
     },
     term: String as PropType<GiscusProps['term']>,
+    lang: {
+      type: String as PropType<GiscusProps['lang']>,
+      default: 'en'
+    },
     theme: {
       type: String as PropType<GiscusProps['theme']>,
       default: 'light'

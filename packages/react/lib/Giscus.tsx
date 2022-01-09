@@ -76,7 +76,8 @@ export default function Giscus({
   term,
   theme,
   reactionsEnabled,
-  emitMetadata
+  emitMetadata,
+  lang
 }: GiscusProps) {
   const [isMounted, setIsMounted] = useState(false)
   useEffect(() => setIsMounted(true), [])
@@ -93,6 +94,7 @@ export default function Giscus({
       theme={theme}
       reactionsEnabled={reactionsEnabled}
       emitMetadata={emitMetadata}
+      lang={lang}
     />
   )
 }

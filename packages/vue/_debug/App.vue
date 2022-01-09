@@ -9,6 +9,7 @@
     reactionsEnabled="1"
     emitMetadata="0"
     theme="light"
+    lang="en"
   />
 </template>
 
