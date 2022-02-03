@@ -50,6 +50,10 @@ const Giscus = defineComponent({
     emitMetadata: {
       type: String as PropType<GiscusProps['emitMetadata']>,
       default: '0'
+    },
+    inputPosition: {
+      type: String as PropType<GiscusProps['inputPosition']>,
+      default: 'bottom'
     }
   },
 

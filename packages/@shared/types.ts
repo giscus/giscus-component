@@ -10,10 +10,13 @@ type Giscus = {
   theme?: Theme
   reactionsEnabled?: BooleanString
   emitMetadata?: BooleanString
+  inputPosition?: InputPosition
   lang?: Lang
 }
 
 type BooleanString = '0' | '1'
+
+type InputPosition = 'top' | 'bottom'
 
 type Session = {
   session: string

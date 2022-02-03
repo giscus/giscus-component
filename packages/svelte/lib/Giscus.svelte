@@ -22,6 +22,7 @@
   export let theme: GiscusProps['theme'] = 'light'
   export let reactionsEnabled: GiscusProps['reactionsEnabled'] = '1'
   export let emitMetadata: GiscusProps['emitMetadata'] = '0'
+  export let inputPosition: GiscusProps['inputPosition'] = 'bottom'
 
   let session = ''
   $: src = getIframeSrc({
@@ -35,6 +36,7 @@
     theme,
     reactionsEnabled,
     emitMetadata,
+    inputPosition,
     session,
   })
 
