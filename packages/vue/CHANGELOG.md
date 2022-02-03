@@ -1,3 +1,11 @@
+# [v@giscus/vue-v1.1.0-beta.2](https://github.com/giscus/giscus-component/compare/@giscus/vue-v1.1.0-beta.1...@giscus/vue-v1.1.0-beta.2) (2022-02-03)
+
+## ✨ New Features
+- [`6f4e985`](https://github.com/giscus/giscus-component/commit/6f4e985)   Add support for inputPosition option 
+
+## 🐛 Bug Fixes
+- [`3ed09b0`](https://github.com/giscus/giscus-component/commit/3ed09b0)  (vue) Use computed src value on iframe element&quot;
+
 # [v@giscus/vue-v1.1.0-beta.1](https://github.com/giscus/giscus-component/compare/@giscus/vue-v1.0.0...@giscus/vue-v1.1.0-beta.1) (2022-02-03)
 
 ## ✨ New Features
