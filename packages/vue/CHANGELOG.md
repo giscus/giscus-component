@@ -1,3 +1,8 @@
+# [v@giscus/vue-v1.1.0-beta.6](https://github.com/giscus/giscus-component/compare/@giscus/vue-v1.1.0-beta.5...@giscus/vue-v1.1.0-beta.6) (2022-02-03)
+
+## 🐛 Bug Fixes
+- [`73cb096`](https://github.com/giscus/giscus-component/commit/73cb096)  (vue) Do not reference react types
+
 # [v@giscus/vue-v1.1.0-beta.5](https://github.com/giscus/giscus-component/compare/@giscus/vue-v1.1.0-beta.4...@giscus/vue-v1.1.0-beta.5) (2022-02-03)
 
 # [v@giscus/vue-v1.1.0-beta.4](https://github.com/giscus/giscus-component/compare/@giscus/vue-v1.1.0-beta.3...@giscus/vue-v1.1.0-beta.4) (2022-02-03)
