@@ -1,3 +1,12 @@
+# [v@giscus/react-v1.1.0](https://github.com/giscus/giscus-component/compare/@giscus/react-v1.0.1...@giscus/react-v1.1.0) (2022-02-03)
+
+## ✨ New Features
+- [`a9edcb9`](https://github.com/giscus/giscus-component/commit/a9edcb9)  (shared) Add lang attribute support 
+- [`ac97ce2`](https://github.com/giscus/giscus-component/commit/ac97ce2)   Add support for inputPosition option 
+
+## 🐛 Bug Fixes
+- [`991b842`](https://github.com/giscus/giscus-component/commit/991b842)  (react) Fix session param handling
+
 # [v@giscus/react-v1.0.1](https://github.com/giscus/giscus-component/compare/@giscus/react-v1.0.0...@giscus/react-v1.0.1) (2021-11-14)
 
 ## 🔒 Security Issues
