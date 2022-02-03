@@ -1,3 +1,11 @@
+# [v@giscus/svelte-v1.1.0-beta.2](https://github.com/giscus/giscus-component/compare/@giscus/svelte-v1.1.0-beta.1...@giscus/svelte-v1.1.0-beta.2) (2022-02-03)
+
+## ✨ New Features
+- [`6f4e985`](https://github.com/giscus/giscus-component/commit/6f4e985)   Add support for inputPosition option 
+
+## 🐛 Bug Fixes
+- [`87158f6`](https://github.com/giscus/giscus-component/commit/87158f6)  (svelte) Use computed src value on iframe element
+
 # [v@giscus/svelte-v1.1.0-beta.1](https://github.com/giscus/giscus-component/compare/@giscus/svelte-v1.0.1...@giscus/svelte-v1.1.0-beta.1) (2022-02-03)
 
 ## ✨ New Features
