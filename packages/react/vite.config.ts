@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import reactRefresh from '@vitejs/plugin-react-refresh'
+import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 import { peerDependencies } from './package.json'
 
@@ -11,7 +11,7 @@ export default defineConfig({
       '@shared': resolve(__dirname, '..', '@shared')
     }
   },
-  plugins: [reactRefresh()],
+  plugins: [react()],
   build: {
     lib: {
       entry: resolve(__dirname, 'lib/index.ts'),
