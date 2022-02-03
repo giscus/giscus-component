@@ -6,8 +6,15 @@ import {
   onUnmounted,
   computed
 } from 'vue'
-import type { LegacyRef } from 'react'
-import { GiscusProps } from '@shared/types'
+import {
+  BooleanString,
+  GiscusProps,
+  InputPosition,
+  Lang,
+  Mapping,
+  Repo,
+  Theme
+} from '@shared/types'
 import {
   addDefaultStyles,
   createErrorMessageListener,
@@ -21,38 +28,38 @@ import iFrameResizer from 'iframe-resizer'
 const Giscus = defineComponent({
   props: {
     repo: {
-      type: String as PropType<GiscusProps['repo']>,
+      type: String as PropType<Repo>,
       required: true
     },
     repoId: {
-      type: String as PropType<GiscusProps['repoId']>,
+      type: String as PropType<string>,
       required: true
     },
-    category: String as PropType<GiscusProps['category']>,
-    categoryId: String as PropType<GiscusProps['categoryId']>,
+    category: String as PropType<string>,
+    categoryId: String as PropType<string>,
     mapping: {
-      type: String as PropType<GiscusProps['mapping']>,
+      type: String as PropType<Mapping>,
       required: true
     },
-    term: String as PropType<GiscusProps['term']>,
+    term: String as PropType<string>,
     lang: {
-      type: String as PropType<GiscusProps['lang']>,
+      type: String as PropType<Lang>,
       default: 'en'
     },
     theme: {
-      type: String as PropType<GiscusProps['theme']>,
+      type: String as PropType<Theme>,
       default: 'light'
     },
     reactionsEnabled: {
-      type: String as PropType<GiscusProps['reactionsEnabled']>,
+      type: String as PropType<BooleanString>,
       default: '1'
     },
     emitMetadata: {
-      type: String as PropType<GiscusProps['emitMetadata']>,
+      type: String as PropType<BooleanString>,
       default: '0'
     },
     inputPosition: {
-      type: String as PropType<GiscusProps['inputPosition']>,
+      type: String as PropType<InputPosition>,
       default: 'bottom'
     }
   },
@@ -116,7 +123,7 @@ const Giscus = defineComponent({
           title="Comments"
           className="giscus-frame"
           src={src.value}
-          ref={iframe as any as LegacyRef<HTMLIFrameElement>}
+          ref={iframe as any}
         />
       </div>
     )
