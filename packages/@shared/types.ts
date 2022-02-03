@@ -23,6 +23,8 @@ type Repo = `${string}/${string}`
 
 type Mapping = 'url' | 'title' | 'og:title' | 'specific' | 'number' | 'pathname'
 
+type GenericString = string & Record<never, never>
+
 type Theme =
   | 'light'
   | 'light_high_contrast'
@@ -34,21 +36,24 @@ type Theme =
   | 'transparent_dark'
   | 'preferred_color_scheme'
   | `https://${string}`
+  | GenericString
 
 type Lang =
-  | 'en'
-  | 'fr'
   | 'de'
   | 'gsw'
+  | 'en'
   | 'es'
+  | 'fr'
+  | 'id'
   | 'it'
   | 'ja'
   | 'ko'
   | 'pl'
-  | 'id'
   | 'ro'
+  | 'ru'
+  | 'vi'
   | 'zh-CN'
   | 'zh-TW'
-  | string
+  | GenericString
 
 export type { GiscusProps, Giscus, Session, Repo, Mapping, Theme }
