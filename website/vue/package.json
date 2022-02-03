@@ -6,7 +6,6 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@giscus/vue": "^1.0.0",
     "vue": "^3.0.5"
   },
   "devDependencies": {

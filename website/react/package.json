@@ -6,7 +6,6 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@giscus/react": "^1.0.0",
     "preact": "^10.5.13"
   },
   "devDependencies": {
