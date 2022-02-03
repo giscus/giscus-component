@@ -7,17 +7,6 @@ const plugin: Plugin = {
 
 export { Giscus, plugin }
 
-import type {
-  GiscusProps,
-  BooleanString,
-  InputPosition,
-  Session,
-  Repo,
-  Mapping,
-  Theme,
-  Lang
-} from '@shared/types'
-
 export type {
   GiscusProps,
   BooleanString,
@@ -27,4 +16,4 @@ export type {
   Mapping,
   Theme,
   Lang
-}
+} from '@shared/types'
