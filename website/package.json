@@ -17,8 +17,8 @@
     "vite": "^2.4.0"
   },
   "dependencies": {
-    "@giscus/react": "^1.0.0",
-    "@giscus/svelte": "^1.0.1",
+    "@giscus/react": "^1.1.1",
+    "@giscus/svelte": "^1.1.0",
     "@giscus/vue": "^1.0.0",
     "preact": "^10.5.14",
     "prop-types": "^15.7.2",

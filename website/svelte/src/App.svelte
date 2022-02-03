@@ -22,7 +22,9 @@
     term="Welcome to react-giscus Discussions!"
     reactionsEnabled="1"
     emitMetadata="0"
+    inputPosition="top"
     theme="light"
+    lang="en"
   />
 </main>
 
