@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { GiscusProps } from '@shared/types'
 import {
   addDefaultStyles,
@@ -11,22 +11,20 @@ import {
 import IframeResizer from 'iframe-resizer-react'
 
 function GiscusClient(props: GiscusProps) {
-  const origin = location.href
-  const url = new URL(origin)
-  const savedSession = localStorage.getItem(GISCUS_SESSION_KEY)
-
-  const [session, setSession] = useState(url.searchParams.get('giscus') || '')
-  const [src, setSrc] = useState(getIframeSrc({ ...props, session }))
-  const ref = useRef<HTMLIFrameElement>(null)
+  const [session, setSession] = useState('')
+  const src = getIframeSrc({ ...props, session })
 
   useEffect(() => {
-    if (session) {
-      localStorage.setItem(GISCUS_SESSION_KEY, JSON.stringify(session))
+    const origin = location.href
+    const url = new URL(origin)
+    const savedSession = localStorage.getItem(GISCUS_SESSION_KEY)
+    const urlSession = url.searchParams.get('giscus') || ''
+
+    if (urlSession) {
+      localStorage.setItem(GISCUS_SESSION_KEY, JSON.stringify(urlSession))
+      setSession(urlSession)
       url.searchParams.delete('giscus')
-      const newOrigin = url.toString()
-      const newSrc = getIframeSrc({ ...props, session, origin: newOrigin })
-      setSrc(newSrc)
-      history.replaceState(undefined, document.title, newOrigin)
+      history.replaceState(undefined, document.title, url.toString())
       return
     }
 
@@ -50,8 +48,10 @@ function GiscusClient(props: GiscusProps) {
   }, [])
 
   useEffect(() => {
-    if (!ref.current) return
-    ref.current.src = src
+    const iframes = document.getElementsByClassName('giscus-frame')
+    if (!iframes.length) return
+    const iframe = iframes[0] as HTMLIFrameElement
+    iframe.src = src
   }, [src])
 
   return (
@@ -60,7 +60,6 @@ function GiscusClient(props: GiscusProps) {
         className="giscus-frame"
         title="Comments"
         src={src}
-        forwardRef={ref}
         checkOrigin={[GISCUS_ORIGIN]}
       />
     </div>
