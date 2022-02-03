@@ -59,4 +59,14 @@ type Lang =
   | 'zh-TW'
   | GenericString
 
-export type { GiscusProps, Giscus, Session, Repo, Mapping, Theme }
+export type {
+  GiscusProps,
+  Giscus,
+  BooleanString,
+  InputPosition,
+  Session,
+  Repo,
+  Mapping,
+  Theme,
+  Lang
+}
