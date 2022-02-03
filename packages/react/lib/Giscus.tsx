@@ -66,34 +66,10 @@ function GiscusClient(props: GiscusProps) {
   )
 }
 
-export default function Giscus({
-  repo,
-  repoId,
-  category,
-  categoryId,
-  mapping,
-  term,
-  theme,
-  reactionsEnabled,
-  emitMetadata,
-  lang
-}: GiscusProps) {
+export default function Giscus(props: GiscusProps) {
   const [isMounted, setIsMounted] = useState(false)
   useEffect(() => setIsMounted(true), [])
 
   if (!isMounted) return null
-  return (
-    <GiscusClient
-      repo={repo}
-      repoId={repoId}
-      category={category}
-      categoryId={categoryId}
-      mapping={mapping}
-      term={term}
-      theme={theme}
-      reactionsEnabled={reactionsEnabled}
-      emitMetadata={emitMetadata}
-      lang={lang}
-    />
-  )
+  return <GiscusClient {...props} />
 }
