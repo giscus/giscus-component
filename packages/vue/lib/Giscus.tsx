@@ -72,7 +72,7 @@ const Giscus = defineComponent({
       } else if (savedSession) {
         try {
           session.value = JSON.parse(savedSession || '') || ''
-        } catch (e) {
+        } catch (e: any) {
           session.value = ''
           localStorage.removeItem(GISCUS_SESSION_KEY)
           console.warn(`${formatError(e?.message)} Session has been cleared.`)
@@ -93,7 +93,6 @@ const Giscus = defineComponent({
     onMounted(() => {
       if (!iframe.value) return
       iframe.value = iframe.value as HTMLIFrameElement
-      iframe.value.src = src.value
       iframe.value.addEventListener('load', () =>
         iFrameResizer.iframeResizer(
           { checkOrigin: [GISCUS_ORIGIN] },
@@ -112,6 +111,7 @@ const Giscus = defineComponent({
         <iframe
           title="Comments"
           className="giscus-frame"
+          src={src.value}
           ref={iframe as any as LegacyRef<HTMLIFrameElement>}
         />
       </div>
