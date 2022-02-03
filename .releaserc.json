@@ -10,8 +10,8 @@
           "premajor": [":boom:"],
           "minor": [":sparkles:"],
           "preminor": [":sparkles:"],
-          "patch": [":bug:", ":ambulance:", ":lock:"],
-          "prepatch": [":bug:", ":ambulance:", ":lock:"]
+          "patch": [":bug:", ":ambulance:", ":lock:", ":label:"],
+          "prepatch": [":bug:", ":ambulance:", ":lock:", ":label:"]
         }
       }
     ],
