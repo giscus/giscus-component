@@ -1,4 +1,13 @@
 import Giscus from './Giscus'
 
 export { Giscus }
-export type { GiscusProps, Session, Repo, Mapping, Theme } from '@shared/types'
+export type {
+  GiscusProps,
+  BooleanString,
+  InputPosition,
+  Session,
+  Repo,
+  Mapping,
+  Theme,
+  Lang
+} from '@shared/types'
