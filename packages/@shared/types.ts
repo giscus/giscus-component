@@ -25,11 +25,14 @@ type Mapping = 'url' | 'title' | 'og:title' | 'specific' | 'number' | 'pathname'
 
 type Theme =
   | 'light'
+  | 'light_high_contrast'
+  | 'light_protanopia'
   | 'dark'
-  | 'dark_dimmed'
   | 'dark_high_contrast'
-  | 'preferred_color_scheme'
+  | 'dark_protanopia'
+  | 'dark_dimmed'
   | 'transparent_dark'
+  | 'preferred_color_scheme'
   | `https://${string}`
 
 type Lang =
