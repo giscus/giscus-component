@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { GiscusProps } from '@shared/types'
 import {
   addDefaultStyles,
@@ -8,11 +8,12 @@ import {
   GISCUS_ORIGIN,
   GISCUS_SESSION_KEY
 } from '@shared/util'
-import IframeResizer from 'iframe-resizer-react'
+import iFrameResizer from 'iframe-resizer'
 
 function GiscusClient(props: GiscusProps) {
   const [session, setSession] = useState('')
   const src = getIframeSrc({ ...props, session })
+  const iframe = useRef<HTMLIFrameElement>(null)
 
   useEffect(() => {
     const origin = location.href
@@ -48,19 +49,22 @@ function GiscusClient(props: GiscusProps) {
   }, [])
 
   useEffect(() => {
-    const iframes = document.getElementsByClassName('giscus-frame')
-    if (!iframes.length) return
-    const iframe = iframes[0] as HTMLIFrameElement
-    iframe.src = src
+    if (!iframe.current) return
+    iframe.current.addEventListener('load', () =>
+      iFrameResizer.iframeResizer(
+        { checkOrigin: [GISCUS_ORIGIN] },
+        iframe.current as HTMLIFrameElement
+      )
+    )
   }, [src])
 
   return (
     <div className="giscus">
-      <IframeResizer
+      <iframe
         className="giscus-frame"
         title="Comments"
         src={src}
-        checkOrigin={[GISCUS_ORIGIN]}
+        ref={iframe}
       />
     </div>
   )
