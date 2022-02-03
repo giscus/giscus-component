@@ -73,7 +73,6 @@
   onMount(() => {
     if (!iframe) return
     iframe = iframe as HTMLIFrameElement
-    iframe.src = src
     iframe.addEventListener('load', () =>
       iFrameResizer.iframeResizer(
         { checkOrigin: [GISCUS_ORIGIN] },
@@ -89,5 +88,5 @@
 </script>
 
 <div class="giscus">
-  <iframe title="Comments" class="giscus-frame" bind:this={iframe} />
+  <iframe title="Comments" class="giscus-frame" src={src} bind:this={iframe} />
 </div>
