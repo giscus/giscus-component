@@ -1,3 +1,8 @@
+# [v@giscus/react-v1.1.1](https://github.com/giscus/giscus-component/compare/@giscus/react-v1.1.0...@giscus/react-v1.1.1) (2022-02-03)
+
+## 🐛 Bug Fixes
+- [`49ec37b`](https://github.com/giscus/giscus-component/commit/49ec37b)  (react) Fix crash when using preact
+
 # [v@giscus/react-v1.1.0](https://github.com/giscus/giscus-component/compare/@giscus/react-v1.0.1...@giscus/react-v1.1.0) (2022-02-03)
 
 ## ✨ New Features
