@@ -22,7 +22,7 @@
     "lint": "vue-tsc --noEmit",
     "build": "run-p build:*",
     "build:script": "vite build",
-    "build:types": "dts-bundle-generator --no-banner --no-check --external-imports=vue -o dist/index.d.ts lib/index.ts",
+    "build:types": "dts-bundle-generator --no-banner --no-check --external-imports=vue --external-types= -o dist/index.d.ts lib/index.ts",
     "serve": "vite preview"
   },
   "peerDependencies": {
