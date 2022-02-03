@@ -1,3 +1,5 @@
+# [v@giscus/react-v1.1.0-beta.3](https://github.com/giscus/giscus-component/compare/@giscus/react-v1.1.0-beta.2...@giscus/react-v1.1.0-beta.3) (2022-02-03)
+
 # [v@giscus/react-v1.1.0-beta.2](https://github.com/giscus/giscus-component/compare/@giscus/react-v1.1.0-beta.1...@giscus/react-v1.1.0-beta.2) (2022-02-03)
 
 ## ✨ New Features
