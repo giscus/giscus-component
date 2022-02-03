@@ -26,6 +26,7 @@ export function getIframeSrc({
   theme = 'light',
   reactionsEnabled = '1',
   emitMetadata = '0',
+  inputPosition = 'bottom',
   lang = 'en',
   session,
   origin
@@ -44,6 +45,7 @@ export function getIframeSrc({
     theme,
     reactionsEnabled,
     emitMetadata,
+    inputPosition,
     repo,
     repoId,
     category,
@@ -72,7 +74,7 @@ export function getIframeSrc({
       params.term =
         location.pathname.length < 2
           ? 'index'
-          : location.pathname.substr(1).replace(/\.\w+$/, '')
+          : location.pathname.substring(1).replace(/\.\w+$/, '')
       break
   }
 

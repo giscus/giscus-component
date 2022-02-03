@@ -13,6 +13,7 @@ ReactDOM.render(
       term="Welcome to giscus-component Discussions"
       reactionsEnabled="1"
       emitMetadata="0"
+      inputPosition="bottom"
       theme="light"
       lang="en"
     />
