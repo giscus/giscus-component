@@ -28,8 +28,14 @@ export function getIframeSrc({
   emitMetadata = '0',
   lang = 'en',
   session,
-  origin = location.href
+  origin
 }: Giscus & Session & { origin?: string }) {
+  const url = new URL(location.href)
+  url.searchParams.delete('giscus')
+
+  const cleanedUrl = url.toString()
+  origin = origin || cleanedUrl
+
   const description = getOgMetaContent('description')
 
   const params: Record<string, string> = {
@@ -47,7 +53,7 @@ export function getIframeSrc({
 
   switch (mapping) {
     case 'url':
-      params.term = location.href
+      params.term = cleanedUrl
       break
     case 'title':
       params.term = document.title
