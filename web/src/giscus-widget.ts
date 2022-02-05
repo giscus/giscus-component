@@ -1,5 +1,7 @@
 import { html, css, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { createRef, ref, Ref } from 'lit/directives/ref.js';
+import iframeResizer from 'iframe-resizer';
 
 /**
  * Widget element for giscus.
@@ -90,6 +92,8 @@ export class GiscusWidget extends LitElement {
   @property()
   private __session = '';
 
+  private iframeRef: Ref<HTMLIFrameElement> = createRef();
+
   constructor() {
     super();
     this.setupSession();
@@ -103,6 +107,21 @@ export class GiscusWidget extends LitElement {
   disconnectedCallback() {
     super.disconnectedCallback();
     window.removeEventListener('message', this.handleMessageEvent);
+  }
+
+  protected firstUpdated(
+    _changedProperties: Map<string | number | symbol, unknown>
+  ) {
+    this.setupIframeResizer();
+  }
+
+  private setupIframeResizer() {
+    this.iframeRef.value?.addEventListener('load', () =>
+      iframeResizer.iframeResizer(
+        { checkOrigin: [this.GISCUS_ORIGIN] },
+        this.iframeRef.value as HTMLIFrameElement
+      )
+    );
   }
 
   private _formatError(message: string) {
@@ -236,7 +255,9 @@ export class GiscusWidget extends LitElement {
   }
 
   render() {
-    return html` <iframe src=${this.getIframeSrc()}></iframe> `;
+    return html`
+      <iframe ${ref(this.iframeRef)} src=${this.getIframeSrc()}></iframe>
+    `;
   }
 }
 
