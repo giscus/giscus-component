@@ -1,5 +1,5 @@
-import { html, css, LitElement } from "lit";
-import { customElement, property } from "lit/decorators.js";
+import { html, css, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 
 /**
  * An example element.
@@ -7,7 +7,7 @@ import { customElement, property } from "lit/decorators.js";
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement("giscus-widget")
+@customElement('giscus-widget')
 export class GiscusWidget extends LitElement {
   static styles = css`
     :host {
@@ -22,7 +22,7 @@ export class GiscusWidget extends LitElement {
    * The name to say "Hello" to.
    */
   @property()
-  name = "World";
+  name = 'World';
 
   /**
    * The number of times the button has been clicked.
@@ -45,12 +45,12 @@ export class GiscusWidget extends LitElement {
   }
 
   foo(): string {
-    return "foo";
+    return 'foo';
   }
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    "giscus-widget": GiscusWidget;
+    'giscus-widget': GiscusWidget;
   }
 }
