@@ -11,41 +11,82 @@ import { customElement, property } from 'lit/decorators.js';
 export class GiscusWidget extends LitElement {
   static styles = css`
     :host {
-      display: block;
-      border: solid 1px gray;
-      padding: 16px;
-      max-width: 800px;
+      width: 100%;
     }
   `;
 
   /**
-   * The name to say "Hello" to.
+   * Repo where the discussion is stored.
    */
-  @property()
-  name = 'World';
+  @property({ reflect: true })
+  repo: Repo = 'giscus/giscus';
 
   /**
-   * The number of times the button has been clicked.
+   * ID of the repo where the discussion is stored.
    */
-  @property({ type: Number })
-  count = 0;
+  @property({ reflect: true })
+  repoId = 'MDEwOlJlcG9zaXRvcnkzNTE5NTgwNTM=';
+
+  /**
+   * Category where the discussion will be searched.
+   */
+  @property({ reflect: true })
+  category = 'General';
+
+  /**
+   * ID of the category where new discussions will be created.
+   */
+  @property({ reflect: true })
+  categoryId = 'MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyNzk2NTc1';
+
+  /**
+   * Mapping between the parent page and the discussion.
+   */
+  @property({ reflect: true })
+  mapping: Mapping = 'specific';
+
+  /**
+   * Search term to use when searching for the discussion.
+   */
+  @property({ reflect: true })
+  term = 'Welcome to giscus!';
+
+  /**
+   * Enable reactions to the main post of the discussion.
+   */
+  @property({ reflect: true })
+  reactionsEnabled: BooleanString = '1';
+
+  /**
+   * Emit the discussion metadata periodically to the parent page.
+   */
+  @property({ reflect: true })
+  emitMetadata: BooleanString = '0';
+
+  /**
+   * Placement of the comment box (`top` or `bottom`).
+   */
+  @property({ reflect: true })
+  inputPosition: InputPosition = 'bottom';
+
+  /**
+   * Theme that giscus will be displayed in.
+   */
+  @property({ reflect: true })
+  theme: Theme = 'light';
+
+  /**
+   * Language that giscus will be displayed in.
+   */
+  @property({ reflect: true })
+  lang: Lang = 'en';
 
   render() {
     return html`
-      <h1>Hello, ${this.name}!</h1>
-      <button @click=${this._onClick} part="button">
-        Click Count: ${this.count}
-      </button>
+      <h1>${this.repo}!</h1>
+      <button part="button">Mapping: ${this.mapping}</button>
       <slot></slot>
     `;
-  }
-
-  private _onClick() {
-    this.count++;
-  }
-
-  foo(): string {
-    return 'foo';
   }
 }
 
@@ -54,3 +95,50 @@ declare global {
     'giscus-widget': GiscusWidget;
   }
 }
+
+type BooleanString = '0' | '1';
+
+type InputPosition = 'top' | 'bottom';
+
+type Repo = `${string}/${string}`;
+
+type Mapping =
+  | 'url'
+  | 'title'
+  | 'og:title'
+  | 'specific'
+  | 'number'
+  | 'pathname';
+
+type GenericString = string & Record<never, never>;
+
+type Theme =
+  | 'light'
+  | 'light_high_contrast'
+  | 'light_protanopia'
+  | 'dark'
+  | 'dark_high_contrast'
+  | 'dark_protanopia'
+  | 'dark_dimmed'
+  | 'transparent_dark'
+  | 'preferred_color_scheme'
+  | `https://${string}`
+  | GenericString;
+
+type Lang =
+  | 'de'
+  | 'gsw'
+  | 'en'
+  | 'es'
+  | 'fr'
+  | 'id'
+  | 'it'
+  | 'ja'
+  | 'ko'
+  | 'pl'
+  | 'ro'
+  | 'ru'
+  | 'vi'
+  | 'zh-CN'
+  | 'zh-TW'
+  | GenericString;
