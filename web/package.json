@@ -1,11 +1,11 @@
 {
   "name": "giscus-widget",
   "version": "0.0.0",
-  "main": "dist/my-element.es.js",
+  "main": "dist/giscus-widget.es.js",
   "exports": {
-    ".": "./dist/my-element.es.js"
+    ".": "./dist/giscus-widget.es.js"
   },
-  "types": "types/my-element.d.ts",
+  "types": "types/giscus-widget.d.ts",
   "files": [
     "dist",
     "types"
