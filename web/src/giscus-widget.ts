@@ -1,4 +1,4 @@
-import { html, css, LitElement } from 'lit';
+import { html, css, LitElement, PropertyDeclaration } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { createRef, ref, Ref } from 'lit/directives/ref.js';
 import iframeResizer from 'iframe-resizer';
@@ -11,6 +11,9 @@ export class GiscusWidget extends LitElement {
   private GISCUS_SESSION_KEY = 'giscus-session';
   private GISCUS_ORIGIN = 'https://giscus.app';
   private ERROR_SUGGESTION = `Please consider reporting this error at https://github.com/laymonage/giscus/issues/new.`;
+
+  private __session = '';
+  private iframeRef: Ref<HTMLIFrameElement> = createRef();
 
   static styles = css`
     :host,
@@ -85,14 +88,6 @@ export class GiscusWidget extends LitElement {
    */
   @property({ reflect: true })
   lang: Lang = 'en';
-
-  /**
-   * Session ID of the current user.
-   */
-  @property()
-  private __session = '';
-
-  private iframeRef: Ref<HTMLIFrameElement> = createRef();
 
   constructor() {
     super();
@@ -190,6 +185,46 @@ export class GiscusWidget extends LitElement {
     }
 
     console.error(`${this._formatError(message)} ${this.ERROR_SUGGESTION}`);
+  }
+
+  private sendMessage<T>(message: T) {
+    const iframe = this.iframeRef.value;
+    if (!iframe || !iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({ giscus: message }, this.GISCUS_ORIGIN);
+  }
+
+  private updateConfig() {
+    const setConfig: ISetConfigMessage = {
+      setConfig: {
+        repo: this.repo,
+        repoId: this.repoId,
+        category: this.category,
+        categoryId: this.categoryId,
+        mapping: this.mapping,
+        term: this.term,
+        reactionsEnabled: this.reactionsEnabled === '1',
+        emitMetadata: this.emitMetadata === '1',
+        inputPosition: this.inputPosition,
+        theme: this.theme,
+        lang: this.lang,
+      },
+    };
+
+    this.sendMessage(setConfig);
+  }
+
+  requestUpdate(
+    name?: PropertyKey,
+    oldValue?: unknown,
+    options?: PropertyDeclaration<unknown, unknown>
+  ): void {
+    // Only rerender (update) on initial load.
+    if (!this.hasUpdated) {
+      super.requestUpdate(name, oldValue, options);
+      return;
+    }
+    // After loaded, just update the config without rerendering.
+    this.updateConfig();
   }
 
   private _getOgMetaContent(property: string) {
@@ -313,3 +348,20 @@ type Lang =
   | 'zh-CN'
   | 'zh-TW'
   | GenericString;
+
+interface ISetConfigMessage {
+  setConfig: {
+    theme?: Theme;
+    repo?: string;
+    repoId?: string;
+    category?: string;
+    categoryId?: string;
+    mapping?: Mapping;
+    term?: string;
+    number?: number;
+    reactionsEnabled?: boolean;
+    emitMetadata?: boolean;
+    inputPosition?: InputPosition;
+    lang?: Lang;
+  };
+}
