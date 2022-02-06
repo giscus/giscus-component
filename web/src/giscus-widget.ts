@@ -13,7 +13,12 @@ export class GiscusWidget extends LitElement {
   private ERROR_SUGGESTION = `Please consider reporting this error at https://github.com/laymonage/giscus/issues/new.`;
 
   private __session = '';
-  private iframeRef: Ref<HTMLIFrameElement> = createRef();
+  private _iframeRef: Ref<HTMLIFrameElement> = createRef();
+  private messageEventHandler = this.handleMessageEvent.bind(this);
+
+  get iframeRef() {
+    return this._iframeRef.value;
+  }
 
   static styles = css`
     :host,
@@ -92,16 +97,16 @@ export class GiscusWidget extends LitElement {
   constructor() {
     super();
     this.setupSession();
+    window.addEventListener('message', this.messageEventHandler);
   }
 
   connectedCallback() {
     super.connectedCallback();
-    window.addEventListener('message', this.handleMessageEvent);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    window.removeEventListener('message', this.handleMessageEvent);
+    window.removeEventListener('message', this.messageEventHandler);
   }
 
   protected firstUpdated(
@@ -111,10 +116,10 @@ export class GiscusWidget extends LitElement {
   }
 
   private setupIframeResizer() {
-    this.iframeRef.value?.addEventListener('load', () =>
+    this.iframeRef?.addEventListener('load', () =>
       iframeResizer.iframeResizer(
         { checkOrigin: [this.GISCUS_ORIGIN] },
-        this.iframeRef.value as HTMLIFrameElement
+        this.iframeRef as HTMLIFrameElement
       )
     );
   }
@@ -167,6 +172,8 @@ export class GiscusWidget extends LitElement {
         localStorage.removeItem(this.GISCUS_SESSION_KEY);
         this.__session = '';
         console.warn(`${this._formatError(message)} Session has been cleared.`);
+        // Reload iframe
+        this.update(new Map());
         return;
       }
 
@@ -188,9 +195,10 @@ export class GiscusWidget extends LitElement {
   }
 
   private sendMessage<T>(message: T) {
-    const iframe = this.iframeRef.value;
-    if (!iframe || !iframe.contentWindow) return;
-    iframe.contentWindow.postMessage({ giscus: message }, this.GISCUS_ORIGIN);
+    this.iframeRef?.contentWindow?.postMessage(
+      { giscus: message },
+      this.GISCUS_ORIGIN
+    );
   }
 
   private updateConfig() {
@@ -291,7 +299,7 @@ export class GiscusWidget extends LitElement {
 
   render() {
     return html`
-      <iframe ${ref(this.iframeRef)} src=${this.getIframeSrc()}></iframe>
+      <iframe ${ref(this._iframeRef)} src=${this.getIframeSrc()}></iframe>
     `;
   }
 }
