@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "esnext",
     "lib": [
-      "es2017",
+      "esnext",
       "dom",
       "dom.iterable"
     ],
@@ -11,6 +11,7 @@
     "outDir": "./types",
     "rootDir": "./src",
     "strict": true,
+    "target": "esnext",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
