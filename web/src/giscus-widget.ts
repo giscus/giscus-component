@@ -24,37 +24,37 @@ export class GiscusWidget extends LitElement {
    * Repo where the discussion is stored.
    */
   @property({ reflect: true })
-  repo: Repo = 'giscus/giscus';
+  repo!: Repo;
 
   /**
    * ID of the repo where the discussion is stored.
    */
   @property({ reflect: true })
-  repoId = 'MDEwOlJlcG9zaXRvcnkzNTE5NTgwNTM=';
+  repoId?: string;
 
   /**
    * Category where the discussion will be searched.
    */
   @property({ reflect: true })
-  category = 'General';
+  category?: string;
 
   /**
    * ID of the category where new discussions will be created.
    */
   @property({ reflect: true })
-  categoryId = 'MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyNzk2NTc1';
+  categoryId?: string;
 
   /**
    * Mapping between the parent page and the discussion.
    */
   @property({ reflect: true })
-  mapping: Mapping = 'specific';
+  mapping?: Mapping;
 
   /**
    * Search term to use when searching for the discussion.
    */
   @property({ reflect: true })
-  term = 'Welcome to giscus!';
+  term?: string;
 
   /**
    * Enable reactions to the main post of the discussion.
@@ -212,9 +212,9 @@ export class GiscusWidget extends LitElement {
       origin,
       session: this.__session,
       repo: this.repo,
-      repoId: this.repoId,
-      category: this.category,
-      categoryId: this.categoryId,
+      repoId: this.repoId || '',
+      category: this.category || '',
+      categoryId: this.categoryId || '',
       reactionsEnabled: this.reactionsEnabled,
       emitMetadata: this.emitMetadata,
       inputPosition: this.inputPosition,
@@ -233,10 +233,10 @@ export class GiscusWidget extends LitElement {
         params.term = this._getOgMetaContent('title');
         break;
       case 'specific':
-        params.term = this.term;
+        params.term = this.term || '';
         break;
       case 'number':
-        params.number = this.term;
+        params.number = this.term || '';
         break;
       case 'pathname':
       default:
