@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   build: {
     lib: {
-      entry: 'src/giscus-widget.ts',
+      entry: 'src/giscus.ts',
       formats: ['es'],
     },
     rollupOptions: {
