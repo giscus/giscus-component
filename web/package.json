@@ -1,7 +1,8 @@
 {
   "name": "giscus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/giscus.es.js",
+  "module": "dist/giscus.es.js",
   "exports": {
     ".": "./dist/giscus.es.js"
   },
