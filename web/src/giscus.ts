@@ -208,8 +208,8 @@ export class GiscusWidget extends LitElement {
         repoId: this.repoId,
         category: this.category,
         categoryId: this.categoryId,
-        mapping: this.mapping,
-        term: this.term,
+        term: this.getTerm(),
+        number: +this.getNumber(),
         reactionsEnabled: this.reactionsEnabled === '1',
         emitMetadata: this.emitMetadata === '1',
         inputPosition: this.inputPosition,
@@ -243,6 +243,30 @@ export class GiscusWidget extends LitElement {
     return element ? element.content : '';
   }
 
+  private getTerm() {
+    switch (this.mapping) {
+      case 'url':
+        return origin;
+      case 'title':
+        return document.title;
+      case 'og:title':
+        return this._getOgMetaContent('title');
+      case 'specific':
+        return this.term || '';
+      case 'number':
+        return '';
+      case 'pathname':
+      default:
+        return location.pathname.length < 2
+          ? 'index'
+          : location.pathname.substring(1).replace(/\.\w+$/, '');
+    }
+  }
+
+  private getNumber() {
+    return (this.mapping === 'number' && this.term) || '';
+  }
+
   private getIframeSrc() {
     const url = new URL(location.href);
     url.searchParams.delete('giscus');
@@ -258,37 +282,14 @@ export class GiscusWidget extends LitElement {
       repoId: this.repoId || '',
       category: this.category || '',
       categoryId: this.categoryId || '',
+      term: this.getTerm(),
+      number: this.getNumber(),
       reactionsEnabled: this.reactionsEnabled,
       emitMetadata: this.emitMetadata,
       inputPosition: this.inputPosition,
       theme: this.theme,
       description,
     };
-
-    switch (this.mapping) {
-      case 'url':
-        params.term = origin;
-        break;
-      case 'title':
-        params.term = document.title;
-        break;
-      case 'og:title':
-        params.term = this._getOgMetaContent('title');
-        break;
-      case 'specific':
-        params.term = this.term || '';
-        break;
-      case 'number':
-        params.number = this.term || '';
-        break;
-      case 'pathname':
-      default:
-        params.term =
-          location.pathname.length < 2
-            ? 'index'
-            : location.pathname.substring(1).replace(/\.\w+$/, '');
-        break;
-    }
 
     const locale = this.lang ? `/${this.lang}` : '';
 
@@ -364,8 +365,8 @@ interface ISetConfigMessage {
     repoId?: string;
     category?: string;
     categoryId?: string;
-    mapping?: Mapping;
     term?: string;
+    description?: string;
     number?: number;
     reactionsEnabled?: boolean;
     emitMetadata?: boolean;
