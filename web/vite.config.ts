@@ -5,7 +5,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'src/giscus.ts',
-      formats: ['es'],
+      name: 'giscus',
     },
     rollupOptions: {
       external: /^lit/,
