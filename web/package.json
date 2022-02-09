@@ -1,6 +1,6 @@
 {
   "name": "giscus",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "./dist/giscus.umd.cjs",
   "module": "./dist/giscus.es.js",
   "exports": {
@@ -20,7 +20,7 @@
     "build": "tsc && vite build"
   },
   "dependencies": {
-    "lit": "^2.0.2"
+    "lit": "^2.1.3"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.10.2",
