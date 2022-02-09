@@ -1,16 +1,14 @@
 <script lang="ts">
-  import { onDestroy, onMount } from 'svelte'
+  import { onMount } from 'svelte'
 
   import {
     addDefaultStyles,
     createErrorMessageListener,
     formatError,
     getIframeSrc,
-    GISCUS_ORIGIN,
     GISCUS_SESSION_KEY
   } from '../../@shared/util'
   import type { GiscusProps } from '../../@shared/types'
-  import iFrameResizer from 'iframe-resizer'
 
   export let repo: GiscusProps['repo']
   export let repoId: GiscusProps['repoId']
@@ -37,7 +35,7 @@
     reactionsEnabled,
     emitMetadata,
     inputPosition,
-    session,
+    session
   })
 
   onMount(() => {
@@ -63,32 +61,21 @@
 
   onMount(addDefaultStyles)
 
-  const listener = createErrorMessageListener(() => (session = ''))
-  onMount(() => window.addEventListener('message', listener))
-  onDestroy(() => window.removeEventListener('message', listener))
-
-  let iframe:
-    | HTMLIFrameElement
-    | undefined
-    | { iFrameResizer: { removeListeners: () => void } }
+  let iframe: HTMLIFrameElement
 
   onMount(() => {
-    if (!iframe) return
-    iframe = iframe as HTMLIFrameElement
-    iframe.addEventListener('load', () =>
-      iFrameResizer.iframeResizer(
-        { checkOrigin: [GISCUS_ORIGIN] },
-        iframe as HTMLIFrameElement
-      )
-    )
-  })
-
-  onDestroy(() => {
-    if (iframe && 'iFrameResizer' in iframe)
-      iframe?.iFrameResizer?.removeListeners()
+    const listener = createErrorMessageListener(() => (session = ''), iframe)
+    window.addEventListener('message', listener)
+    return () => window.removeEventListener('message', listener)
   })
 </script>
 
 <div class="giscus">
-  <iframe title="Comments" class="giscus-frame" src={src} bind:this={iframe} />
+  <iframe
+    class="giscus-frame"
+    title="Comments"
+    scrolling="no"
+    {src}
+    bind:this={iframe}
+  />
 </div>
