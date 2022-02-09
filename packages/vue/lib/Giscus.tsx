@@ -20,10 +20,8 @@ import {
   createErrorMessageListener,
   formatError,
   getIframeSrc,
-  GISCUS_ORIGIN,
   GISCUS_SESSION_KEY
 } from '@shared/util'
-import iFrameResizer from 'iframe-resizer'
 
 const Giscus = defineComponent({
   props: {
@@ -93,35 +91,23 @@ const Giscus = defineComponent({
 
     onMounted(addDefaultStyles)
 
-    const listener = createErrorMessageListener(() => (session.value = ''))
-    onMounted(() => window.addEventListener('message', listener))
-    onUnmounted(() => window.removeEventListener('message', listener))
-
-    const iframe = ref<
-      HTMLIFrameElement | { iFrameResizer: { removeListeners: () => void } }
-    >()
+    const iframe = ref<HTMLIFrameElement>()
 
     onMounted(() => {
-      if (!iframe.value) return
-      iframe.value = iframe.value as HTMLIFrameElement
-      iframe.value.addEventListener('load', () =>
-        iFrameResizer.iframeResizer(
-          { checkOrigin: [GISCUS_ORIGIN] },
-          iframe.value as HTMLIFrameElement
-        )
+      const listener = createErrorMessageListener(
+        () => (session.value = ''),
+        iframe.value
       )
-    })
-
-    onUnmounted(() => {
-      if (iframe.value && 'iFrameResizer' in iframe.value)
-        iframe.value?.iFrameResizer?.removeListeners()
+      window.addEventListener('message', listener)
+      onUnmounted(() => window.removeEventListener('message', listener))
     })
 
     return () => (
       <div className="giscus">
         <iframe
-          title="Comments"
           className="giscus-frame"
+          title="Comments"
+          scrolling="no"
           src={src.value}
           ref={iframe as any}
         />

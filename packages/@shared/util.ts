@@ -91,18 +91,27 @@ export function addDefaultStyles() {
     }
     .giscus-frame {
       border: none;
-      color-scheme: auto;
+      color-scheme: normal;
     }
   `
   document.head.prepend(style)
 }
 
-export function createErrorMessageListener(resetSession: () => void) {
+export function createErrorMessageListener(
+  resetSession: () => void,
+  iframe: HTMLIFrameElement | null = null
+) {
   return function (event: MessageEvent) {
     if (event.origin !== GISCUS_ORIGIN) return
 
     const { data } = event
-    if (!(typeof data === 'object' && data?.giscus?.error)) return
+    if (!(typeof data === 'object' && data.giscus)) return
+
+    if (iframe && data.giscus.resizeHeight) {
+      iframe.style.height = `${data.giscus.resizeHeight}px`
+    }
+
+    if (!data.giscus.error) return
 
     const message: string = data.giscus.error
 

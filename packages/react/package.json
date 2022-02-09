@@ -61,9 +61,7 @@
   ],
   "homepage": "https://github.com/giscus/giscus-component#readme",
   "bugs": "https://github.com/giscus/giscus-component/issues",
-  "dependencies": {
-    "iframe-resizer": "^4.3.2"
-  },
+  "dependencies": {},
   "publishConfig": {
     "access": "public"
   }
