@@ -1,3 +1,8 @@
+# [v@giscus/react-v1.1.2-beta.1](https://github.com/giscus/giscus-component/compare/@giscus/react-v1.1.1...@giscus/react-v1.1.2-beta.1) (2022-02-09)
+
+## 🚑 Critical Hotfixes
+- [`c25ec3b`](https://github.com/giscus/giscus-component/commit/c25ec3b)   Resize iframe with ResizeObserver
+
 # [v@giscus/react-v1.1.1](https://github.com/giscus/giscus-component/compare/@giscus/react-v1.1.0...@giscus/react-v1.1.1) (2022-02-03)
 
 ## 🐛 Bug Fixes
