@@ -1,3 +1,8 @@
+# [v@giscus/react-v1.1.2-beta.2](https://github.com/giscus/giscus-component/compare/@giscus/react-v1.1.2-beta.1...@giscus/react-v1.1.2-beta.2) (2022-02-09)
+
+## 🐛 Bug Fixes
+- [`5c44d7d`](https://github.com/giscus/giscus-component/commit/5c44d7d)   Fix scrollbar
+
 # [v@giscus/react-v1.1.2-beta.1](https://github.com/giscus/giscus-component/compare/@giscus/react-v1.1.1...@giscus/react-v1.1.2-beta.1) (2022-02-09)
 
 ## 🚑 Critical Hotfixes
