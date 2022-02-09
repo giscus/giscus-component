@@ -91,7 +91,7 @@ export function addDefaultStyles() {
     }
     .giscus-frame {
       border: none;
-      color-scheme: auto;
+      color-scheme: normal;
     }
   `
   document.head.prepend(style)

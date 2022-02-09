@@ -54,6 +54,7 @@ function GiscusClient(props: GiscusProps) {
       <iframe
         className="giscus-frame"
         title="Comments"
+        scrolling="no"
         src={src}
         ref={iframe}
       />

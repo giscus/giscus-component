@@ -71,5 +71,11 @@
 </script>
 
 <div class="giscus">
-  <iframe title="Comments" class="giscus-frame" {src} bind:this={iframe} />
+  <iframe
+    class="giscus-frame"
+    title="Comments"
+    scrolling="no"
+    {src}
+    bind:this={iframe}
+  />
 </div>

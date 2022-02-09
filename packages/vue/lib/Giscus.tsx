@@ -105,8 +105,9 @@ const Giscus = defineComponent({
     return () => (
       <div className="giscus">
         <iframe
-          title="Comments"
           className="giscus-frame"
+          title="Comments"
+          scrolling="no"
           src={src.value}
           ref={iframe as any}
         />
