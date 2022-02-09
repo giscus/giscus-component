@@ -5,10 +5,8 @@ import {
   createErrorMessageListener,
   formatError,
   getIframeSrc,
-  GISCUS_ORIGIN,
   GISCUS_SESSION_KEY
 } from '@shared/util'
-import iFrameResizer from 'iframe-resizer'
 
 function GiscusClient(props: GiscusProps) {
   const [session, setSession] = useState('')
@@ -43,20 +41,13 @@ function GiscusClient(props: GiscusProps) {
   useEffect(addDefaultStyles, [])
 
   useEffect(() => {
-    const listener = createErrorMessageListener(() => setSession(''))
+    const listener = createErrorMessageListener(
+      () => setSession(''),
+      iframe.current
+    )
     window.addEventListener('message', listener)
     return () => window.removeEventListener('message', listener)
   }, [])
-
-  useEffect(() => {
-    if (!iframe.current) return
-    iframe.current.addEventListener('load', () =>
-      iFrameResizer.iframeResizer(
-        { checkOrigin: [GISCUS_ORIGIN] },
-        iframe.current as HTMLIFrameElement
-      )
-    )
-  }, [src])
 
   return (
     <div className="giscus">
