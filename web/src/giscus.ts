@@ -1,7 +1,6 @@
 import { html, css, LitElement, PropertyDeclaration } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { createRef, ref, Ref } from 'lit/directives/ref.js';
-import iframeResizer from 'iframe-resizer';
 
 /**
  * Widget element for giscus.
@@ -109,21 +108,6 @@ export class GiscusWidget extends LitElement {
     window.removeEventListener('message', this.messageEventHandler);
   }
 
-  protected firstUpdated(
-    _changedProperties: Map<string | number | symbol, unknown>
-  ) {
-    this.setupIframeResizer();
-  }
-
-  private setupIframeResizer() {
-    this.iframeRef?.addEventListener('load', () =>
-      iframeResizer.iframeResizer(
-        { checkOrigin: [this.GISCUS_ORIGIN] },
-        this.iframeRef as HTMLIFrameElement
-      )
-    );
-  }
-
   private _formatError(message: string) {
     return `[giscus] An error occurred. Error message: "${message}".`;
   }
@@ -159,7 +143,13 @@ export class GiscusWidget extends LitElement {
     if (event.origin !== this.GISCUS_ORIGIN) return;
 
     const { data } = event;
-    if (!(typeof data === 'object' && data?.giscus?.error)) return;
+    if (!(typeof data === 'object' && data.giscus)) return;
+
+    if (this.iframeRef && data.giscus.resizeHeight) {
+      this.iframeRef.style.height = `${data.giscus.resizeHeight}px`;
+    }
+
+    if (!data.giscus.error) return;
 
     const message: string = data.giscus.error;
 
@@ -300,7 +290,11 @@ export class GiscusWidget extends LitElement {
 
   render() {
     return html`
-      <iframe ${ref(this._iframeRef)} src=${this.getIframeSrc()}></iframe>
+      <iframe
+        scrolling="no"
+        ${ref(this._iframeRef)}
+        src=${this.getIframeSrc()}
+      ></iframe>
     `;
   }
 }

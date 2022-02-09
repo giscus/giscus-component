@@ -17,11 +17,9 @@
     "build": "tsc && vite build"
   },
   "dependencies": {
-    "iframe-resizer": "^4.3.2",
     "lit": "^2.0.2"
   },
   "devDependencies": {
-    "@types/iframe-resizer": "^3.5.9",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
     "eslint": "^8.8.0",
