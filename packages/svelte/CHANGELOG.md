@@ -1,3 +1,8 @@
+# [v@giscus/svelte-v1.1.1](https://github.com/giscus/giscus-component/compare/@giscus/svelte-v1.1.0...@giscus/svelte-v1.1.1) (2022-02-09)
+
+## 🚑 Critical Hotfixes
+- [`ba14b50`](https://github.com/giscus/giscus-component/commit/ba14b50)   Resize iframe with ResizeObserver
+
 # [v@giscus/svelte-v1.1.0](https://github.com/giscus/giscus-component/compare/@giscus/svelte-v1.0.1...@giscus/svelte-v1.1.0) (2022-02-03)
 
 ## ✨ New Features
