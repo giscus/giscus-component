@@ -1,6 +1,6 @@
-import sveltePreprocess from 'svelte-preprocess'
+const sveltePreprocess = require('svelte-preprocess')
 
-export default {
+module.exports = {
   // Consult https://github.com/sveltejs/svelte-preprocess
   // for more information about preprocessors
   preprocess: sveltePreprocess()
