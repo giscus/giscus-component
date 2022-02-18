@@ -1,3 +1,9 @@
+# [v@giscus/svelte-v1.1.2-beta.1](https://github.com/giscus/giscus-component/compare/@giscus/svelte-v1.1.1...@giscus/svelte-v1.1.2-beta.1) (2022-02-18)
+
+## 🐛 Bug Fixes
+- [`0fab290`](https://github.com/giscus/giscus-component/commit/0fab290)  (svelte) Remove type: &quot;module&quot; from Svelte package 
+- [`2c7273a`](https://github.com/giscus/giscus-component/commit/2c7273a)  (svelte) Use cjs for Svelte config
+
 # [v@giscus/svelte-v1.1.1](https://github.com/giscus/giscus-component/compare/@giscus/svelte-v1.1.0...@giscus/svelte-v1.1.1) (2022-02-09)
 
 ## 🚑 Critical Hotfixes
