@@ -1,4 +1,4 @@
-import Giscus from "./lib";
+import Giscus from './lib';
 
 function App() {
   return (

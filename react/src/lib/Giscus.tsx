@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import type { GiscusProps } from ".";
+import { useEffect } from 'react';
+import type { GiscusProps } from '.';
 
 export default function Giscus({
   id,
@@ -17,7 +17,7 @@ export default function Giscus({
   loading,
 }: GiscusProps) {
   useEffect(() => {
-    import("giscus");
+    import('giscus');
   }, []);
 
   return (
