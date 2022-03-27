@@ -1,13 +1,10 @@
 {
   "name": "giscus",
-  "version": "0.0.9",
-  "main": "./dist/giscus.umd.cjs",
-  "module": "./dist/giscus.es.js",
+  "version": "0.1.0",
+  "main": "dist/giscus.es.js",
+  "module": "dist/giscus.es.js",
   "exports": {
-    ".": {
-      "import": "./dist/giscus.es.js",
-      "require": "./dist/giscus.umd.cjs"
-    }
+    ".": "./dist/giscus.es.js"
   },
   "types": "types/giscus.d.ts",
   "files": [
