@@ -6,14 +6,14 @@ interface GiscusWidgetAttributes {
   repoid: string;
   category?: string;
   categoryid?: string;
-  mapping: import('./lib').Mapping;
+  mapping: import('./lib/types').Mapping;
   term?: string;
-  theme?: import('./lib').Theme;
-  reactionsenabled?: import('./lib').BooleanString;
-  emitmetadata?: import('./lib').BooleanString;
-  inputposition?: import('./lib').InputPosition;
-  lang?: import('./lib').AvailableLanguage;
-  loading?: import('./lib').Loading;
+  theme?: import('./lib/types').Theme;
+  reactionsenabled?: import('./lib/types').BooleanString;
+  emitmetadata?: import('./lib/types').BooleanString;
+  inputposition?: import('./lib/types').InputPosition;
+  lang?: import('./lib/types').AvailableLanguage;
+  loading?: import('./lib/types').Loading;
 }
 
 declare namespace JSX {

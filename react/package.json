@@ -2,6 +2,15 @@
   "name": "@giscus/react",
   "private": true,
   "version": "2.0.0",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.es.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -12,11 +21,15 @@
     "format:fix": "prettier src --write"
   },
   "dependencies": {
-    "giscus": "^0.1.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "giscus": "^0.1.1"
+  },
+  "peerDependencies": {
+    "react": "^16 || ^17 || ^18",
+    "react-dom": "^16 || ^17 || ^18"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.1",
+    "@types/node": "^16.11.26",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^5.16.0",

@@ -4,6 +4,9 @@
     "module": "esnext",
     "moduleResolution": "node"
   },
+  "lib": [
+    "node"
+  ],
   "include": [
     "vite.config.ts"
   ]
