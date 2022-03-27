@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "giscus": "^0.1.0",
     "vue": "^3.2.25"
   },
   "devDependencies": {
