@@ -354,6 +354,7 @@ type Lang =
   | 'pl'
   | 'ro'
   | 'ru'
+  | 'tr'
   | 'vi'
   | 'zh-CN'
   | 'zh-TW'
