@@ -8,7 +8,7 @@ import type {
   Mapping,
   Repo,
   Theme,
-} from '.';
+} from './types';
 
 defineProps<{
   id?: string;
