@@ -93,6 +93,12 @@ export class GiscusWidget extends LitElement {
   @property({ reflect: true })
   lang: Lang = 'en';
 
+  /**
+   * Whether the iframe should be loaded lazily or eagerly.
+   */
+  @property({ reflect: true })
+  loading: Loading = 'eager';
+
   constructor() {
     super();
     this.setupSession();
@@ -294,6 +300,7 @@ export class GiscusWidget extends LitElement {
         scrolling="no"
         ${ref(this._iframeRef)}
         src=${this.getIframeSrc()}
+        loading=${this.loading}
       ></iframe>
     `;
   }
@@ -352,6 +359,7 @@ type Lang =
   | 'zh-TW'
   | GenericString;
 
+type Loading = 'lazy' | 'eager';
 interface ISetConfigMessage {
   setConfig: {
     theme?: Theme;
