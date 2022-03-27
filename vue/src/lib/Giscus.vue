@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import type { AvailableLanguage, BooleanString, InputPosition, Loading, Mapping, Repo, Theme } from '.';
+import type {
+  AvailableLanguage,
+  BooleanString,
+  InputPosition,
+  Loading,
+  Mapping,
+  Repo,
+  Theme,
+} from '.';
 
 defineProps<{
   id?: string;
