@@ -267,7 +267,7 @@ export class GiscusWidget extends LitElement {
     const url = new URL(location.href);
     url.searchParams.delete('giscus');
 
-    const origin = url.toString();
+    const origin = `${url}${this.id ? '#' + this.id : ''}`;
 
     const description = this._getOgMetaContent('description');
 
