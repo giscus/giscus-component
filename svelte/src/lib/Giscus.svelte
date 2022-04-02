@@ -7,7 +7,7 @@
     Loading,
     Mapping,
     Theme,
-  } from '$lib';
+  } from '.';
 
   onMount(() => import('giscus'));
 
