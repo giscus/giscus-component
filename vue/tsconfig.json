@@ -24,5 +24,7 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ]
+  ],
+  "outDir": "dist",
+  "declaration": true
 }

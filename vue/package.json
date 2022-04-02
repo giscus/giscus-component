@@ -1,6 +1,6 @@
 {
   "name": "@giscus/vue",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.3",
   "main": "dist/giscus.cjs.js",
   "module": "dist/giscus.es.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build && npm run build:types",
+    "build:types": "vue-tsc --emitDeclarationOnly --declaration --outDir dist/types && mv dist/types/lib/* dist/ && rm -rf dist/types",
     "preview": "vite preview",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
@@ -29,7 +30,6 @@
     "vue": ">=3.2.0"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^8.3.1",
     "@types/node": "^16.11.26",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
