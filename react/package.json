@@ -1,6 +1,6 @@
 {
   "name": "@giscus/react",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.2",
   "main": "dist/giscus.cjs.js",
   "module": "dist/giscus.es.js",
   "types": "dist/index.d.ts",
@@ -10,6 +10,9 @@
       "import": "./dist/giscus.es.js"
     }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
