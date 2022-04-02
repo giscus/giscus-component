@@ -1,15 +1,18 @@
 {
   "name": "@giscus/vue",
-  "version": "2.0.0-beta.0",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.es.js",
+  "version": "2.0.0-beta.1",
+  "main": "dist/giscus.cjs.js",
+  "module": "dist/giscus.es.js",
   "types": "dist/types.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs.js",
-      "import": "./dist/index.es.js"
+      "require": "./dist/giscus.cjs.js",
+      "import": "./dist/giscus.es.js"
     }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -26,6 +29,7 @@
     "vue": ">=3.2.0"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.1",
     "@types/node": "^16.11.26",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
