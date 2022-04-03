@@ -7,11 +7,41 @@
 	<link rel="icon" href="%svelte.assets%/favicon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>@giscus/svelte demo</title>
+	<style>
+		main {
+			max-width: 760px;
+			margin: 2rem auto;
+			font-family: sans-serif;
+		}
+	</style>
 	%svelte.head%
 </head>
 
 <body>
-	<div>%svelte.body%</div>
+	<main>
+		<h1><a rel="external" href="/">giscus-component</a></h1>
+
+		<p>This page is running the @giscus/svelte library on Svelte.</p>
+
+		<p>Click the links below to see the component library in action:</p>
+
+		<ul>
+			<li>
+				<a rel="external" href="/web">Web Component (Lit)</a>
+			</li>
+			<li>
+				<a rel="external" href="/preact">Preact</a>
+			</li>
+			<li>
+				<a rel="external" href="/react">React</a>
+			</li>
+			<li>
+				<a rel="external" href="/vue">Vue</a>
+			</li>
+		</ul>
+
+		<div>%svelte.body%</div>
+	</main>
 </body>
 
 </html>
