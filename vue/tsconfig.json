@@ -12,7 +12,11 @@
     "lib": [
       "esnext",
       "dom"
-    ]
+    ],
+    "outDir": "dist/types",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*.ts",
@@ -24,7 +28,5 @@
     {
       "path": "./tsconfig.node.json"
     }
-  ],
-  "outDir": "dist",
-  "declaration": true
+  ]
 }

@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && npm run build:types",
-    "build:types": "vue-tsc --emitDeclarationOnly --declaration --outDir dist/types && mv dist/types/lib/* dist/ && rm -rf dist/types",
+    "build:types": "vue-tsc && mv dist/types/lib/* dist/ && rm -rf dist/types",
     "preview": "vite preview",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
