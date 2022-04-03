@@ -18,7 +18,7 @@ export default defineConfig({
       external: ['preact'],
       output: {
         globals: {
-          preact: 'Preact',
+          preact: 'preact',
         },
       },
       plugins: [

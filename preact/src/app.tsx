@@ -13,7 +13,7 @@ export function App() {
       emitMetadata="0"
       inputPosition="top"
       theme="light"
-      lang="id"
+      lang="en"
     />
   );
 }
