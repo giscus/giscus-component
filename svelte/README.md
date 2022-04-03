@@ -1,4 +1,4 @@
-# giscus-widget
+# @giscus/svelte
 
 See [giscus-component][giscus-component] for more details.
 
