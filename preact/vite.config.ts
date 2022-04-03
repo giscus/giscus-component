@@ -15,10 +15,12 @@ export default defineConfig({
       fileName: (format) => `giscus.${format}.js`,
     },
     rollupOptions: {
-      external: ['preact'],
+      external: ['preact', 'preact/compat', 'preact/jsx-runtime'],
       output: {
         globals: {
           preact: 'preact',
+          'preact/compat': 'preactCompat',
+          'preact/jsx-runtime': 'preactJsxRuntime',
         },
       },
       plugins: [
