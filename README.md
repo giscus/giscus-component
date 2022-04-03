@@ -57,7 +57,7 @@ npm i giscus
 Then import it in your code.
 
 ```ts
-import "giscus";
+import 'giscus';
 ```
 
 Alternatively, you can also use [unpkg][unpkg] or [Skypack][skypack].
@@ -114,12 +114,12 @@ This is a monorepo. The base component is written using Lit as a web component.
 The other components are built as a wrapper around the web component for
 convenience.
 
-| Environment         | Name                                  | Version                                     | Downloads                                     |
-| ------------------- | ------------------------------------- | ------------------------------------------- | --------------------------------------------- |
-| Web Component (Lit) | [`giscus`](./packages/web)            | [![npm version][web-vbadge]][npm-web]       | [![npm downloads][web-dbadge]][npm-web]       |
-| React & Preact      | [`@giscus/react`](./packages/react)   | [![npm version][react-vbadge]][npm-react]   | [![npm downloads][react-dbadge]][npm-react]   |
-| Vue                 | [`@giscus/vue`](./packages/vue)       | [![npm version][vue-vbadge]][npm-vue]       | [![npm downloads][vue-dbadge]][npm-vue]       |
-| Svelte              | [`@giscus/svelte`](./packages/svelte) | [![npm version][svelte-vbadge]][npm-svelte] | [![npm downloads][svelte-dbadge]][npm-svelte] |
+| Environment         | Name                         | Version                                     | Downloads                                     |
+| ------------------- | ---------------------------- | ------------------------------------------- | --------------------------------------------- |
+| Web Component (Lit) | [`giscus`](./web)            | [![npm version][web-vbadge]][npm-web]       | [![npm downloads][web-dbadge]][npm-web]       |
+| React & Preact      | [`@giscus/react`](./react)   | [![npm version][react-vbadge]][npm-react]   | [![npm downloads][react-dbadge]][npm-react]   |
+| Vue                 | [`@giscus/vue`](./vue)       | [![npm version][vue-vbadge]][npm-vue]       | [![npm downloads][vue-dbadge]][npm-vue]       |
+| Svelte              | [`@giscus/svelte`](./svelte) | [![npm version][svelte-vbadge]][npm-svelte] | [![npm downloads][svelte-dbadge]][npm-svelte] |
 
 ## Related Article
 
