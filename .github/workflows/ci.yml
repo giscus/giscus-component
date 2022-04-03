@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint_build:
+    name: 'Lint and Build'
+
+    strategy:
+      fail-fast: false
+      matrix:
+        framework: [react, vue, svelte, web]
+
+    defaults:
+      run:
+        working-directory: ${{ matrix.framework }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'npm'
+          cache-dependency-path: ${{ matrix.framework }}/package-lock.json
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run Prettier
+        run: npm run format
+
+      - name: Build project
+        run: npm run build
