@@ -135,6 +135,7 @@ export class GiscusWidget extends LitElement {
     if (savedSession) {
       try {
         this.__session = JSON.parse(savedSession || '') || '';
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (e: any) {
         this.__session = '';
         localStorage.removeItem(this.GISCUS_SESSION_KEY);
