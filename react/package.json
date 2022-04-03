@@ -28,7 +28,7 @@
     "format:fix": "prettier src --write"
   },
   "dependencies": {
-    "giscus": "^0.1.2"
+    "giscus": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^16 || ^17 || ^18",
