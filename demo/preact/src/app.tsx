@@ -1,4 +1,4 @@
-import Giscus from '@giscus/preact';
+import Giscus from '@giscus/react';
 
 export function App() {
   return (
