@@ -12,7 +12,7 @@ export default defineConfig({
     lib: {
       entry: resolvePath('src/lib/index.ts'),
       formats: ['cjs', 'es'],
-      fileName: (format) => `giscus.${format}.js`,
+      fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
       external: ['preact', 'preact/compat', 'preact/jsx-runtime'],

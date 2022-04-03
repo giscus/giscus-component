@@ -1,13 +1,13 @@
 {
   "name": "@giscus/react",
-  "version": "2.0.0-beta.4",
-  "main": "dist/giscus.cjs.js",
-  "module": "dist/giscus.es.js",
+  "version": "2.0.0-beta.5",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/giscus.cjs.js",
-      "import": "./dist/giscus.es.js"
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.es.js"
     }
   },
   "files": [
