@@ -24,6 +24,7 @@ export class GiscusWidget extends LitElement {
     iframe {
       width: 100%;
       border: none;
+      color-scheme: normal;
     }
   `;
 
