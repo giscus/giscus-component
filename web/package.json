@@ -12,6 +12,11 @@
     "dist",
     "types"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giscus/giscus-component.git",
+    "directory": "web"
+  },
   "license": "MIT",
   "scripts": {
     "dev": "vite",
