@@ -9,7 +9,7 @@ import { createRef, ref, Ref } from 'lit/directives/ref.js';
 export class GiscusWidget extends LitElement {
   private GISCUS_SESSION_KEY = 'giscus-session';
   private GISCUS_ORIGIN = 'https://giscus.app';
-  private ERROR_SUGGESTION = `Please consider reporting this error at https://github.com/laymonage/giscus/issues/new.`;
+  private ERROR_SUGGESTION = `Please consider reporting this error at https://github.com/giscus/giscus/issues/new.`;
 
   private __session = '';
   private _iframeRef: Ref<HTMLIFrameElement> = createRef();
