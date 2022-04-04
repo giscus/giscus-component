@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Giscus } from '@giscus/svelte';
+  import Giscus from '@giscus/svelte';
 </script>
 
 <main>
