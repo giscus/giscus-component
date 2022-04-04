@@ -48,6 +48,4 @@ export type AvailableLanguage =
 
 export type Loading = 'lazy' | 'eager';
 
-import Giscus from './Giscus.svelte';
-export { Giscus };
-export default Giscus;
+export { default } from './Giscus.svelte';

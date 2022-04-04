@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Giscus } from '$lib';
+  import Giscus from '$lib';
 </script>
 
 <main>
