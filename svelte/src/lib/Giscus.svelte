@@ -26,20 +26,18 @@
   export let loading: Loading = 'eager';
 </script>
 
-<main>
-  <giscus-widget
-    {id}
-    {repo}
-    repoid={repoId}
-    {category}
-    categoryid={categoryId}
-    {mapping}
-    {term}
-    reactionsenabled={reactionsEnabled}
-    emitmetadata={emitMetadata}
-    inputposition={inputPosition}
-    {theme}
-    {lang}
-    {loading}
-  />
-</main>
+<giscus-widget
+  {id}
+  {repo}
+  repoid={repoId}
+  {category}
+  categoryid={categoryId}
+  {mapping}
+  {term}
+  reactionsenabled={reactionsEnabled}
+  emitmetadata={emitMetadata}
+  inputposition={inputPosition}
+  {theme}
+  {lang}
+  {loading}
+/>
