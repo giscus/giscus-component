@@ -8,7 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@giscus/react": "^2.0.1",
+    "@giscus/react": "^2.0.2",
     "preact": "^10.5.15"
   },
   "devDependencies": {

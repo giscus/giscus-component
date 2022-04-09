@@ -12,6 +12,6 @@
     "vite": "^2.9.0"
   },
   "dependencies": {
-    "giscus": "^1.0.1"
+    "giscus": "^1.0.2"
   }
 }
