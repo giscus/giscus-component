@@ -1,9 +1,11 @@
 <script lang="ts">
   import Giscus from '@giscus/svelte';
+  import '../styles.css';
 </script>
 
-<main>
+<div class="comments-container">
   <Giscus
+    id="comments"
     repo="giscus/giscus-component"
     repoId="MDEwOlJlcG9zaXRvcnkzOTEzMTMwMjA="
     category="Announcements"
@@ -16,4 +18,4 @@
     theme="light"
     lang="en"
   />
-</main>
+</div>

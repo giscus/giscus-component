@@ -1,0 +1,10 @@
+.giscus-frame {
+  max-width: 640px;
+  margin: auto;
+  display: flex;
+}
+
+.giscus {
+  max-height: 640px;
+  overflow-y: scroll;
+}

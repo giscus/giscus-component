@@ -1,5 +1,5 @@
 rm -rf dist && mkdir dist
-cp index.html dist/
+cp {index.html,styles.css} dist/
 
 for framework in preact react vue svelte web
 do
