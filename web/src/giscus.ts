@@ -309,6 +309,7 @@ export class GiscusWidget extends LitElement {
         ${ref(this._iframeRef)}
         src=${this.getIframeSrc()}
         loading=${this.loading}
+        part="iframe"
       ></iframe>
     `;
   }
