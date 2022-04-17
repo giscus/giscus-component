@@ -6,23 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Lit App</title>
     <script type="module" src="/src/giscus.ts"></script>
+    <style>
+      .styles {
+        margin: 2rem;
+        font-family: sans-serif;
+        background-color: #bababa;
+      }
+      #comments {
+        display: flex;
+        margin: auto;
+        max-width: 640px;
+        min-height: 200px;
+      }
+      .comments-container {
+        margin: auto;
+        max-width: 800px;
+        max-height: 640px;
+        overflow-y: scroll;
+      }
+    </style>
   </head>
-  <body style="background-color: #bababa">
-    <giscus-widget
-      id="comments"
-      repo="giscus/giscus"
-      repoid="MDEwOlJlcG9zaXRvcnkzNTE5NTgwNTM="
-      category="General"
-      categoryid="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyNzk2NTc1"
-      mapping="specific"
-      term="Welcome to giscus!"
-      reactionsenabled="1"
-      emitmetadata="0"
-      inputposition="top"
-      theme="light"
-      lang="en"
-    >
-      <p>Loading comments...</p>
-    </giscus-widget>
+  <body class="styles">
+    <div class="comments-container">
+      <giscus-widget
+        id="comments"
+        repo="giscus/giscus"
+        repoid="MDEwOlJlcG9zaXRvcnkzNTE5NTgwNTM="
+        category="General"
+        categoryid="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyNzk2NTc1"
+        mapping="specific"
+        term="Welcome to giscus!"
+        reactionsenabled="1"
+        emitmetadata="0"
+        inputposition="top"
+        theme="light"
+        lang="en"
+      >
+        <p>Loading comments...</p>
+      </giscus-widget>
+    </div>
   </body>
 </html>
