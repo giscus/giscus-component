@@ -94,6 +94,51 @@ The attribute names are the same as the `data-` attributes shown on the
 [giscus website][giscus], but written in lowercase with the `data-` prefix and
 dashes removed.
 
+### Changing the `<iframe>` styles
+
+You can style the `<iframe>` in your CSS by selecting the web component, or the
+`iframe` part specifically. For example:
+
+```css
+giscus-widget {
+  display: flex;
+  margin: auto;
+  max-width: 640px;
+}
+/* or... */
+#comments {
+  /* ... */
+}
+/* or... */
+#comments::part(iframe) {
+  /* ... */
+}
+/* etc. */
+```
+
+You can also make the widget scrollable by creating a parent container with a
+limited height and `overflow: scroll`, for example:
+
+```html
+<div class="comments-container">
+  <giscus-widget
+    ...
+  >
+  </giscus-widget>
+</div>
+```
+
+```css
+.comments-container {
+  max-height: 640px;
+  overflow-y: scroll;
+}
+```
+
+Note that this only allows you to style the `<iframe>` element and
+**not the iframe's contents**. If you want to style the contents, you need to
+[use a custom theme][custom-theme].
+
 ### Notes
 
 When you change the props/attributes of the React, Vue, and web components, they
@@ -136,6 +181,7 @@ Released under the [MIT](./LICENSE) license.
 [skypack]: https://skypack.dev
 [demo]: https://giscus-component.vercel.app
 [advanced-usage]: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md
+[custom-theme]: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#data-theme
 [web-vbadge]: https://img.shields.io/npm/v/giscus.svg
 [react-vbadge]: https://img.shields.io/npm/v/@giscus/react.svg
 [vue-vbadge]: https://img.shields.io/npm/v/@giscus/vue.svg
