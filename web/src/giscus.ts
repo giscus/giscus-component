@@ -25,6 +25,7 @@ export class GiscusWidget extends LitElement {
       width: 100%;
       border: none;
       color-scheme: normal;
+      min-height: 150px;
     }
   `;
 
