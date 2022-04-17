@@ -241,10 +241,16 @@ export class GiscusWidget extends LitElement {
     return element ? element.content : '';
   }
 
+  private _getCleanedUrl() {
+    const url = new URL(location.href);
+    url.searchParams.delete('giscus');
+    return url;
+  }
+
   private getTerm() {
     switch (this.mapping) {
       case 'url':
-        return origin;
+        return `${this._getCleanedUrl()}`;
       case 'title':
         return document.title;
       case 'og:title':
@@ -266,8 +272,7 @@ export class GiscusWidget extends LitElement {
   }
 
   private getIframeSrc() {
-    const url = new URL(location.href);
-    url.searchParams.delete('giscus');
+    const url = this._getCleanedUrl();
 
     const origin = `${url}${this.id ? '#' + this.id : ''}`;
 
