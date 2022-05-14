@@ -19,10 +19,10 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "^1.0.0-next.40",
-    "@sveltejs/kit": "^1.0.0-next.326",
-    "@typescript-eslint/eslint-plugin": "^5.22.0",
-    "@typescript-eslint/parser": "^5.22.0",
+    "@sveltejs/adapter-auto": "^1.0.0-next.42",
+    "@sveltejs/kit": "^1.0.0-next.330",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^4.0.0",
