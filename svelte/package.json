@@ -37,6 +37,6 @@
   },
   "type": "module",
   "dependencies": {
-    "giscus": "^1.0.3"
+    "giscus": "^1.0.4"
   }
 }
