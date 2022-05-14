@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import type { GiscusProps } from './types';
 
 export default function Giscus({
@@ -16,9 +16,15 @@ export default function Giscus({
   lang,
   loading,
 }: GiscusProps) {
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
+    if (mounted) return;
     import('giscus');
+    setMounted(true);
   }, []);
+
+  if (!mounted) return null;
 
   return (
     <giscus-widget
