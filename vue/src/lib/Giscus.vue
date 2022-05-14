@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import type {
   AvailableLanguage,
   BooleanString,
@@ -26,11 +26,17 @@ defineProps<{
   loading?: Loading;
 }>();
 
-onMounted(() => import('giscus'));
+const mounted = ref(false);
+
+onMounted(() => {
+  mounted.value = true;
+  import('giscus');
+});
 </script>
 
 <template>
   <giscus-widget
+    v-if="mounted"
     :id="id"
     :repo="repo"
     :repoid="repoId"
