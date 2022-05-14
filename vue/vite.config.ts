@@ -6,7 +6,13 @@ const resolvePath = (str: string) => resolve(__dirname, str);
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: { isCustomElement: (tag) => tag.includes('-') },
+      },
+    }),
+  ],
   build: {
     lib: {
       entry: resolvePath('src/lib/index.ts'),
