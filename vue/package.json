@@ -30,7 +30,7 @@
     "format:fix": "prettier src --write"
   },
   "dependencies": {
-    "giscus": "^1.0.3"
+    "giscus": "^1.0.4"
   },
   "peerDependencies": {
     "vue": ">=3.2.0"
