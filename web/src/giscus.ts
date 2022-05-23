@@ -305,6 +305,7 @@ export class GiscusWidget extends LitElement {
   render() {
     return html`
       <iframe
+        title="Comments"
         scrolling="no"
         ${ref(this._iframeRef)}
         src=${this.getIframeSrc()}
