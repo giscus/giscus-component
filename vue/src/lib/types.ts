@@ -18,9 +18,11 @@ export type Theme =
   | 'light'
   | 'light_high_contrast'
   | 'light_protanopia'
+  | 'light_tritanopia'
   | 'dark'
   | 'dark_high_contrast'
   | 'dark_protanopia'
+  | 'dark_tritanopia'
   | 'dark_dimmed'
   | 'transparent_dark'
   | 'preferred_color_scheme'
@@ -37,7 +39,9 @@ export type AvailableLanguage =
   | 'it'
   | 'ja'
   | 'ko'
+  | 'nl'
   | 'pl'
+  | 'pt'
   | 'ro'
   | 'ru'
   | 'tr'
@@ -50,6 +54,7 @@ export type Loading = 'lazy' | 'eager';
 
 export interface GiscusProps {
   id?: string;
+  host?: string;
   repo: Repo;
   repoId: string;
   category?: string;
@@ -57,6 +62,7 @@ export interface GiscusProps {
   mapping: Mapping;
   term?: string;
   theme?: Theme;
+  strict?: BooleanString;
   reactionsEnabled?: BooleanString;
   emitMetadata?: BooleanString;
   inputPosition?: InputPosition;

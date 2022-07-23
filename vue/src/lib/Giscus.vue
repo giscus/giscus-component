@@ -12,6 +12,7 @@ import type {
 
 defineProps<{
   id?: string;
+  host?: string;
   repo: Repo;
   repoId: string;
   category?: string;
@@ -19,6 +20,7 @@ defineProps<{
   mapping: Mapping;
   term?: string;
   theme?: Theme;
+  strict?: BooleanString;
   reactionsEnabled?: BooleanString;
   emitMetadata?: BooleanString;
   inputPosition?: InputPosition;
@@ -38,12 +40,14 @@ onMounted(() => {
   <giscus-widget
     v-if="mounted"
     :id="id"
+    :host="host"
     :repo="repo"
     :repoid="repoId"
     :category="category"
     :categoryid="categoryId"
     :mapping="mapping"
     :term="term"
+    :strict="strict"
     :reactionsenabled="reactionsEnabled"
     :emitmetadata="emitMetadata"
     :inputposition="inputPosition"

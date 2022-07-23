@@ -1,7 +1,7 @@
 {
   "name": "@giscus/vue",
   "version": "2.0.6",
-  "main": "dist/giscus.cjs.js",
+  "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "exports": {
@@ -30,7 +30,7 @@
     "format:fix": "prettier src --write"
   },
   "dependencies": {
-    "giscus": "^1.0.6"
+    "giscus": "^1.1.1"
   },
   "peerDependencies": {
     "vue": ">=3.2.0"
