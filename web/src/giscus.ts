@@ -72,6 +72,12 @@ export class GiscusWidget extends LitElement {
   term?: string;
 
   /**
+   * Use strict title matching.
+   */
+  @property({ reflect: true })
+  strict: BooleanString = '0';
+
+  /**
    * Enable reactions to the main post of the discussion.
    */
   @property({ reflect: true })
@@ -212,6 +218,7 @@ export class GiscusWidget extends LitElement {
         categoryId: this.categoryId,
         term: this.getTerm(),
         number: +this.getNumber(),
+        strict: this.strict === '1',
         reactionsEnabled: this.reactionsEnabled === '1',
         emitMetadata: this.emitMetadata === '1',
         inputPosition: this.inputPosition,
@@ -291,6 +298,7 @@ export class GiscusWidget extends LitElement {
       categoryId: this.categoryId || '',
       term: this.getTerm(),
       number: this.getNumber(),
+      strict: this.strict,
       reactionsEnabled: this.reactionsEnabled,
       emitMetadata: this.emitMetadata,
       inputPosition: this.inputPosition,
@@ -384,6 +392,7 @@ interface ISetConfigMessage {
     term?: string;
     description?: string;
     number?: number;
+    strict?: boolean;
     reactionsEnabled?: boolean;
     emitMetadata?: boolean;
     inputPosition?: InputPosition;
