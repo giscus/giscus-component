@@ -3,12 +3,14 @@ import type { GiscusProps } from './types';
 
 export default function Giscus({
   id,
+  host,
   repo,
   repoId,
   category,
   categoryId,
   mapping,
   term,
+  strict,
   reactionsEnabled,
   emitMetadata,
   inputPosition,
@@ -29,12 +31,14 @@ export default function Giscus({
   return (
     <giscus-widget
       id={id}
+      host={host}
       repo={repo}
       repoid={repoId}
       category={category}
       categoryid={categoryId}
       mapping={mapping}
       term={term}
+      strict={strict}
       reactionsenabled={reactionsEnabled}
       emitmetadata={emitMetadata}
       inputposition={inputPosition}
