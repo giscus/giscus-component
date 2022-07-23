@@ -8,7 +8,7 @@ import { createRef, ref, Ref } from 'lit/directives/ref.js';
 @customElement('giscus-widget')
 export class GiscusWidget extends LitElement {
   private GISCUS_SESSION_KEY = 'giscus-session';
-  private GISCUS_ORIGIN = 'https://giscus.app';
+  private GISCUS_DEFAULT_HOST = 'https://giscus.app';
   private ERROR_SUGGESTION = `Please consider reporting this error at https://github.com/giscus/giscus/issues/new.`;
 
   private __session = '';
@@ -28,6 +28,12 @@ export class GiscusWidget extends LitElement {
       min-height: 150px;
     }
   `;
+
+  /**
+   * Host of the giscus server.
+   */
+  @property({ reflect: true })
+  host: string = this.GISCUS_DEFAULT_HOST;
 
   /**
    * Repo where the discussion is stored.
@@ -149,7 +155,7 @@ export class GiscusWidget extends LitElement {
   }
 
   private handleMessageEvent(event: MessageEvent) {
-    if (event.origin !== this.GISCUS_ORIGIN) return;
+    if (event.origin !== this.host) return;
 
     const { data } = event;
     if (!(typeof data === 'object' && data.giscus)) return;
@@ -194,10 +200,7 @@ export class GiscusWidget extends LitElement {
   }
 
   private sendMessage<T>(message: T) {
-    this.iframeRef?.contentWindow?.postMessage(
-      { giscus: message },
-      this.GISCUS_ORIGIN
-    );
+    this.iframeRef?.contentWindow?.postMessage({ giscus: message }, this.host);
   }
 
   private updateConfig() {
@@ -225,8 +228,8 @@ export class GiscusWidget extends LitElement {
     oldValue?: unknown,
     options?: PropertyDeclaration<unknown, unknown>
   ): void {
-    // Only rerender (update) on initial load.
-    if (!this.hasUpdated) {
+    // Only rerender (update) on initial load or if the host changes.
+    if (!this.hasUpdated || name === 'host') {
       super.requestUpdate(name, oldValue, options);
       return;
     }
@@ -299,7 +302,7 @@ export class GiscusWidget extends LitElement {
 
     const searchParams = new URLSearchParams(params);
 
-    return `${this.GISCUS_ORIGIN}${locale}/widget?${searchParams}`;
+    return `${this.host}${locale}/widget?${searchParams}`;
   }
 
   render() {
