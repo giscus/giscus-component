@@ -1,19 +1,23 @@
 {
   "root": true,
-  "parser": "@typescript-eslint/parser",
+  "parser": "vue-eslint-parser",
   "parserOptions": {
+    "parser": "@typescript-eslint/parser",
     "sourceType": "module",
     "ecmaVersion": 2020
   },
   "extends": [
     "eslint:recommended",
-    "plugin:vue/recommended",
+    "plugin:vue/vue3-recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
   "plugins": [
     "@typescript-eslint"
   ],
+  "rules": {
+    "vue/multi-word-component-names": "off"
+  },
   "env": {
     "browser": true,
     "es2017": true,

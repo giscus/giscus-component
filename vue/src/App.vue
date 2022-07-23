@@ -7,14 +7,14 @@ import Giscus from './lib';
 <template>
   <Giscus
     repo="giscus/giscus-component"
-    repoId="MDEwOlJlcG9zaXRvcnkzOTEzMTMwMjA="
+    repo-id="MDEwOlJlcG9zaXRvcnkzOTEzMTMwMjA="
     category="Announcements"
-    categoryId="DIC_kwDOF1L2fM4B-hVS"
+    category-id="DIC_kwDOF1L2fM4B-hVS"
     mapping="specific"
     term="Welcome to @giscus/vue component!"
-    reactionsEnabled="1"
-    emitMetadata="0"
-    inputPosition="top"
+    reactions-enabled="1"
+    emit-metadata="0"
+    input-position="top"
     theme="light"
     lang="en"
   />
