@@ -1,6 +1,6 @@
 {
   "name": "@giscus/react",
-  "version": "2.0.6",
+  "version": "2.1.1",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
