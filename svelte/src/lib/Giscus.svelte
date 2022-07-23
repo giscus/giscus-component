@@ -10,12 +10,14 @@
   } from '.';
 
   export let id: string = undefined;
+  export let host = 'https://giscus.app';
   export let repo: `${string}/${string}`;
   export let repoId: string;
   export let category: string = undefined;
   export let categoryId: string = undefined;
   export let mapping: Mapping = 'pathname';
   export let term: string = undefined;
+  export let strict: BooleanString = '0';
   export let reactionsEnabled: BooleanString = '1';
   export let emitMetadata: BooleanString = '0';
   export let inputPosition: InputPosition = 'bottom';
@@ -34,12 +36,14 @@
 {#if mounted}
   <giscus-widget
     {id}
+    {host}
     {repo}
     repoid={repoId}
     {category}
     categoryid={categoryId}
     {mapping}
     {term}
+    {strict}
     reactionsenabled={reactionsEnabled}
     emitmetadata={emitMetadata}
     inputposition={inputPosition}
