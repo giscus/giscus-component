@@ -244,10 +244,11 @@ export class GiscusWidget extends LitElement {
     this.updateConfig();
   }
 
-  private _getOgMetaContent(property: string) {
-    const element = document.querySelector(
-      `meta[property='og:${property}'],meta[name='${property}']`
-    ) as HTMLMetaElement;
+  private getMetaContent(property: string, og = false) {
+    const ogSelector = og ? `meta[property='og:${property}'],` : '';
+    const element = document.querySelector<HTMLMetaElement>(
+      ogSelector + `meta[name='${property}']`
+    );
 
     return element ? element.content : '';
   }
@@ -265,7 +266,7 @@ export class GiscusWidget extends LitElement {
       case 'title':
         return document.title;
       case 'og:title':
-        return this._getOgMetaContent('title');
+        return this.getMetaContent('title', true);
       case 'specific':
         return this.term || '';
       case 'number':
@@ -283,11 +284,12 @@ export class GiscusWidget extends LitElement {
   }
 
   private getIframeSrc() {
-    const url = this._getCleanedUrl();
+    const url = this._getCleanedUrl().toString();
 
     const origin = `${url}${this.id ? '#' + this.id : ''}`;
 
-    const description = this._getOgMetaContent('description');
+    const description = this.getMetaContent('description', true);
+    const backLink = this.getMetaContent('giscus:backlink') || url;
 
     const params: Record<string, string> = {
       origin,
@@ -304,6 +306,7 @@ export class GiscusWidget extends LitElement {
       inputPosition: this.inputPosition,
       theme: this.theme,
       description,
+      backLink,
     };
 
     const locale = this.lang ? `/${this.lang}` : '';
@@ -395,6 +398,7 @@ interface ISetConfigMessage {
     categoryId?: string;
     term?: string;
     description?: string;
+    backLink?: string;
     number?: number;
     strict?: boolean;
     reactionsEnabled?: boolean;
