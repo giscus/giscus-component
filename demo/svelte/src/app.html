@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="This is a demo for the @giscus/svelte component."
+    />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@giscus/svelte demo</title>
+    <style>
+      main {
+        max-width: 760px;
+        margin: 2rem auto;
+        font-family: sans-serif;
+      }
+    </style>
+    %sveltekit.head%
+  </head>
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="description" content="This is a demo for the @giscus/svelte component." />
-	<link rel="icon" href="%svelte.assets%/favicon.png" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>@giscus/svelte demo</title>
-	<style>
-		main {
-			max-width: 760px;
-			margin: 2rem auto;
-			font-family: sans-serif;
-		}
-	</style>
-	%svelte.head%
-</head>
+  <body>
+    <main>
+      <h1><a rel="external" href="/">giscus-component</a></h1>
 
-<body>
-	<main>
-		<h1><a rel="external" href="/">giscus-component</a></h1>
+      <p>This page is running the @giscus/svelte library on Svelte.</p>
 
-		<p>This page is running the @giscus/svelte library on Svelte.</p>
+      <p>Click the links below to see the component library in action:</p>
 
-		<p>Click the links below to see the component library in action:</p>
+      <ul>
+        <li>
+          <a rel="external" href="/web">Web Component (Lit)</a>
+        </li>
+        <li>
+          <a rel="external" href="/preact">Preact</a>
+        </li>
+        <li>
+          <a rel="external" href="/react">React</a>
+        </li>
+        <li>
+          <a rel="external" href="/vue">Vue</a>
+        </li>
+      </ul>
 
-		<ul>
-			<li>
-				<a rel="external" href="/web">Web Component (Lit)</a>
-			</li>
-			<li>
-				<a rel="external" href="/preact">Preact</a>
-			</li>
-			<li>
-				<a rel="external" href="/react">React</a>
-			</li>
-			<li>
-				<a rel="external" href="/vue">Vue</a>
-			</li>
-		</ul>
-
-		<div>%svelte.body%</div>
-	</main>
-</body>
-
+      <div>%sveltekit.body%</div>
+    </main>
+  </body>
 </html>
