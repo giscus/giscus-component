@@ -36,7 +36,7 @@
     "react-dom": "^16 || ^17 || ^18"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^8.3.4",
+    "@rollup/plugin-typescript": "^8.5.0",
     "@types/node": "^18.7.8",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
