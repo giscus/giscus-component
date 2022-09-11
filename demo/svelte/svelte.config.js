@@ -15,7 +15,6 @@ const config = {
       precompress: false,
     }),
     prerender: {
-      default: true,
       onError: 'continue',
     },
     paths: {
