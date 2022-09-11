@@ -36,16 +36,16 @@
     "vue": ">=3.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.7.8",
-    "@typescript-eslint/eslint-plugin": "^5.33.1",
-    "@typescript-eslint/parser": "^5.33.1",
-    "@vitejs/plugin-vue": "^3.0.3",
-    "eslint": "^8.22.0",
+    "@types/node": "^18.7.16",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-vue": "^9.3.0",
+    "eslint-plugin-vue": "^9.4.0",
     "prettier": "^2.7.1",
-    "typescript": "^4.7.4",
+    "typescript": "^4.8.3",
     "vite": "^3.0.9",
-    "vue-tsc": "^0.40.1"
+    "vue-tsc": "^0.40.13"
   }
 }
