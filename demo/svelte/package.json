@@ -10,8 +10,8 @@
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.39",
-    "@sveltejs/kit": "^1.0.0-next.314",
+    "@sveltejs/adapter-static": "^1.0.0-next.42",
+    "@sveltejs/kit": "^1.0.0-next.480",
     "svelte": "^3.47.0",
     "svelte-check": "^2.7.0",
     "svelte-preprocess": "^4.10.6",
