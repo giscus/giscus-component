@@ -17,7 +17,10 @@ export default defineConfig({
     lib: {
       entry: resolvePath('src/lib/index.ts'),
       formats: ['cjs', 'es'],
-      fileName: (format) => `index.${format}.js`,
+      fileName: (format) => ({
+        cjs: 'index.cjs',
+        es: 'index.mjs',
+      }[format]),
     },
     rollupOptions: {
       external: ['vue'],

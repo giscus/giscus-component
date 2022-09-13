@@ -2,12 +2,12 @@
   "name": "giscus",
   "version": "1.2.2",
   "type": "module",
-  "main": "dist/giscus.js",
-  "module": "dist/giscus.js",
+  "main": "dist/giscus.mjs",
+  "module": "dist/giscus.mjs",
   "exports": {
     ".": {
       "types": "./types/giscus.d.ts",
-      "import": "./dist/giscus.js"
+      "import": "./dist/giscus.mjs"
     }
   },
   "types": "types/giscus.d.ts",

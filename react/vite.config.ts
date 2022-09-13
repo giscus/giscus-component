@@ -12,7 +12,10 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/lib/index.ts'),
       formats: ['cjs', 'es'],
-      fileName: (format) => `index.${format}.js`,
+      fileName: (format) => ({
+        cjs: 'index.cjs',
+        es: 'index.mjs',
+      }[format]),
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],

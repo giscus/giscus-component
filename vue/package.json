@@ -1,14 +1,14 @@
 {
   "name": "@giscus/vue",
   "version": "2.2.2",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.es.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs.js",
-      "import": "./dist/index.es.js"
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
     }
   },
   "files": [

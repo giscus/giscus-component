@@ -6,6 +6,7 @@ export default defineConfig({
     lib: {
       entry: 'src/giscus.ts',
       formats: ['es'],
+      fileName: () => 'giscus.mjs',
     },
     rollupOptions: {
       external: /^lit/,
