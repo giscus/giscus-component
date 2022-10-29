@@ -38,7 +38,7 @@
   "devDependencies": {
     "@rollup/plugin-typescript": "^9.0.2",
     "@types/node": "^18.11.3",
-    "@types/react": "^18.0.21",
+    "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
