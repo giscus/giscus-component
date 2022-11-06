@@ -15,7 +15,7 @@ const config = {
       precompress: false,
     }),
     prerender: {
-      onError: 'continue',
+      handleHttpError: 'warn',
     },
     paths: {
       base: '/svelte',
