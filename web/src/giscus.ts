@@ -309,11 +309,11 @@ export class GiscusWidget extends LitElement {
       backLink,
     };
 
+    const host = this.host || this.GISCUS_DEFAULT_HOST;
     const locale = this.lang ? `/${this.lang}` : '';
-
     const searchParams = new URLSearchParams(params);
 
-    return `${this.host}${locale}/widget?${searchParams}`;
+    return `${host}${locale}/widget?${searchParams}`;
   }
 
   render() {
