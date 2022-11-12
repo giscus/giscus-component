@@ -1,6 +1,6 @@
 {
   "name": "@giscus/react",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -29,7 +29,7 @@
     "format:fix": "prettier src --write"
   },
   "dependencies": {
-    "giscus": "^1.2.2"
+    "giscus": "^1.2.3"
   },
   "peerDependencies": {
     "react": "^16 || ^17 || ^18",
