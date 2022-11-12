@@ -16,7 +16,7 @@ export class GiscusWidget extends LitElement {
   private messageEventHandler = this.handleMessageEvent.bind(this);
 
   get iframeRef() {
-    return this._iframeRef.value;
+    return this._iframeRef?.value;
   }
 
   static styles = css`
@@ -25,7 +25,11 @@ export class GiscusWidget extends LitElement {
       width: 100%;
       border: none;
       min-height: 150px;
-      color-scheme: light;
+      color-scheme: light dark;
+    }
+
+    iframe.loading {
+      opacity: 0;
     }
   `;
 
@@ -117,10 +121,6 @@ export class GiscusWidget extends LitElement {
     super();
     this.setupSession();
     window.addEventListener('message', this.messageEventHandler);
-  }
-
-  connectedCallback() {
-    super.connectedCallback();
   }
 
   disconnectedCallback() {
@@ -230,6 +230,12 @@ export class GiscusWidget extends LitElement {
     this.sendMessage(setConfig);
   }
 
+  firstUpdated() {
+    this.iframeRef?.addEventListener('load', () =>
+      this.iframeRef?.classList.remove('loading')
+    );
+  }
+
   requestUpdate(
     name?: PropertyKey,
     oldValue?: unknown,
@@ -321,6 +327,7 @@ export class GiscusWidget extends LitElement {
       <iframe
         title="Comments"
         scrolling="no"
+        class="loading"
         ${ref(this._iframeRef)}
         src=${this.getIframeSrc()}
         loading=${this.loading}
