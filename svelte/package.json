@@ -38,6 +38,6 @@
   },
   "type": "module",
   "dependencies": {
-    "giscus": "^1.2.1"
+    "giscus": "^1.2.2"
   }
 }
