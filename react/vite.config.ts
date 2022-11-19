@@ -7,15 +7,12 @@ const resolvePath = (str: string) => resolve(__dirname, str);
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), wrapper()],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/lib/index.ts'),
-      formats: ['cjs', 'es'],
-      fileName: (format) => ({
-        cjs: 'index.cjs',
-        es: 'index.mjs',
-      }[format]),
+      formats: ['cjs'],
+      fileName: 'index',
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],
@@ -37,3 +34,16 @@ export default defineConfig({
     },
   },
 });
+
+function wrapper() {
+  return {
+    name: 'wrapper',
+    generateBundle() {
+      this.emitFile({
+        type: 'asset',
+        fileName: 'wrapper.mjs',
+        source: `import module from './index.js';\n\nexport default module;`,
+      });
+    },
+  };
+}
