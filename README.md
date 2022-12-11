@@ -1,18 +1,21 @@
 # giscus-component
 
 A wrapper component for giscus 💎, a comments system powered by GitHub
-Discussions. Currently available for React, Vue, Svelte, and as a Web Component.
+Discussions. Currently available for React, Vue, Svelte, Solid, and as a Web
+Component.
 
 ## Documentation
 
-### Using the React, Vue, or Svelte component
+### Using the React, Vue, Svelte, or Solid component
 
-To use the React, Vue, or Svelte component, install the corresponding package.
+To use the React, Vue, Svelte, or Solid component, install the corresponding
+package.
 
 ```shell
 npm i @giscus/react   # for React/Preact
 npm i @giscus/vue     # for Vue
 npm i @giscus/svelte  # for Svelte
+npm i @giscus/solid   # for Solid
 # Change npm with the package manager you use
 ```
 
@@ -165,6 +168,7 @@ convenience.
 | React & Preact      | [`@giscus/react`](./react)   | [![npm version][react-vbadge]][npm-react]   | [![npm downloads][react-dbadge]][npm-react]   |
 | Vue                 | [`@giscus/vue`](./vue)       | [![npm version][vue-vbadge]][npm-vue]       | [![npm downloads][vue-dbadge]][npm-vue]       |
 | Svelte              | [`@giscus/svelte`](./svelte) | [![npm version][svelte-vbadge]][npm-svelte] | [![npm downloads][svelte-dbadge]][npm-svelte] |
+| Solid               | [`@giscus/solid`](./solid)   | [![npm version][solid-vbadge]][npm-solid]   | [![npm downloads][solid-dbadge]][npm-solid]   |
 
 ## Related Article
 
@@ -186,11 +190,14 @@ Released under the [MIT](./LICENSE) license.
 [react-vbadge]: https://img.shields.io/npm/v/@giscus/react.svg
 [vue-vbadge]: https://img.shields.io/npm/v/@giscus/vue.svg
 [svelte-vbadge]: https://img.shields.io/npm/v/@giscus/svelte.svg
+[solid-vbadge]: https://img.shields.io/npm/v/@giscus/solid.svg
 [web-dbadge]: https://img.shields.io/npm/dt/giscus.svg
 [react-dbadge]: https://img.shields.io/npm/dt/@giscus/react.svg
 [vue-dbadge]: https://img.shields.io/npm/dt/@giscus/vue.svg
 [svelte-dbadge]: https://img.shields.io/npm/dt/@giscus/svelte.svg
+[solid-dbadge]: https://img.shields.io/npm/dt/@giscus/ssolid.svg
 [npm-web]: https://www.npmjs.com/package/giscus
 [npm-react]: https://www.npmjs.com/package/@giscus/react
 [npm-vue]: https://www.npmjs.com/package/@giscus/vue
 [npm-svelte]: https://www.npmjs.com/package/@giscus/svelte
+[npm-solid]: https://www.npmjs.com/package/@giscus/solid

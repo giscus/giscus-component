@@ -21,6 +21,13 @@ updates:
     open-pull-requests-limit: 99
 
   - package-ecosystem: npm
+    directory: '/solid'
+    schedule:
+      interval: weekly
+      day: saturday
+    open-pull-requests-limit: 99
+
+  - package-ecosystem: npm
     directory: '/svelte'
     schedule:
       interval: weekly
