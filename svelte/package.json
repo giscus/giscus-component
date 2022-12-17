@@ -22,7 +22,7 @@
     "@sveltejs/kit": "^1.0.0-next.581",
     "@sveltejs/package": "^1.0.0-next.6",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
-    "@typescript-eslint/parser": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.1",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^4.0.0",
