@@ -5,12 +5,25 @@ import typescript from '@rollup/plugin-typescript';
 
 const resolvePath = (str: string) => resolve(__dirname, str);
 
+function wrapper() {
+  return {
+    name: 'wrapper',
+    generateBundle() {
+      this.emitFile({
+        type: 'asset',
+        fileName: 'wrapper.mjs',
+        source: `import module from './index.js';\n\nexport default module;`,
+      });
+    },
+  };
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), wrapper()],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/lib/index.ts'),
+      entry: resolvePath('src/lib/index.ts'),
       formats: ['cjs'],
       fileName: 'index',
     },
@@ -27,23 +40,10 @@ export default defineConfig({
         typescript({
           target: 'es2020',
           rootDir: resolvePath('src/lib'),
+          outDir: resolvePath('dist'),
           declaration: true,
-          declarationDir: resolvePath('dist'),
         }),
       ],
     },
   },
 });
-
-function wrapper() {
-  return {
-    name: 'wrapper',
-    generateBundle() {
-      this.emitFile({
-        type: 'asset',
-        fileName: 'wrapper.mjs',
-        source: `import module from './index.js';\n\nexport default module;`,
-      });
-    },
-  };
-}
