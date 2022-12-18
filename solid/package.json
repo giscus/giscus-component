@@ -1,50 +1,50 @@
 {
-    "name": "@giscus/solid",
-    "version": "2.2.4",
-    "main": "dist/index.js",
-    "module": "dist/wrapper.mjs",
-    "types": "dist/index.d.ts",
-    "exports": {
-        ".": {
-            "types": "./dist/index.d.ts",
-            "require": "./dist/index.js",
-            "import": "./dist/wrapper.mjs"
-        }
-    },
-    "files": [
-        "dist"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/giscus/giscus-component.git",
-        "directory": "solid"
-    },
-    "scripts": {
-        "dev": "vite",
-        "build": "tsc && vite build",
-        "preview": "vite preview",
-        "lint": "eslint src",
-        "lint:fix": "eslint src --fix",
-        "format": "prettier src --check",
-        "format:fix": "prettier src --write"
-    },
-    "dependencies": {
-        "giscus": "^1.2.4"
-    },
-    "peerDependencies": {
-        "solid-js": "^1.3 || ^1.4 || ^1.5 || ^1.6"
-    },
-    "devDependencies": {
-        "@rollup/plugin-typescript": "^10.0.1",
-        "@types/node": "^18.11.12",
-        "@typescript-eslint/eslint-plugin": "^5.46.0",
-        "@typescript-eslint/parser": "^5.46.0",
-        "eslint": "^8.29.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-solid": "^0.9.1",
-        "prettier": "^2.8.1",
-        "typescript": "^4.9.4",
-        "vite": "^4.0.0",
-        "vite-plugin-solid": "^2.5.0"
+  "name": "@giscus/solid",
+  "version": "2.2.5",
+  "main": "dist/index.js",
+  "module": "dist/wrapper.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/wrapper.mjs"
     }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giscus/giscus-component.git",
+    "directory": "solid"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier src --check",
+    "format:fix": "prettier src --write"
+  },
+  "dependencies": {
+    "giscus": "^1.2.5"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.3 || ^1.4 || ^1.5 || ^1.6"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^10.0.1",
+    "@types/node": "^18.11.12",
+    "@typescript-eslint/eslint-plugin": "^5.46.0",
+    "@typescript-eslint/parser": "^5.46.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-solid": "^0.9.1",
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.0",
+    "vite-plugin-solid": "^2.5.0"
+  }
 }

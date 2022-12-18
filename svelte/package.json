@@ -1,6 +1,6 @@
 {
   "name": "@giscus/svelte",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "types": "./index.d.ts",
   "repository": {
     "type": "git",
@@ -34,10 +34,10 @@
     "svelte2tsx": "^0.5.22",
     "tslib": "^2.4.1",
     "typescript": "~4.9.4",
-    "vite": "^4.0.1"
+    "vite": "^4.0.2"
   },
   "type": "module",
   "dependencies": {
-    "giscus": "^1.2.4"
+    "giscus": "^1.2.5"
   }
 }
