@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is a demo for the giscus web component."
+    />
+    <title>giscus demo</title>
+    <style>
+      main {
+        max-width: 760px;
+        margin: 2rem auto;
+        font-family: sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="This is a demo for the giscus web component." />
-  <title>giscus demo</title>
-  <style>
-    main {
-      max-width: 760px;
-      margin: 2rem auto;
-      font-family: sans-serif;
-    }
-  </style>
-  <link rel="stylesheet" href="/src/styles.css" />
-</head>
+  <body>
+    <main>
+      <h1><a href="/">giscus-component</a></h1>
 
-<body>
-  <main>
-    <h1><a href="/">giscus-component</a></h1>
+      <p>This page is running the giscus-widget web component on plain HTML.</p>
 
-    <p>This page is running the giscus-widget web component on plain HTML.</p>
+      <p>Click the links below to see the component library in action:</p>
 
-    <p>Click the links below to see the component library in action:</p>
+      <ul>
+        <li>
+          <a href="/preact">Preact</a>
+        </li>
+        <li>
+          <a href="/react">React</a>
+        </li>
+        <li>
+          <a href="/vue">Vue</a>
+        </li>
+        <li>
+          <a href="/svelte">Svelte</a>
+        </li>
+        <li>
+          <a href="/solid">Solid</a>
+        </li>
+      </ul>
 
-    <ul>
-      <li>
-        <a href="/preact">Preact</a>
-      </li>
-      <li>
-        <a href="/react">React</a>
-      </li>
-      <li>
-        <a href="/vue">Vue</a>
-      </li>
-      <li>
-        <a href="/svelte">Svelte</a>
-      </li>
-    </ul>
-
-    <div id="app"></div>
-  </main>
-  <script type="module" src="/src/main.ts"></script>
-</body>
-
+      <div id="app"></div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>

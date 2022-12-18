@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build && mv dist ../dist/vue",
+    "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@giscus/vue": "^2.2.4",
+    "@giscus/vue": "^2.2.6",
     "vue": "^3.2.45"
   },
   "devDependencies": {

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build && mv build ../dist/svelte",
+    "build": "vite build",
     "package": "svelte-kit package",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
@@ -21,6 +21,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@giscus/svelte": "^2.2.4"
+    "@giscus/svelte": "^2.2.6"
   }
 }

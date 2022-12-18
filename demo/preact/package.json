@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && mv dist ../dist/preact",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@giscus/react": "^2.2.4",
+    "@giscus/react": "^2.2.6",
     "preact": "^10.11.3"
   },
   "devDependencies": {
