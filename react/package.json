@@ -1,6 +1,6 @@
 {
   "name": "@giscus/react",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "main": "dist/index.js",
   "module": "dist/wrapper.mjs",
   "types": "dist/index.d.ts",
@@ -29,7 +29,7 @@
     "format:fix": "prettier src --write"
   },
   "dependencies": {
-    "giscus": "^1.2.5"
+    "giscus": "^1.2.6"
   },
   "peerDependencies": {
     "react": "^16 || ^17 || ^18",
