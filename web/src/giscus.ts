@@ -176,7 +176,8 @@ export class GiscusWidget extends LitElement {
 
     if (
       message.includes('Bad credentials') ||
-      message.includes('Invalid state value')
+      message.includes('Invalid state value') ||
+      message.includes('State has expired')
     ) {
       // Might be because token is expired or other causes
       if (localStorage.getItem(this.GISCUS_SESSION_KEY) !== null) {
