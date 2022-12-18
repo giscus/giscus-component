@@ -137,6 +137,7 @@ export class GiscusWidget extends LitElement {
     const url = new URL(origin);
     const savedSession = localStorage.getItem(this.GISCUS_SESSION_KEY);
     const urlSession = url.searchParams.get('giscus') || '';
+    this.__session = '';
 
     if (urlSession) {
       localStorage.setItem(this.GISCUS_SESSION_KEY, JSON.stringify(urlSession));
@@ -148,10 +149,9 @@ export class GiscusWidget extends LitElement {
 
     if (savedSession) {
       try {
-        this.__session = JSON.parse(savedSession || '') || '';
+        this.__session = JSON.parse(savedSession);
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (e: any) {
-        this.__session = '';
         localStorage.removeItem(this.GISCUS_SESSION_KEY);
         console.warn(
           `${this._formatError(e?.message)} Session has been cleared.`
