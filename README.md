@@ -147,8 +147,8 @@ Note that this only allows you to style the `<iframe>` element and
 When you change the props/attributes of the React, Vue, and web components, they
 will automatically update the giscus configuration using `postMessage()` to the
 underlying `<iframe>` element without reloading the comments. Unfortunately,
-this doesn't work for Svelte as it always reloads the web component for some
-reason. If you know how to fix this, please let me know.
+this doesn't work for Svelte and Solid as they always reload the web component
+for some reason. If you know how to fix this, please let me know.
 
 ### Further information
 
