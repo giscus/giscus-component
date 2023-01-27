@@ -10,7 +10,7 @@ import type {
   Theme,
 } from './types';
 
-defineProps<{
+withDefaults(defineProps<{
   id?: string;
   host?: string;
   repo: Repo;
@@ -26,7 +26,21 @@ defineProps<{
   inputPosition?: InputPosition;
   lang?: AvailableLanguage;
   loading?: Loading;
-}>();
+}>(), {
+  id: undefined,
+  // Workaround: https://github.com/giscus/giscus-component/issues/1003
+  host: 'https://giscus.app',
+  category: undefined,
+  categoryId: undefined,
+  term: undefined,
+  theme: undefined,
+  strict: undefined,
+  reactionsEnabled: undefined,
+  emitMetadata: undefined,
+  inputPosition: undefined,
+  lang: undefined,
+  loading: undefined
+});
 
 const mounted = ref(false);
 
