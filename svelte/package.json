@@ -33,7 +33,7 @@
     "svelte-preprocess": "^5.0.1",
     "svelte2tsx": "^0.6.0",
     "tslib": "^2.5.0",
-    "typescript": "~4.9.4",
+    "typescript": "~4.9.5",
     "vite": "^4.0.4"
   },
   "type": "module",
