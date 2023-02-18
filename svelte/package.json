@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "package": "svelte-package",
+    "package": "svelte-package -o package",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
@@ -39,5 +39,27 @@
   "type": "module",
   "dependencies": {
     "giscus": "^1.2.6"
-  }
+  },
+  "peerDependencies": {
+    "svelte": "^3"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./Giscus.svelte": {
+      "types": "./package/Giscus.svelte.d.ts",
+      "svelte": "./package/Giscus.svelte",
+      "default": "./package/Giscus.svelte"
+    },
+    ".": {
+      "types": "./package/index.d.ts",
+      "svelte": "./package/index.js",
+      "default": "./package/index.js",
+      "require": "./dist/index.js",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "package"
+  ],
+  "svelte": "./package/index.js"
 }
