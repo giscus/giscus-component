@@ -1,6 +1,6 @@
 {
   "name": "@giscus/svelte",
-  "version": "2.2.6",
+  "version": "2.2.8",
   "types": "./index.d.ts",
   "repository": {
     "type": "git",
@@ -38,7 +38,7 @@
   },
   "type": "module",
   "dependencies": {
-    "giscus": "^1.2.6"
+    "giscus": "^1.2.8"
   },
   "peerDependencies": {
     "svelte": "^3"
@@ -54,8 +54,8 @@
       "types": "./package/index.d.ts",
       "svelte": "./package/index.js",
       "default": "./package/index.js",
-      "require": "./dist/index.js",
-      "import": "./dist/index.js"
+      "require": "./package/index.js",
+      "import": "./package/index.js"
     }
   },
   "files": [
