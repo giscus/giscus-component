@@ -217,6 +217,7 @@ export class GiscusWidget extends LitElement {
   }
 
   private sendMessage<T>(message: T) {
+    if (!this.iframeRef || !this.iframeRef.src.startsWith(this.host)) return;
     this.iframeRef?.contentWindow?.postMessage({ giscus: message }, this.host);
   }
 
@@ -242,9 +243,10 @@ export class GiscusWidget extends LitElement {
   }
 
   firstUpdated() {
-    this.iframeRef?.addEventListener('load', () =>
-      this.iframeRef?.classList.remove('loading')
-    );
+    this.iframeRef?.addEventListener('load', () => {
+      this.iframeRef?.classList.remove('loading');
+      this.updateConfig();
+    });
   }
 
   requestUpdate(
