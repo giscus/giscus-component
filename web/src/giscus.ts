@@ -143,6 +143,7 @@ export class GiscusWidget extends LitElement {
       localStorage.setItem(this.GISCUS_SESSION_KEY, JSON.stringify(urlSession));
       this.__session = urlSession;
       url.searchParams.delete('giscus');
+      url.hash = '';
       history.replaceState(undefined, document.title, url.toString());
       return;
     }
@@ -263,6 +264,7 @@ export class GiscusWidget extends LitElement {
   private _getCleanedUrl() {
     const url = new URL(location.href);
     url.searchParams.delete('giscus');
+    url.hash = '';
     return url;
   }
 
