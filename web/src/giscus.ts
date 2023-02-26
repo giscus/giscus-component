@@ -14,6 +14,7 @@ export class GiscusWidget extends LitElement {
   private __session = '';
   private _iframeRef: Ref<HTMLIFrameElement> = createRef();
   private messageEventHandler = this.handleMessageEvent.bind(this);
+  private hasLoaded = false;
 
   get iframeRef() {
     return this._iframeRef?.value;
@@ -217,8 +218,9 @@ export class GiscusWidget extends LitElement {
   }
 
   private sendMessage<T>(message: T) {
-    if (!this.iframeRef || !this.iframeRef.src.startsWith(this.host)) return;
-    this.iframeRef?.contentWindow?.postMessage({ giscus: message }, this.host);
+    if (!this.iframeRef || !this.iframeRef.contentWindow || !this.hasLoaded)
+      return;
+    this.iframeRef.contentWindow.postMessage({ giscus: message }, this.host);
   }
 
   private updateConfig() {
@@ -245,6 +247,8 @@ export class GiscusWidget extends LitElement {
   firstUpdated() {
     this.iframeRef?.addEventListener('load', () => {
       this.iframeRef?.classList.remove('loading');
+      this.hasLoaded = true;
+      // Make sure to update the config in case the iframe is loaded lazily.
       this.updateConfig();
     });
   }
