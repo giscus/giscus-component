@@ -161,6 +161,12 @@ export class GiscusWidget extends LitElement {
     }
   }
 
+  private signOut() {
+    localStorage.removeItem(this.GISCUS_SESSION_KEY);
+    this.__session = '';
+    this.update(new Map());
+  }
+
   private handleMessageEvent(event: MessageEvent) {
     if (event.origin !== this.host) return;
 
@@ -169,6 +175,12 @@ export class GiscusWidget extends LitElement {
 
     if (this.iframeRef && data.giscus.resizeHeight) {
       this.iframeRef.style.height = `${data.giscus.resizeHeight}px`;
+    }
+
+    if (data.giscus.signOut) {
+      console.log(`[giscus] User has logged out. Session has been cleared.`);
+      this.signOut();
+      return;
     }
 
     if (!data.giscus.error) return;
@@ -182,11 +194,8 @@ export class GiscusWidget extends LitElement {
     ) {
       // Might be because token is expired or other causes
       if (localStorage.getItem(this.GISCUS_SESSION_KEY) !== null) {
-        localStorage.removeItem(this.GISCUS_SESSION_KEY);
-        this.__session = '';
         console.warn(`${this._formatError(message)} Session has been cleared.`);
-        // Reload iframe
-        this.update(new Map());
+        this.signOut();
         return;
       }
 
