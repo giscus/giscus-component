@@ -1,6 +1,6 @@
 # giscus-component
 
-A wrapper component for giscus 💎, a comments system powered by GitHub
+A wrapper component for [giscus](https://giscus.app) 💎, a comments system powered by GitHub
 Discussions. Currently available for React, Vue, Svelte, Solid, and as a Web
 Component.
 
