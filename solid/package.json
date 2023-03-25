@@ -36,13 +36,13 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.0.0",
-    "@types/node": "^18.15.3",
+    "@types/node": "^18.15.9",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
     "eslint": "^8.29.0",
-    "eslint-config-prettier": "^8.7.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-solid": "^0.11.0",
-    "prettier": "^2.8.4",
+    "prettier": "^2.8.7",
     "typescript": "^5.0.2",
     "vite": "^4.0.0",
     "vite-plugin-solid": "^2.6.1"
