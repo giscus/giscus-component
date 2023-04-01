@@ -1,10 +1,6 @@
 import { createEffect, createSignal, Show } from 'solid-js';
 import type { GiscusProps } from './types';
 
-function Null() {
-  return null;
-}
-
 export default function Giscus(props: GiscusProps) {
   const [mounted, setMounted] = createSignal(false);
 
@@ -18,7 +14,7 @@ export default function Giscus(props: GiscusProps) {
   // as it seems Solid cannot properly handle the properties without it.
 
   return (
-    <Show when={mounted()} fallback={Null}>
+    <Show when={mounted()} fallback={null}>
       <giscus-widget
         id={props.id}
         host={props.host}
