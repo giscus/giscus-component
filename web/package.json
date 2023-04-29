@@ -30,7 +30,7 @@
     "format:fix": "prettier src --write"
   },
   "dependencies": {
-    "lit": "^2.7.2"
+    "lit": "^2.7.3"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.58.0",
