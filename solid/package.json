@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.1",
-    "@types/node": "^18.16.8",
+    "@types/node": "^18.16.13",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
     "eslint": "^8.29.0",
