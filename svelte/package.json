@@ -1,6 +1,6 @@
 {
   "name": "@giscus/svelte",
-  "version": "2.2.8",
+  "version": "2.3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/giscus/giscus-component.git",
@@ -37,7 +37,7 @@
   },
   "type": "module",
   "dependencies": {
-    "giscus": "^1.2.8"
+    "giscus": "^1.3.0"
   },
   "peerDependencies": {
     "svelte": "^3 || ^4"
