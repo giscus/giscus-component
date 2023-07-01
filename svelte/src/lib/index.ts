@@ -24,17 +24,23 @@ export type Theme =
   | 'dark_protanopia'
   | 'dark_tritanopia'
   | 'dark_dimmed'
-  | 'transparent_dark'
   | 'preferred_color_scheme'
+  | 'transparent_dark'
+  | 'noborder_light'
+  | 'noborder_dark'
+  | 'cobalt'
   | `https://${string}`
   | GenericString;
 
 export type AvailableLanguage =
+  | 'ar'
+  | 'ca'
   | 'de'
-  | 'gsw'
   | 'en'
   | 'es'
+  | 'fa'
   | 'fr'
+  | 'he'
   | 'id'
   | 'it'
   | 'ja'
@@ -44,8 +50,10 @@ export type AvailableLanguage =
   | 'pt'
   | 'ro'
   | 'ru'
+  | 'th'
   | 'tr'
   | 'vi'
+  | 'uk'
   | 'zh-CN'
   | 'zh-TW'
   | GenericString;
