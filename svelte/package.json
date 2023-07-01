@@ -1,7 +1,6 @@
 {
   "name": "@giscus/svelte",
   "version": "2.2.8",
-  "types": "./index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/giscus/giscus-component.git",
@@ -61,5 +60,6 @@
   "files": [
     "package"
   ],
-  "svelte": "./package/index.js"
+  "svelte": "./package/index.js",
+  "types": "./package/index.d.ts"
 }
