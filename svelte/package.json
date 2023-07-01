@@ -40,7 +40,7 @@
     "giscus": "^1.2.8"
   },
   "peerDependencies": {
-    "svelte": "^3"
+    "svelte": "^3 || ^4"
   },
   "exports": {
     "./package.json": "./package.json",
