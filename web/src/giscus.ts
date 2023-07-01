@@ -2,10 +2,17 @@ import { html, css, LitElement, PropertyDeclaration } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { createRef, ref, Ref } from 'lit/directives/ref.js';
 
+function safeCustomElement(tagName: string) {
+  // Prevents re-registering an element.
+  return customElements.get(tagName)
+    ? (v: ReturnType<ReturnType<typeof customElement>>) => v
+    : customElement(tagName);
+}
+
 /**
  * Widget element for giscus.
  */
-@customElement('giscus-widget')
+@safeCustomElement('giscus-widget')
 export class GiscusWidget extends LitElement {
   private GISCUS_SESSION_KEY = 'giscus-session';
   private GISCUS_DEFAULT_HOST = 'https://giscus.app';
