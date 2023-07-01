@@ -40,6 +40,17 @@ export class GiscusWidget extends LitElement {
   @property({ reflect: true })
   host: string = this.GISCUS_DEFAULT_HOST;
 
+  get _host() {
+    // Ensure that the host is always a valid URL even if the attribute
+    // has been set to an invalid value.
+    try {
+      new URL(this.host);
+      return this.host;
+    } catch {
+      return this.GISCUS_DEFAULT_HOST;
+    }
+  }
+
   /**
    * Repo where the discussion is stored.
    */
@@ -169,7 +180,7 @@ export class GiscusWidget extends LitElement {
   }
 
   private handleMessageEvent(event: MessageEvent) {
-    if (event.origin !== this.host) return;
+    if (event.origin !== this._host) return;
 
     const { data } = event;
     if (!(typeof data === 'object' && data.giscus)) return;
@@ -220,7 +231,8 @@ export class GiscusWidget extends LitElement {
   private sendMessage<T>(message: T) {
     if (!this.iframeRef || !this.iframeRef.contentWindow || !this.hasLoaded)
       return;
-    this.iframeRef.contentWindow.postMessage({ giscus: message }, this.host);
+    console.log({ host: this.host, _host: this._host });
+    this.iframeRef.contentWindow.postMessage({ giscus: message }, this._host);
   }
 
   private updateConfig() {
@@ -333,7 +345,7 @@ export class GiscusWidget extends LitElement {
       backLink,
     };
 
-    const host = this.host || this.GISCUS_DEFAULT_HOST;
+    const host = this._host;
     const locale = this.lang ? `/${this.lang}` : '';
     const searchParams = new URLSearchParams(params);
 
