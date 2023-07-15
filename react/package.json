@@ -48,6 +48,6 @@
     "eslint-plugin-react": "^7.32.2",
     "prettier": "^3.0.0",
     "typescript": "^5.1.6",
-    "vite": "^4.4.2"
+    "vite": "^4.4.4"
   }
 }
