@@ -2,10 +2,11 @@ import { html, css, LitElement, PropertyDeclaration } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { createRef, ref, Ref } from 'lit/directives/ref.js';
 
-function safeCustomElement(tagName: string) {
+function safeCustomElement(tagName: string): ReturnType<typeof customElement> {
   // Prevents re-registering an element.
   return customElements.get(tagName)
-    ? (v: ReturnType<ReturnType<typeof customElement>>) => v
+    ? (v: ReturnType<ReturnType<typeof customElement>>) =>
+        v as ReturnType<typeof customElement>
     : customElement(tagName);
 }
 
@@ -155,7 +156,7 @@ export class GiscusWidget extends LitElement {
     const origin = location.href;
     const url = new URL(origin);
     const savedSession = localStorage.getItem(this.GISCUS_SESSION_KEY);
-    const urlSession = url.searchParams.get('giscus') || '';
+    const urlSession = url.searchParams.get('giscus') ?? '';
     this.__session = '';
 
     if (urlSession) {
@@ -169,12 +170,13 @@ export class GiscusWidget extends LitElement {
 
     if (savedSession) {
       try {
-        this.__session = JSON.parse(savedSession);
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      } catch (e: any) {
+        this.__session = JSON.parse(savedSession) as string;
+      } catch (e) {
         localStorage.removeItem(this.GISCUS_SESSION_KEY);
         console.warn(
-          `${this._formatError(e?.message)} Session has been cleared.`
+          `${this._formatError(
+            (e as Record<string, string>)?.message
+          )} Session has been cleared.`
         );
       }
     }
@@ -186,7 +188,7 @@ export class GiscusWidget extends LitElement {
     this.update(new Map());
   }
 
-  private handleMessageEvent(event: MessageEvent) {
+  private handleMessageEvent(event: MessageEvent<GiscusMessage>) {
     if (event.origin !== this._host) return;
 
     const { data } = event;
@@ -236,8 +238,7 @@ export class GiscusWidget extends LitElement {
   }
 
   private sendMessage<T>(message: T) {
-    if (!this.iframeRef || !this.iframeRef.contentWindow || !this.hasLoaded)
-      return;
+    if (!this.iframeRef?.contentWindow || !this.hasLoaded) return;
     console.log({ host: this.host, _host: this._host });
     this.iframeRef.contentWindow.postMessage({ giscus: message }, this._host);
   }
@@ -305,13 +306,13 @@ export class GiscusWidget extends LitElement {
   private getTerm() {
     switch (this.mapping) {
       case 'url':
-        return `${this._getCleanedUrl()}`;
+        return this._getCleanedUrl().toString();
       case 'title':
         return document.title;
       case 'og:title':
         return this.getMetaContent('title', true);
       case 'specific':
-        return this.term || '';
+        return this.term ?? '';
       case 'number':
         return '';
       case 'pathname':
@@ -323,7 +324,7 @@ export class GiscusWidget extends LitElement {
   }
 
   private getNumber() {
-    return (this.mapping === 'number' && this.term) || '';
+    return this.mapping === 'number' ? this.term ?? '' : '';
   }
 
   private getIframeSrc() {
@@ -338,9 +339,9 @@ export class GiscusWidget extends LitElement {
       origin,
       session: this.__session,
       repo: this.repo,
-      repoId: this.repoId || '',
-      category: this.category || '',
-      categoryId: this.categoryId || '',
+      repoId: this.repoId ?? '',
+      category: this.category ?? '',
+      categoryId: this.categoryId ?? '',
       term: this.getTerm(),
       number: this.getNumber(),
       strict: this.strict,
@@ -356,7 +357,7 @@ export class GiscusWidget extends LitElement {
     const locale = this.lang ? `/${this.lang}` : '';
     const searchParams = new URLSearchParams(params);
 
-    return `${host}${locale}/widget?${searchParams}`;
+    return `${host}${locale}/widget?${searchParams.toString()}`;
   }
 
   render() {
@@ -459,4 +460,12 @@ interface ISetConfigMessage {
     inputPosition?: InputPosition;
     lang?: Lang;
   };
+}
+
+interface GiscusMessage {
+  giscus?: Partial<{
+    resizeHeight: number;
+    signOut: boolean;
+    error: string;
+  }>;
 }
