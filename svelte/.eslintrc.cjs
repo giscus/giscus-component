@@ -3,7 +3,8 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-type-checked',
+    'plugin:@typescript-eslint/stylistic-type-checked',
     'prettier',
   ],
   plugins: ['svelte3', '@typescript-eslint'],
@@ -15,6 +16,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 2020,
+    project: true,
   },
   env: {
     browser: true,

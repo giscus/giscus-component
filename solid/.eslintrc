@@ -6,12 +6,14 @@
     "ecmaVersion": 2020,
     "ecmaFeatures": {
       "jsx": true
-    }
+    },
+    "project": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:solid/recommended",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked",
     "prettier"
   ],
   "plugins": [

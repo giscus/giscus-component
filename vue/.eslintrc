@@ -4,12 +4,14 @@
   "parserOptions": {
     "parser": "@typescript-eslint/parser",
     "sourceType": "module",
-    "ecmaVersion": 2020
+    "ecmaVersion": 2020,
+    "project": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:vue/vue3-recommended",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked",
     "prettier"
   ],
   "plugins": [
