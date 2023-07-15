@@ -1,44 +1,53 @@
 {
-  "name": "giscus",
-  "version": "1.3.0",
-  "type": "module",
-  "main": "dist/giscus.mjs",
-  "module": "dist/giscus.mjs",
+  "name": "@giscus/react",
+  "version": "2.3.0",
+  "main": "dist/index.js",
+  "module": "dist/wrapper.mjs",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./types/giscus.d.ts",
-      "import": "./dist/giscus.mjs"
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/wrapper.mjs"
     }
   },
-  "types": "types/giscus.d.ts",
   "files": [
-    "dist",
-    "types"
+    "dist"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/giscus/giscus-component.git",
-    "directory": "web"
+    "directory": "react"
   },
-  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "preview": "vite preview",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "format": "prettier src --check",
     "format:fix": "prettier src --write"
   },
   "dependencies": {
-    "lit": "^2.7.6"
+    "giscus": "^1.3.0"
+  },
+  "peerDependencies": {
+    "react": "^16 || ^17 || ^18",
+    "react-dom": "^16 || ^17 || ^18"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.61.0",
-    "@typescript-eslint/parser": "^5.61.0",
-    "eslint": "^8.44.0",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@types/node": "^18.16.19",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@vitejs/plugin-react": "^4.0.2",
+    "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-react": "^7.32.2",
     "prettier": "^3.0.0",
     "typescript": "^5.1.6",
-    "vite": "^4.4.2"
+    "vite": "^4.4.4"
   }
 }
