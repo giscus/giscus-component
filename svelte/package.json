@@ -20,8 +20,8 @@
     "@sveltejs/adapter-auto": "^2.1.0",
     "@sveltejs/kit": "^1.22.3",
     "@sveltejs/package": "^2.2.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^4.0.0",
@@ -33,7 +33,7 @@
     "svelte2tsx": "^0.6.19",
     "tslib": "^2.6.0",
     "typescript": "~5.1.6",
-    "vite": "^4.4.4"
+    "vite": "^4.4.6"
   },
   "type": "module",
   "dependencies": {
