@@ -37,18 +37,18 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.1",
-    "@types/node": "^18.17.3",
-    "@types/react": "^18.2.18",
+    "@types/node": "^18.17.5",
+    "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.2.1",
-    "@typescript-eslint/parser": "^6.2.1",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
     "@vitejs/plugin-react": "^4.0.4",
-    "eslint": "^8.46.0",
+    "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.33.1",
     "prettier": "^3.0.1",
     "tslib": "^2.6.1",
     "typescript": "^5.1.6",
-    "vite": "^4.4.8"
+    "vite": "^4.4.9"
   }
 }
