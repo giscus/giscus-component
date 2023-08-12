@@ -6,10 +6,19 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:@typescript-eslint/stylistic-type-checked',
     'prettier',
+    'plugin:svelte/recommended',
   ],
-  plugins: ['svelte3', '@typescript-eslint'],
+  plugins: ['@typescript-eslint'],
   ignorePatterns: ['*.cjs'],
-  overrides: [{ files: ['*.svelte'], processor: 'svelte3/svelte3' }],
+  overrides: [
+    {
+      files: ['*.svelte'],
+      parser: 'svelte-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+      },
+    },
+  ],
   settings: {
     'svelte3/typescript': () => require('typescript'),
   },
@@ -17,6 +26,7 @@ module.exports = {
     sourceType: 'module',
     ecmaVersion: 2020,
     project: true,
+    extraFileExtensions: ['.svelte'],
   },
   env: {
     browser: true,
