@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "vite build && npm run package",
     "package": "svelte-package -o package",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
