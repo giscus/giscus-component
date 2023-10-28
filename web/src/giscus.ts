@@ -4,10 +4,7 @@ import { createRef, ref, Ref } from 'lit/directives/ref.js';
 
 function safeCustomElement(tagName: string): ReturnType<typeof customElement> {
   // Prevents re-registering an element.
-  return customElements.get(tagName)
-    ? (v: ReturnType<ReturnType<typeof customElement>>) =>
-        v as ReturnType<typeof customElement>
-    : customElement(tagName);
+  return customElements.get(tagName) ? (v) => v : customElement(tagName);
 }
 
 /**
