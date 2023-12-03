@@ -196,7 +196,7 @@ export class GiscusWidget extends LitElement {
     }
 
     if (data.giscus.signOut) {
-      console.log(`[giscus] User has logged out. Session has been cleared.`);
+      console.info(`[giscus] User has logged out. Session has been cleared.`);
       this.signOut();
       return;
     }
@@ -236,7 +236,6 @@ export class GiscusWidget extends LitElement {
 
   private sendMessage<T>(message: T) {
     if (!this.iframeRef?.contentWindow || !this.hasLoaded) return;
-    console.log({ host: this.host, _host: this._host });
     this.iframeRef.contentWindow.postMessage({ giscus: message }, this._host);
   }
 
