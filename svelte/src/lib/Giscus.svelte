@@ -49,5 +49,6 @@
     inputposition="{inputPosition}"
     theme="{theme}"
     lang="{lang}"
-    loading="{loading}"></giscus-widget>
+    loading="{loading}"
+  ></giscus-widget>
 {/if}
