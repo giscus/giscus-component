@@ -8,10 +8,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^4.9.4",
-    "vite": "^4.0.0"
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
   },
   "dependencies": {
-    "giscus": "^1.2.4"
+    "giscus": "^1.4.0"
   }
 }

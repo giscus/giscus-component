@@ -10,17 +10,18 @@
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.49",
-    "@sveltejs/kit": "^1.0.0-next.581",
-    "svelte": "^3.54.0",
-    "svelte-check": "^2.10.2",
-    "svelte-preprocess": "^4.10.7",
-    "tslib": "^2.4.1",
-    "typescript": "^4.9.4",
-    "vite": "^4.0.0"
+    "@sveltejs/adapter-static": "^3.0.0",
+    "@sveltejs/kit": "^2.0.1",
+    "@sveltejs/vite-plugin-svelte": "^3.0.1",
+    "svelte": "^4.2.8",
+    "svelte-check": "^3.6.2",
+    "svelte-preprocess": "^5.1.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
   },
   "type": "module",
   "dependencies": {
-    "@giscus/svelte": "^2.2.6"
+    "@giscus/svelte": "^2.4.0"
   }
 }
