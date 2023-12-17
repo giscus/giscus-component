@@ -1,6 +1,6 @@
 {
   "name": "@giscus/solid",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "main": "dist/index.js",
   "module": "dist/wrapper.mjs",
   "types": "dist/index.d.ts",
@@ -29,7 +29,7 @@
     "format:fix": "prettier src --write"
   },
   "dependencies": {
-    "giscus": "^1.3.0"
+    "giscus": "^1.4.0"
   },
   "peerDependencies": {
     "solid-js": "^1.3 || ^1.4 || ^1.5 || ^1.6"
