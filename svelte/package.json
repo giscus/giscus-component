@@ -19,10 +19,10 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.0.1",
     "@sveltejs/kit": "^2.0.6",
-    "@sveltejs/package": "^2.2.4",
+    "@sveltejs/package": "^2.2.5",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^6.15.0",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-svelte": "^2.35.1",
