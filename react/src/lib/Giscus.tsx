@@ -22,29 +22,32 @@ export default function Giscus({
 
   useEffect(() => {
     if (mounted) return;
-    import('giscus');
-    setMounted(true);
+    import('giscus').then(() => setMounted(true));
   }, []);
 
   if (!mounted) return null;
 
   return (
-    <giscus-widget
-      id={id}
-      host={host}
-      repo={repo}
-      repoid={repoId}
-      category={category}
-      categoryid={categoryId}
-      mapping={mapping}
-      term={term}
-      strict={strict}
-      reactionsenabled={reactionsEnabled}
-      emitmetadata={emitMetadata}
-      inputposition={inputPosition}
-      theme={theme}
-      lang={lang}
-      loading={loading}
-    />
+    <>
+      {mounted && (
+        <giscus-widget
+          id={id}
+          host={host}
+          repo={repo}
+          repoid={repoId}
+          category={category}
+          categoryid={categoryId}
+          mapping={mapping}
+          term={term}
+          strict={strict}
+          reactionsenabled={reactionsEnabled}
+          emitmetadata={emitMetadata}
+          inputposition={inputPosition}
+          theme={theme}
+          lang={lang}
+          loading={loading}
+        />
+      )}
+    </>
   );
 }
