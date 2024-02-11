@@ -25,8 +25,6 @@ export default function Giscus({
     import('giscus').then(() => setMounted(true));
   }, []);
 
-  if (!mounted) return null;
-
   return (
     <>
       {mounted && (
