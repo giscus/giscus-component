@@ -6,8 +6,7 @@ export default function Giscus(props: GiscusProps) {
 
   createEffect(() => {
     if (mounted()) return;
-    void import('giscus');
-    setMounted(true);
+    void import('giscus').then(() => setMounted(true));
   });
 
   // Note: make sure to use kebab-case for the web component's attributes,

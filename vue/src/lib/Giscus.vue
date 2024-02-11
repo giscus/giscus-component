@@ -31,8 +31,7 @@ defineProps<{
 const mounted = ref(false);
 
 onMounted(() => {
-  mounted.value = true;
-  import('giscus');
+  import('giscus').then(() => (mounted.value = true));
 });
 </script>
 

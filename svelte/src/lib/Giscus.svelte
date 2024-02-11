@@ -28,8 +28,7 @@
   let mounted = false;
 
   onMount(() => {
-    mounted = true;
-    void import('giscus');
+    void import('giscus').then(() => (mounted = true));
   });
 </script>
 
