@@ -16,11 +16,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolvePath('src/lib/index.ts'),
-      formats: ['cjs', 'es'],
-      fileName: (format) => ({
-        cjs: 'index.cjs',
-        es: 'index.mjs',
-      }[format]),
+      formats: ['es'],
+      fileName: 'index',
     },
     rollupOptions: {
       external: ['vue'],
