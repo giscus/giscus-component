@@ -1,6 +1,16 @@
 import { html, css, LitElement, PropertyDeclaration } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { createRef, ref, Ref } from 'lit/directives/ref.js';
+import {
+  Repo,
+  Mapping,
+  BooleanString,
+  InputPosition,
+  Theme,
+  AvailableLanguage,
+  Loading,
+} from './types';
+export * from './types';
 
 function safeCustomElement(tagName: string): ReturnType<typeof customElement> {
   // Prevents re-registering an element.
@@ -126,7 +136,7 @@ export class GiscusWidget extends LitElement {
    * Language that giscus will be displayed in.
    */
   @property({ reflect: true })
-  lang: Lang = 'en';
+  lang: AvailableLanguage = 'en';
 
   /**
    * Whether the iframe should be loaded lazily or eagerly.
@@ -378,71 +388,10 @@ declare global {
   }
 }
 
-type BooleanString = '0' | '1';
-
-type InputPosition = 'top' | 'bottom';
-
-type Repo = `${string}/${string}`;
-
-type Mapping =
-  | 'url'
-  | 'title'
-  | 'og:title'
-  | 'specific'
-  | 'number'
-  | 'pathname';
-
-type GenericString = string & Record<never, never>;
-
-type Theme =
-  | 'light'
-  | 'light_high_contrast'
-  | 'light_protanopia'
-  | 'light_tritanopia'
-  | 'dark'
-  | 'dark_high_contrast'
-  | 'dark_protanopia'
-  | 'dark_tritanopia'
-  | 'dark_dimmed'
-  | 'preferred_color_scheme'
-  | 'transparent_dark'
-  | 'noborder_light'
-  | 'noborder_dark'
-  | 'cobalt'
-  | `https://${string}`
-  | GenericString;
-
-type Lang =
-  | 'ar'
-  | 'ca'
-  | 'de'
-  | 'en'
-  | 'es'
-  | 'fa'
-  | 'fr'
-  | 'he'
-  | 'id'
-  | 'it'
-  | 'ja'
-  | 'ko'
-  | 'nl'
-  | 'pl'
-  | 'pt'
-  | 'ro'
-  | 'ru'
-  | 'th'
-  | 'tr'
-  | 'vi'
-  | 'uk'
-  | 'zh-CN'
-  | 'zh-TW'
-  | GenericString;
-
-type Loading = 'lazy' | 'eager';
-interface ISetConfigMessage {
+export interface ISetConfigMessage {
   setConfig: {
     theme?: Theme;
-    repo?: string;
+    repo?: Repo;
     repoId?: string;
     category?: string;
     categoryId?: string;
@@ -454,11 +403,11 @@ interface ISetConfigMessage {
     reactionsEnabled?: boolean;
     emitMetadata?: boolean;
     inputPosition?: InputPosition;
-    lang?: Lang;
+    lang?: AvailableLanguage;
   };
 }
 
-interface GiscusMessage {
+export interface GiscusMessage {
   giscus?: Partial<{
     resizeHeight: number;
     signOut: boolean;

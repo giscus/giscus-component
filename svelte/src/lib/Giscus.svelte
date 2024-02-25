@@ -9,14 +9,14 @@
     Theme,
   } from '.';
 
-  export let id: string = undefined;
+  export let id: string;
   export let host = 'https://giscus.app';
   export let repo: `${string}/${string}`;
   export let repoId: string;
-  export let category: string = undefined;
-  export let categoryId: string = undefined;
+  export let category: string;
+  export let categoryId: string;
   export let mapping: Mapping = 'pathname';
-  export let term: string = undefined;
+  export let term: string;
   export let strict: BooleanString = '0';
   export let reactionsEnabled: BooleanString = '1';
   export let emitMetadata: BooleanString = '0';
