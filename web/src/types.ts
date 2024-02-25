@@ -28,22 +28,29 @@ export type Theme =
   | 'transparent_dark'
   | 'noborder_light'
   | 'noborder_dark'
+  | 'noborder_gray'
   | 'cobalt'
+  | 'purple_dark'
   | `https://${string}`
   | GenericString;
 
 export type AvailableLanguage =
   | 'ar'
   | 'ca'
+  | 'da'
   | 'de'
   | 'en'
+  | 'eo'
   | 'es'
   | 'fa'
   | 'fr'
+  | 'gr'
   | 'he'
+  | 'hu'
   | 'id'
   | 'it'
   | 'ja'
+  | 'kh'
   | 'ko'
   | 'nl'
   | 'pl'
@@ -54,7 +61,10 @@ export type AvailableLanguage =
   | 'tr'
   | 'vi'
   | 'uk'
+  | 'uz'
   | 'zh-CN'
+  | 'zh-Hans'
+  | 'zh-Hant'
   | 'zh-TW'
   | GenericString;
 
