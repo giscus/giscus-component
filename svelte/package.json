@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
-    "package": "svelte-package -o package",
+    "package": "svelte-package",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
@@ -44,23 +44,14 @@
     "svelte": "^3 || ^4"
   },
   "exports": {
-    "./package.json": "./package.json",
-    "./Giscus.svelte": {
-      "types": "./package/Giscus.svelte.d.ts",
-      "svelte": "./package/Giscus.svelte",
-      "default": "./package/Giscus.svelte"
-    },
     ".": {
-      "types": "./package/index.d.ts",
-      "svelte": "./package/index.js",
-      "default": "./package/index.js",
-      "require": "./package/index.js",
-      "import": "./package/index.js"
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
     }
   },
   "files": [
-    "package"
+    "dist"
   ],
-  "svelte": "./package/index.js",
-  "types": "./package/index.d.ts"
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts"
 }
