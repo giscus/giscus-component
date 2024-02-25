@@ -1,16 +1,9 @@
 {
   "name": "@giscus/solid",
   "version": "2.4.0",
-  "main": "dist/index.js",
-  "module": "dist/wrapper.mjs",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/wrapper.mjs"
-    }
-  },
+  "type": "module",
+  "exports": "./dist/index.js",
   "files": [
     "dist"
   ],

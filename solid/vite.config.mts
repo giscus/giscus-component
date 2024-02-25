@@ -5,28 +5,15 @@ import typescript from '@rollup/plugin-typescript';
 
 const resolvePath = (str: string) => resolve(__dirname, str);
 
-function wrapper() {
-  return {
-    name: 'wrapper',
-    generateBundle() {
-      this.emitFile({
-        type: 'asset',
-        fileName: 'wrapper.mjs',
-        source: `import module from './index.js';\n\nexport default module;`,
-      });
-    },
-  };
-}
-
 export default defineConfig({
-  plugins: [solidPlugin(), wrapper()],
+  plugins: [solidPlugin()],
   server: {
     port: 3000,
   },
   build: {
     lib: {
       entry: resolvePath('src/lib/index.ts'),
-      formats: ['cjs'],
+      formats: ['es'],
       fileName: 'index',
     },
     rollupOptions: {
