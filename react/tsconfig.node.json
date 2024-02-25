@@ -4,10 +4,6 @@
     "module": "esnext",
     "moduleResolution": "node"
   },
-  "lib": [
-    "node"
-  ],
-  "include": [
-    "vite.config.mts"
-  ]
+  "lib": ["node"],
+  "include": ["vite.config.mts"]
 }

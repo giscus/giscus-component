@@ -18,8 +18,8 @@
     "preview": "vite preview",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "format": "prettier src --check",
-    "format:fix": "prettier src --write"
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write"
   },
   "dependencies": {
     "giscus": "^1.4.0"
