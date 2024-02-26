@@ -25,27 +25,25 @@ export default function Giscus({
     import('giscus').then(() => setMounted(true));
   }, []);
 
+  if (!mounted) return null;
+
   return (
-    <>
-      {mounted && (
-        <giscus-widget
-          id={id}
-          host={host}
-          repo={repo}
-          repoid={repoId}
-          category={category}
-          categoryid={categoryId}
-          mapping={mapping}
-          term={term}
-          strict={strict}
-          reactionsenabled={reactionsEnabled}
-          emitmetadata={emitMetadata}
-          inputposition={inputPosition}
-          theme={theme}
-          lang={lang}
-          loading={loading}
-        />
-      )}
-    </>
+    <giscus-widget
+      id={id}
+      host={host}
+      repo={repo}
+      repoid={repoId}
+      category={category}
+      categoryid={categoryId}
+      mapping={mapping}
+      term={term}
+      strict={strict}
+      reactionsenabled={reactionsEnabled}
+      emitmetadata={emitMetadata}
+      inputposition={inputPosition}
+      theme={theme}
+      lang={lang}
+      loading={loading}
+    />
   );
 }
