@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import type { GiscusProps } from './types';
 
 export default function Giscus({
+  style,
+  className,
   id,
   host,
   repo,
@@ -30,6 +32,8 @@ export default function Giscus({
 
   return (
     <giscus-widget
+      style={style}
+      className={className}
       id={id}
       host={host}
       repo={repo}
