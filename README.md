@@ -63,14 +63,11 @@ Then import it in your code.
 import 'giscus';
 ```
 
-Alternatively, you can also use [unpkg][unpkg] or [Skypack][skypack].
+Alternatively, you can also use a bundling CDN like [esm.sh][esm].
 
 ```html
-<!-- unpkg -->
-<script type="module" src="https://unpkg.com/giscus?module"></script>
-
-<!-- Skypack -->
-<script type="module" src="https://cdn.skypack.dev/giscus"></script>
+<!-- esm.sh -->
+<script type="module" src="https://esm.sh/giscus"></script>
 ```
 
 Then use it in your HTML.
@@ -181,8 +178,7 @@ Copyright © 2021-2022 laymonage.
 Released under the [MIT](./LICENSE) license.
 
 [giscus]: https://giscus.app
-[unpkg]: https://unpkg.com
-[skypack]: https://skypack.dev
+[esm]: https://esm.sh
 [demo]: https://giscus-component.vercel.app
 [advanced-usage]: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md
 [custom-theme]: https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#data-theme
