@@ -369,6 +369,7 @@ export class GiscusWidget extends LitElement {
   render() {
     return html`
       <iframe
+        credentialless
         title="Comments"
         scrolling="no"
         class="loading"
