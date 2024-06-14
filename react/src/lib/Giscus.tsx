@@ -22,8 +22,7 @@ export default function Giscus({
 
   useEffect(() => {
     if (mounted) return;
-    import('giscus');
-    setMounted(true);
+    import('giscus').then(() => setMounted(true));
   }, []);
 
   if (!mounted) return null;
