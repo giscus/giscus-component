@@ -1,12 +1,15 @@
 /// <reference types="vite/client" />
+/// <reference types="react" />
 
 interface GiscusWidgetAttributes {
+  style?: React.CSSProperties;
+  className?: string;
   id?: string;
   host?: string;
   repo: `${string}/${string}`;
   repoid: string;
   category?: string;
-  categoryid?: string;
+  categoryid: string;
   mapping: import('./lib/types').Mapping;
   term?: string;
   theme?: import('./lib/types').Theme;
