@@ -22,7 +22,7 @@ export default function Giscus({
 
   useEffect(() => {
     if (mounted) return;
-    import('giscus');
+    void import('giscus');
     setMounted(true);
   }, []);
 
