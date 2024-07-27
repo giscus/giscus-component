@@ -330,7 +330,7 @@ export class GiscusWidget extends LitElement {
   }
 
   private getNumber() {
-    return this.mapping === 'number' ? this.term ?? '' : '';
+    return this.mapping === 'number' ? (this.term ?? '') : '';
   }
 
   private getIframeSrc() {
