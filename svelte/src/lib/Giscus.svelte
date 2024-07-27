@@ -29,7 +29,7 @@
 
   onMount(() => {
     mounted = true;
-    import('giscus');
+    void import('giscus');
   });
 </script>
 
