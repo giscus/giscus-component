@@ -6,7 +6,7 @@ export default function Giscus(props: GiscusProps) {
 
   createEffect(() => {
     if (mounted()) return;
-    import('giscus');
+    void import('giscus');
     setMounted(true);
   });
 
