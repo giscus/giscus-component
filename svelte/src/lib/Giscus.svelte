@@ -35,20 +35,20 @@
 
 {#if mounted}
   <giscus-widget
-    id="{id}"
-    host="{host}"
-    repo="{repo}"
-    repoid="{repoId}"
-    category="{category}"
-    categoryid="{categoryId}"
-    mapping="{mapping}"
-    term="{term}"
-    strict="{strict}"
-    reactionsenabled="{reactionsEnabled}"
-    emitmetadata="{emitMetadata}"
-    inputposition="{inputPosition}"
-    theme="{theme}"
-    lang="{lang}"
-    loading="{loading}"
+    id={id}
+    host={host}
+    repo={repo}
+    repoid={repoId}
+    category={category}
+    categoryid={categoryId}
+    mapping={mapping}
+    term={term}
+    strict={strict}
+    reactionsenabled={reactionsEnabled}
+    emitmetadata={emitMetadata}
+    inputposition={inputPosition}
+    theme={theme}
+    lang={lang}
+    loading={loading}
   ></giscus-widget>
 {/if}
