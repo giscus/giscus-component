@@ -1,6 +1,8 @@
 /// <reference types="vite/client" />
 
-interface GiscusWidgetAttributes {
+import { HTMLAttributes } from 'react';
+
+interface GiscusWidgetAttributes extends HTMLAttributes<HTMLElement> {
   id?: string;
   host?: string;
   repo: `${string}/${string}`;
@@ -18,8 +20,10 @@ interface GiscusWidgetAttributes {
   loading?: import('./lib/types').Loading;
 }
 
-declare namespace JSX {
-  interface IntrinsicElements {
-    'giscus-widget': GiscusWidgetAttributes;
+declare module 'react' {
+  namespace JSX {
+    interface IntrinsicElements {
+      'giscus-widget': GiscusWidgetAttributes;
+    }
   }
 }
