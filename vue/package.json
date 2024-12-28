@@ -30,15 +30,15 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
-    "@typescript-eslint/eslint-plugin": "^8.18.0",
-    "@typescript-eslint/parser": "^8.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
     "@vitejs/plugin-vue": "^5.2.1",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-vue": "^9.32.0",
     "prettier": "^3.4.2",
     "typescript": "^5.7.2",
-    "vite": "^6.0.3",
-    "vue-tsc": "^2.1.10"
+    "vite": "^6.0.6",
+    "vue-tsc": "^2.2.0"
   }
 }
