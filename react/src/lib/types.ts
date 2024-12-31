@@ -31,20 +31,34 @@ export type Theme =
   | 'noborder_gray'
   | 'cobalt'
   | 'purple_dark'
+  | 'gruvbox'
+  | 'gruvbox_dark'
+  | 'gruvbox_light'
+  | 'catppuccin_latte'
+  | 'catppuccin_frappe'
+  | 'catppuccin_macchiato'
+  | 'catppuccin_mocha'
+  | 'fro'
   | `https://${string}`
   | GenericString;
 
 export type AvailableLanguage =
   | 'ar'
+  | 'be'
+  | 'bg'
   | 'ca'
+  | 'cs'
   | 'da'
   | 'de'
   | 'en'
   | 'eo'
   | 'es'
+  | 'eu'
   | 'fa'
   | 'fr'
   | 'gr'
+  | 'gsw'
+  | 'hbs'
   | 'he'
   | 'hu'
   | 'id'
@@ -65,6 +79,7 @@ export type AvailableLanguage =
   | 'zh-CN'
   | 'zh-Hans'
   | 'zh-Hant'
+  | 'zh-HK'
   | 'zh-TW'
   | GenericString;
 
