@@ -82,6 +82,9 @@ import Giscus from '@giscus/astro';
 />
 ```
 
+The component also works with Astro's view transitions (`<ClientRouter />`, or
+`<ViewTransitions />` in Astro 4).
+
 The component renders the `<giscus-widget>` web component into your HTML.
 Astro components don't re-render on the client, so to change the configuration
 after the page has loaded (e.g. when switching between light and dark mode),

@@ -41,4 +41,14 @@ const {
 
 <script>
   import 'giscus';
+
+  // With Astro's view transitions router, the new page is swapped in before
+  // the URL is updated, so a widget can render with the previous page's URL.
+  // Re-create the widgets once the URL has changed.
+  document.addEventListener('astro:after-swap', () => {
+    for (const widget of document.querySelectorAll('giscus-widget')) {
+      if (widget.closest('[data-astro-transition-persist]')) continue;
+      widget.replaceWith(widget.cloneNode());
+    }
+  });
 </script>
