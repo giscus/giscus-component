@@ -15,7 +15,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        framework: [react, vue, svelte, solid, web]
+        framework: [react, vue, svelte, solid, web, astro]
 
     defaults:
       run:
@@ -28,7 +28,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          # Astro's type checker (astro check) requires Node 20+.
+          node-version: ${{ matrix.framework == 'astro' && '22' || '18' }}
           cache: 'npm'
           cache-dependency-path: ${{ matrix.framework }}/package-lock.json
 

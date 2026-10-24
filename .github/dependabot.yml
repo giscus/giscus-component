@@ -64,3 +64,14 @@ updates:
       web:
         patterns:
           - '*'
+
+  - package-ecosystem: npm
+    directory: '/astro'
+    schedule:
+      interval: weekly
+      day: saturday
+    open-pull-requests-limit: 99
+    groups:
+      astro:
+        patterns:
+          - '*'
