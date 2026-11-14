@@ -1,0 +1,50 @@
+{
+  "name": "@giscus/astro",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/lib/index.ts"
+  },
+  "files": [
+    "src/lib"
+  ],
+  "keywords": [
+    "astro-component",
+    "withastro",
+    "giscus",
+    "comments",
+    "github-discussions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giscus/giscus-component.git",
+    "directory": "astro"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier . --check --plugin=prettier-plugin-astro",
+    "format:fix": "prettier . --write --plugin=prettier-plugin-astro"
+  },
+  "dependencies": {
+    "giscus": "^1.6.0"
+  },
+  "peerDependencies": {
+    "astro": "^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
+    "astro": "^5.18.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-astro": "^1.7.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^5.7.3"
+  }
+}
